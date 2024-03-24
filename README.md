@@ -8,3 +8,4 @@
 * Cinemachine
 * Input System
 * Scene Reference Attribute - https://github.com/KyleBanks/scene-ref-attribute.git
+* RPG Character Animation Pack - https://www.explosive.ws/
