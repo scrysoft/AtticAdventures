@@ -1,7 +1,7 @@
 # AtticAdventures
 ## Setup
-Render Pipeline:  HDRP
-Quality Settings: Balanced
+* Render Pipeline:  HDRP
+* Quality Settings: Balanced
 
 ## Plugins
 * DoTween
