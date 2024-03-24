@@ -1,4 +1,5 @@
 using AtticAdventures.Input;
+using AtticAdventures.StateMachine;
 using AtticAdventures.Utilities;
 using Cinemachine;
 using KBCore.Refs;
@@ -25,8 +26,12 @@ namespace AtticAdventures.Core
         [SerializeField] float jumpForce = 10f;
         [SerializeField] float jumpDuration = 0.5f;
         [SerializeField] float jumpCooldown = 0f;
-        [SerializeField] float jumpMaxHeight = 2f;
         [SerializeField] float gravityMultiplier = 3f;
+
+        [Header("DiveRoll")]
+        [SerializeField] float diveRollForce = 10f;
+        [SerializeField] float diveRollDuration = 1f;
+        [SerializeField] float diveRollCooldown = 2f;
 
 
         private const float ZeroF = 0f;
@@ -35,12 +40,21 @@ namespace AtticAdventures.Core
         private float currentSpeed;
         private float velocity;
         private float jumpVelocity;
+        private float diveRollVelocity = 1f;
 
         private Vector3 movement;
 
         private List<Timer> timers;
+
+        // Jumping
         private CountdownTimer jumpTimer;
         private CountdownTimer jumpCooldownTimer;
+
+        // DiveRoll
+        CountdownTimer diveRollTimer;
+        CountdownTimer diveRollCooldownTimer;
+
+        private StateMachine.StateMachine stateMachine;
 
         // Animator parameters
         static readonly int Speed = Animator.StringToHash("Speed");
@@ -54,12 +68,43 @@ namespace AtticAdventures.Core
 
             rb.freezeRotation = true;
 
+            // Setup Timers
             jumpTimer = new CountdownTimer(jumpDuration);
             jumpCooldownTimer = new CountdownTimer(jumpCooldown);
-            timers = new List<Timer>(2) { jumpTimer, jumpCooldownTimer };
 
+            jumpTimer.OnTimerStart += () => jumpVelocity = jumpForce;
             jumpTimer.OnTimerStop += () => jumpCooldownTimer.Start();
+
+            diveRollTimer = new CountdownTimer(diveRollDuration);
+            diveRollCooldownTimer = new CountdownTimer(diveRollCooldown);
+            diveRollTimer.OnTimerStart += () => diveRollVelocity = diveRollForce;
+            diveRollTimer.OnTimerStop += () =>
+            {
+                diveRollVelocity = 1f;
+                diveRollCooldownTimer.Start();
+            };
+
+            timers = new List<Timer>(4) { jumpTimer, jumpCooldownTimer, diveRollTimer, diveRollCooldownTimer };
+
+            // State Machine
+            stateMachine = new StateMachine.StateMachine();
+
+            // Declare States
+            var locomotionState = new LocomotionState(this, animator);
+            var jumpState = new JumpState(this, animator);
+            var diveRollState = new DiveRollState(this, animator);
+
+            // Define Transitions
+            At(locomotionState, jumpState, new FuncPredicate(() => jumpTimer.IsRunning));
+            At(locomotionState, diveRollState, new FuncPredicate(() => diveRollTimer.IsRunning));
+            Any(locomotionState, new FuncPredicate(() => groundChecker.IsGrounded && !jumpTimer.IsRunning && !diveRollTimer.IsRunning));
+
+            // Set initial state
+            stateMachine.SetState(locomotionState);
         }
+
+        private void At(IState from, IState to, IPredicate condition) => stateMachine.AddTransition(from, to, condition);
+        private void Any(IState to, IPredicate condition) => stateMachine.AddAnyTransition(to, condition);
 
         private void Start()
         {
@@ -69,11 +114,13 @@ namespace AtticAdventures.Core
         private void OnEnable()
         {
             input.Jump += OnJump;
+            input.DiveRoll += OnDiveRoll;
         }
 
         private void OnDisable()
         {
             input.Jump -= OnJump;
+            input.DiveRoll -= OnDiveRoll;
         }
 
         private void OnJump(bool performed)
@@ -87,9 +134,18 @@ namespace AtticAdventures.Core
             }
         }
 
+        private void OnDiveRoll()
+        {
+            if(!diveRollTimer.IsRunning && !diveRollCooldownTimer.IsRunning )
+            {
+                diveRollTimer.Start();
+            }
+        }
+
         private void Update()
         {
             movement = new Vector3(input.Direction.x, 0f, input.Direction.y);
+            stateMachine.Update();
 
             HandleTimers();
 
@@ -98,8 +154,7 @@ namespace AtticAdventures.Core
 
         private void FixedUpdate()
         {
-            HandleJump();
-            HandleMovement();
+            stateMachine.FixedUpdate();
         }
 
         private void UpdateAnimator()
@@ -115,7 +170,7 @@ namespace AtticAdventures.Core
             }
         }
 
-        private void HandleJump()
+        public void HandleJump()
         {
             // If not jumping and grounded keep velocity at zero
             if(!jumpTimer.IsRunning && groundChecker.IsGrounded)
@@ -126,23 +181,7 @@ namespace AtticAdventures.Core
             }
 
             // If jumping or falling calculate velocity
-            if (jumpTimer.IsRunning)
-            {
-                // Progress point for initial burst of velocity
-                float launchPoint = 0.9f;
-
-                if(jumpTimer.Progress > launchPoint)
-                {
-                    // Calculate the velocity required to reach the jump height
-                    jumpVelocity = Mathf.Sqrt(2 * jumpMaxHeight * Mathf.Abs(Physics.gravity.y));
-                }
-                else
-                {
-                    // Gradually apply less velocity as the jump progresses
-                    jumpVelocity += (1 - jumpTimer.Progress) * jumpForce * Time.fixedDeltaTime;
-                }
-            }
-            else
+            if (!jumpTimer.IsRunning)
             {
                 // Gravity takes over
                 jumpVelocity += Physics.gravity.y * gravityMultiplier * Time.fixedDeltaTime;
@@ -152,7 +191,7 @@ namespace AtticAdventures.Core
             rb.velocity = new Vector3(rb.velocity.x, jumpVelocity, rb.velocity.z);
         }
 
-        private void HandleMovement()
+        public void HandleMovement()
         {
             // Rotates movement direction to match camera rotation
             Vector3 adjustedDirection = Quaternion.AngleAxis(mainCamera.eulerAngles.y, Vector3.up) * movement;
@@ -178,7 +217,7 @@ namespace AtticAdventures.Core
 
         private void HandleHorizontalMovement(Vector3 adjustedDirection)
         {
-            Vector3 velocity = adjustedDirection * moveSpeed * Time.fixedDeltaTime;
+            Vector3 velocity = adjustedDirection * (moveSpeed * diveRollVelocity * Time.fixedDeltaTime);
             rb.velocity = new Vector3(velocity.x, rb.velocity.y, velocity.z);
         }
 

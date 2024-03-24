@@ -1,3 +1,4 @@
+using RPGCharacterAnims.Actions;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -13,6 +14,7 @@ namespace AtticAdventures.Input
         public event UnityAction EnableMouseControlCamera = delegate { };
         public event UnityAction DisableMouseControlCamera = delegate { };
         public event UnityAction<bool> Jump = delegate { };
+        public event UnityAction DiveRoll = delegate { };
 
         private PlayerInputActions inputActions;
 
@@ -69,9 +71,15 @@ namespace AtticAdventures.Input
             }
         }
 
+        // DiveRoll
         public void OnRun(InputAction.CallbackContext context)
         {
-            // Implement
+            switch (context.phase)
+            {
+                case InputActionPhase.Started:
+                    DiveRoll.Invoke();
+                    break;
+            }
         }
 
         public void OnFire(InputAction.CallbackContext context)

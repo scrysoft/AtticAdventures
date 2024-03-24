@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2157.1956, g: 2261.0334, b: 3283.727, a: 1}
+  m_IndirectSpecularColor: {r: 2157.806, g: 2261.5881, b: 3283.9966, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1001,7 +1001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 851fda5730af9e44489cd27dfaea7d20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundDistance: 0.08
+  groundDistance: 0.04
   groundLayers:
     serializedVersion: 2
     m_Bits: 64
@@ -1027,7 +1027,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1055,8 +1055,10 @@ MonoBehaviour:
   jumpForce: 10
   jumpDuration: 0.5
   jumpCooldown: 0
-  jumpMaxHeight: 2
   gravityMultiplier: 3
+  diveRollForce: 1
+  diveRollDuration: 1
+  diveRollCooldown: 1
 --- !u!95 &835855615 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: -4609772580496020318, guid: e16e767da6f23f04687bbea5851a2391,
@@ -1085,7 +1087,7 @@ CapsuleCollider:
   m_Radius: 0.2
   m_Height: 1.8
   m_Direction: 1
-  m_Center: {x: 0, y: 0.9, z: 0}
+  m_Center: {x: 0, y: 0.93, z: 0}
 --- !u!114 &835855618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2110,7 +2112,7 @@ PrefabInstance:
     - target: {fileID: 1626232734065784990, guid: e16e767da6f23f04687bbea5851a2391,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.37
       objectReference: {fileID: 0}
     - target: {fileID: 1626232734065784990, guid: e16e767da6f23f04687bbea5851a2391,
         type: 3}
