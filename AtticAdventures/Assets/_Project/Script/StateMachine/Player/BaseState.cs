@@ -11,6 +11,7 @@ namespace AtticAdventures.StateMachine
         protected static readonly int LocomotionHash = Animator.StringToHash("Locomotion");
         protected static readonly int JumpHash = Animator.StringToHash("Jump");
         protected static readonly int DiveRollHash = Animator.StringToHash("DiveRoll");
+        protected static readonly int AttackHash = Animator.StringToHash("Attack");
 
         protected const float crossFadeDuration = 0.1f;
 

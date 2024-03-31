@@ -12,23 +12,25 @@ namespace AtticAdventures.Core
         [SerializeField] float attackRange = 2f;            // Distance from enemy to player to attack
 
         public Transform Player { get; private set; }
+        public Health PlayerHealth { get; private set; }
 
         CountdownTimer detectionTimer;
 
         IDetectionStrategy detectionStrategy;
 
-        void Awake()
+        private void Awake()
         {
             Player = GameObject.FindGameObjectWithTag("Player").transform; // Make sure to TAG the player!
+            PlayerHealth = Player.GetComponent<Health>();
         }
 
-        void Start()
+        private void Start()
         {
             detectionTimer = new CountdownTimer(detectionCooldown);
             detectionStrategy = new ConeDetectionStrategy(detectionAngle, detectionRadius, innerDetectionRadius);
         }
 
-        void Update() => detectionTimer.Tick(Time.deltaTime);
+        private void Update() => detectionTimer.Tick(Time.deltaTime);
 
         public bool CanDetectPlayer()
         {

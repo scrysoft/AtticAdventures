@@ -3,6 +3,7 @@ using AtticAdventures.StateMachine;
 using AtticAdventures.Utilities;
 using Cinemachine;
 using KBCore.Refs;
+using RPGCharacterAnims.Actions;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -33,6 +34,11 @@ namespace AtticAdventures.Core
         [SerializeField] float diveRollDuration = 1f;
         [SerializeField] float diveRollCooldown = 2f;
 
+        [Header("Attack Settings")]
+        [SerializeField] float attackCooldown = 0.5f;
+        [SerializeField] float attackDistance = 1f;
+        [SerializeField] int attackDamage = 10;
+
 
         private const float ZeroF = 0f;
         private Transform mainCamera;
@@ -54,6 +60,9 @@ namespace AtticAdventures.Core
         CountdownTimer diveRollTimer;
         CountdownTimer diveRollCooldownTimer;
 
+        // Attack
+        CountdownTimer attackTimer;
+
         private StateMachine.StateMachine stateMachine;
 
         // Animator parameters
@@ -68,6 +77,43 @@ namespace AtticAdventures.Core
 
             rb.freezeRotation = true;
 
+            SetupTimers();
+            
+            SetupStateMachines();
+        }
+
+        private void SetupStateMachines()
+        {
+            // State Machine
+            stateMachine = new StateMachine.StateMachine();
+
+            // Declare States
+            var locomotionState = new LocomotionState(this, animator);
+            var jumpState = new JumpState(this, animator);
+            var diveRollState = new DiveRollState(this, animator);
+            var attackState = new AttackState(this, animator);
+
+            // Define Transitions
+            At(locomotionState, jumpState, new FuncPredicate(() => jumpTimer.IsRunning));
+            At(locomotionState, diveRollState, new FuncPredicate(() => diveRollTimer.IsRunning));
+            At(locomotionState, attackState, new FuncPredicate(() => attackTimer.IsRunning));
+            At(attackState, locomotionState, new FuncPredicate(() => !attackTimer.IsRunning));
+            Any(locomotionState, new FuncPredicate(ReturnToLocomotionState));
+
+            // Set initial state
+            stateMachine.SetState(locomotionState);
+        }
+
+        private bool ReturnToLocomotionState()
+        {
+            return groundChecker.IsGrounded
+                   && !attackTimer.IsRunning
+                   && !jumpTimer.IsRunning
+                   && !diveRollTimer.IsRunning;
+        }
+
+        private void SetupTimers()
+        {
             // Setup Timers
             jumpTimer = new CountdownTimer(jumpDuration);
             jumpCooldownTimer = new CountdownTimer(jumpCooldown);
@@ -84,23 +130,9 @@ namespace AtticAdventures.Core
                 diveRollCooldownTimer.Start();
             };
 
-            timers = new List<Timer>(4) { jumpTimer, jumpCooldownTimer, diveRollTimer, diveRollCooldownTimer };
+            attackTimer = new CountdownTimer(attackCooldown);
 
-            // State Machine
-            stateMachine = new StateMachine.StateMachine();
-
-            // Declare States
-            var locomotionState = new LocomotionState(this, animator);
-            var jumpState = new JumpState(this, animator);
-            var diveRollState = new DiveRollState(this, animator);
-
-            // Define Transitions
-            At(locomotionState, jumpState, new FuncPredicate(() => jumpTimer.IsRunning));
-            At(locomotionState, diveRollState, new FuncPredicate(() => diveRollTimer.IsRunning));
-            Any(locomotionState, new FuncPredicate(() => groundChecker.IsGrounded && !jumpTimer.IsRunning && !diveRollTimer.IsRunning));
-
-            // Set initial state
-            stateMachine.SetState(locomotionState);
+            timers = new List<Timer>(5) { jumpTimer, jumpCooldownTimer, diveRollTimer, diveRollCooldownTimer, attackTimer };
         }
 
         private void At(IState from, IState to, IPredicate condition) => stateMachine.AddTransition(from, to, condition);
@@ -115,12 +147,36 @@ namespace AtticAdventures.Core
         {
             input.Jump += OnJump;
             input.DiveRoll += OnDiveRoll;
+            input.Attack += OnAttack;
         }
 
         private void OnDisable()
         {
             input.Jump -= OnJump;
             input.DiveRoll -= OnDiveRoll;
+            input.Attack -= OnAttack;
+        }
+
+        private void OnAttack()
+        {
+            if (!attackTimer.IsRunning)
+            {
+                attackTimer.Start();
+            }
+        }
+
+        public void Attack()
+        {
+            Vector3 attackPos = transform.position + transform.forward;
+            Collider[] hitEnemies = Physics.OverlapSphere(attackPos, attackDistance);
+
+            foreach (var enemy in hitEnemies)
+            {
+                if (enemy.CompareTag("Enemy"))
+                {
+                    enemy.GetComponent<Health>().TakeDamage(attackDamage);
+                }
+            }
         }
 
         private void OnJump(bool performed)

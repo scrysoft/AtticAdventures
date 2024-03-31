@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 8231230197369916817}
   - component: {fileID: 3164471639453143929}
   - component: {fileID: 740394218590064257}
+  - component: {fileID: 2050200537967387023}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,6 +116,20 @@ MonoBehaviour:
   innerDetectionRadius: 2
   detectionCooldown: 1
   attackRange: 2
+--- !u!114 &2050200537967387023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2672321801936453250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6774d86f191d9541b85702cfb43930b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  playerHealthChannel: {fileID: 0}
 --- !u!1001 &6389116567608734756
 PrefabInstance:
   m_ObjectHideFlags: 0

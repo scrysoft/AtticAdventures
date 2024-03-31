@@ -15,6 +15,8 @@ namespace AtticAdventures.Core
         [SerializeField, Child] Animator animator;
 
         [SerializeField] float wanderRadius = 10f;
+
+        [SerializeField] int damageAmount = 10;
         [SerializeField] float timeBetweenAttacks = 1f;
 
         private StateMachine.StateMachine stateMachine;
@@ -60,6 +62,7 @@ namespace AtticAdventures.Core
             if (attackTimer.IsRunning) return;
 
             attackTimer.Start();
+            playerDetector.PlayerHealth.TakeDamage(damageAmount);
         }
     }
 }

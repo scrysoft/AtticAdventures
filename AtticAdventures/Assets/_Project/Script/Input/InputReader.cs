@@ -15,6 +15,7 @@ namespace AtticAdventures.Input
         public event UnityAction DisableMouseControlCamera = delegate { };
         public event UnityAction<bool> Jump = delegate { };
         public event UnityAction DiveRoll = delegate { };
+        public event UnityAction Attack = delegate { };
 
         private PlayerInputActions inputActions;
 
@@ -82,9 +83,13 @@ namespace AtticAdventures.Input
             }
         }
 
+        // Attack
         public void OnFire(InputAction.CallbackContext context)
         {
-            // Implement
+            if(context.phase == InputActionPhase.Started)
+            {
+                Attack.Invoke();
+            }
         }
 
         private bool IsDevicMouse(InputAction.CallbackContext context) => context.control.device.name == "Mouse";
