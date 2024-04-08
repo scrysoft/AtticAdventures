@@ -39,7 +39,7 @@ namespace AtticAdventures.Core
 
         public bool CanAttackPlayer()
         {
-            var directionToPlayer = Player.position - transform.position;
+            Vector3 directionToPlayer = Player.position - transform.position;
             return directionToPlayer.magnitude <= attackRange;
         }
 
