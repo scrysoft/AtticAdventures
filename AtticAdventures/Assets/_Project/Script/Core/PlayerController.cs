@@ -3,7 +3,6 @@ using AtticAdventures.StateMachine;
 using AtticAdventures.Utilities;
 using Cinemachine;
 using KBCore.Refs;
-using RPGCharacterAnims.Actions;
 using System.Collections.Generic;
 using UnityEngine;
 

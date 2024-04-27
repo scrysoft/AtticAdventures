@@ -192,9 +192,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4087218983191939151, guid: 7ed4e947490a07243ba5a75ec0ef9b3a,
         type: 3}
+      propertyPath: distanceToGround
+      value: 0.056
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087218983191939151, guid: 7ed4e947490a07243ba5a75ec0ef9b3a,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 119
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087218983191939151, guid: 7ed4e947490a07243ba5a75ec0ef9b3a,
+        type: 3}
       propertyPath: freeLookVirtualCam
       value: 
       objectReference: {fileID: 1286189298}
+    - target: {fileID: 4240632370214232500, guid: 7ed4e947490a07243ba5a75ec0ef9b3a,
+        type: 3}
+      propertyPath: groundDistance
+      value: 0.04
+      objectReference: {fileID: 0}
     - target: {fileID: 6083129489716164526, guid: 7ed4e947490a07243ba5a75ec0ef9b3a,
         type: 3}
       propertyPath: m_LocalPosition.x

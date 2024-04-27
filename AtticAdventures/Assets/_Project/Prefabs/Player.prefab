@@ -426,10 +426,11 @@ GameObject:
   - component: {fileID: 4492931273727137810}
   - component: {fileID: 3071885580070922355}
   - component: {fileID: 4087218983191939151}
+  - component: {fileID: 5088199154520374159}
   - component: {fileID: 4240632370214232500}
   - component: {fileID: 4332947907561946897}
   - component: {fileID: 5858629232995756909}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -496,7 +497,7 @@ CapsuleCollider:
   m_Radius: 0.2
   m_Height: 1.8
   m_Direction: 1
-  m_Center: {x: 0, y: 0.9, z: 0}
+  m_Center: {x: 0, y: 0.95, z: 0}
 --- !u!54 &3071885580070922355
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -551,6 +552,26 @@ MonoBehaviour:
   diveRollForce: 1
   diveRollDuration: 1
   diveRollCooldown: 0.1
+  attackCooldown: 0.5
+  attackDistance: 1
+  attackDamage: 10
+--- !u!114 &5088199154520374159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050721191552826776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57950cae96013bb4c8d60da4dc63c969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3780915750165371453}
+  distanceToGround: 0.056
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 119
 --- !u!114 &4240632370214232500
 MonoBehaviour:
   m_ObjectHideFlags: 0
