@@ -3,6 +3,7 @@ using AtticAdventures.StateMachine;
 using AtticAdventures.Utilities;
 using Cinemachine;
 using KBCore.Refs;
+using RPGCharacterAnims.Actions;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -45,6 +46,7 @@ namespace AtticAdventures.Core
         private float currentSpeed;
         private float velocity;
         private float jumpVelocity;
+        private float doubleJumpVelocity = 1f;
         private float diveRollVelocity = 1f;
 
         private Vector3 movement;
@@ -231,7 +233,6 @@ namespace AtticAdventures.Core
             if(!jumpTimer.IsRunning && groundChecker.IsGrounded)
             {
                 jumpVelocity = ZeroF;
-                jumpTimer.Stop();
                 return;
             }
 
@@ -272,7 +273,7 @@ namespace AtticAdventures.Core
 
         private void HandleHorizontalMovement(Vector3 adjustedDirection)
         {
-            Vector3 velocity = adjustedDirection * (moveSpeed * diveRollVelocity * Time.fixedDeltaTime);
+            Vector3 velocity = adjustedDirection * (moveSpeed * diveRollVelocity * doubleJumpVelocity * Time.fixedDeltaTime);
             rb.velocity = new Vector3(velocity.x, rb.velocity.y, velocity.z);
         }
 
