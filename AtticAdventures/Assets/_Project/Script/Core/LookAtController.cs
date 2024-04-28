@@ -11,7 +11,7 @@ namespace AtticAdventures.Core
         [SerializeField] Animator animator;
         [SerializeField] float minLookDistance = 10f;
 
-        private bool activated = false;
+        [SerializeField] bool activated = false;
         private Vector3 baseTargetPosition;
 
         private void Start()

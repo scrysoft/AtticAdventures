@@ -150,7 +150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8726660832501412796
 Transform:
   m_ObjectHideFlags: 0
@@ -379,6 +379,7 @@ MonoBehaviour:
   bodyWeight: 0.2
   animator: {fileID: 1777936588065691782}
   minLookDistance: 10
+  activated: 0
 --- !u!4 &5637162738963434682 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1626232734065784990, guid: e16e767da6f23f04687bbea5851a2391,
