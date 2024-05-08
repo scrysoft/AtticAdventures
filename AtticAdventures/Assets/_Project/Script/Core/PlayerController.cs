@@ -19,6 +19,7 @@ namespace AtticAdventures.Core
         [SerializeField, Anywhere] InputReader input;
 
         [Header("Movement Settings")]
+        [SerializeField] Transform cameraTarget;
         [SerializeField] float moveSpeed = 6f;
         [SerializeField] float rotationSpeed = 15f;
         [SerializeField] float smoothTime = 0.2f;
@@ -73,7 +74,7 @@ namespace AtticAdventures.Core
         {
             mainCamera = Camera.main.transform;
             freeLookVirtualCam.Follow = transform;
-            freeLookVirtualCam.LookAt = transform;
+            freeLookVirtualCam.LookAt = cameraTarget;
             freeLookVirtualCam.OnTargetObjectWarped(transform, transform.position - freeLookVirtualCam.transform.position - Vector3.forward);
 
             rb.freezeRotation = true;
