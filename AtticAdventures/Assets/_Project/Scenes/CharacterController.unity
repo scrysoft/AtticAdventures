@@ -767,7 +767,7 @@ MonoBehaviour:
     m_Name: Ultimate
     m_MinValue: 0
     m_MaxValue: 100
-    m_Value: 100
+    m_Value: 0
     m_AutoUpdateValueType: 0
     m_UpdateWhenInactive: 0
     m_AutoUpdateStartDelay: 1
@@ -798,12 +798,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ItemSetGroups:
-  - m_SerializedItemCategory: {fileID: 114688281249701904, guid: 5481010ef14c32f4cb7b6661b0c59fb4,
+  - m_SerializedItemCategory: {fileID: -1054373251383302002, guid: a1bfb1af875d6db419f271dd13545256,
       type: 2}
     m_StartingItemSetRules:
-    - {fileID: 11400000, guid: a26ce96f0eca43d4fbf76b9d2203da18, type: 2}
+    - {fileID: 11400000, guid: fc3abb5649f5e2c4ba27156cec17dfa3, type: 2}
   m_OnAddItemUpdateItemSetsOption: 0
-  m_ItemCollection: {fileID: 11400000, guid: 5481010ef14c32f4cb7b6661b0c59fb4, type: 2}
+  m_ItemCollection: {fileID: 11400000, guid: a1bfb1af875d6db419f271dd13545256, type: 2}
 --- !u!114 &514368696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -850,7 +850,10 @@ MonoBehaviour:
     m_Option: 1
     m_ItemSetName: 
     m_Index: 0
-  m_DefaultLoadout: []
+  m_DefaultLoadout:
+  - ItemDefinition: {fileID: -8815583931237348038, guid: a1bfb1af875d6db419f271dd13545256,
+      type: 2}
+    Amount: 1
   m_RemoveExceptions: []
 --- !u!114 &514368697
 MonoBehaviour:
@@ -997,18 +1000,18 @@ MonoBehaviour:
   m_MovementTypes:
   - rid: 7444518841222430721
   m_Abilities:
+  - rid: 7444518841222430726
+  - rid: 7444518890196697093
+  - rid: 7444518890196697094
+  - rid: 7444518890196697095
   - rid: 7444518841222430722
   - rid: 7444518841798098951
-  - rid: 7444518841798098952
-  - rid: 7444518841798098953
   - rid: 7444518841798098954
   - rid: 7444518841798098955
   - rid: 7444518841798098956
-  - rid: 7444518841798098957
   - rid: 7444518841222430723
   - rid: 7444518841222430724
   - rid: 7444518841222430725
-  - rid: 7444518841222430726
   - rid: 7444518841222430728
   - rid: 7444518841222430729
   m_ItemAbilities:
@@ -1186,7 +1189,7 @@ MonoBehaviour:
           m_AudioConfig: {fileID: 0}
           m_AudioClips: []
         m_VerticalVelocityStopThreshold: 0.01
-        m_RecurrenceDelay: 0.1
+        m_RecurrenceDelay: 0.2
     - rid: 7444518841222430724
       type: {class: Fall, ns: Opsive.UltimateCharacterController.Character.Abilities,
         asm: Opsive.UltimateCharacterController}
@@ -1978,7 +1981,7 @@ MonoBehaviour:
           m_Preset: {fileID: 0}
           m_BlockList: []
           m_Default: 1
-        m_Enabled: 0
+        m_Enabled: 1
         m_StartType: 0
         m_StopType: 1
         m_InputNames: []
@@ -2026,135 +2029,11 @@ MonoBehaviour:
         m_ObjectID: -1
         m_LayerMask:
           serializedVersion: 2
-          m_Bits: 4294967295
+          m_Bits: 16777216
         m_GroundNormalSensitivity: 0.5
         m_AngleThreshold: 180
         m_MoveWithObject: 0
         m_ForceDirectionInfluence: 0.8
-    - rid: 7444518841798098952
-      type: {class: Crawl, ns: Opsive.UltimateCharacterController.AddOns.Agility,
-        asm: Opsive.UltimateCharacterController.AddOns}
-      data:
-        m_States:
-        - m_Name: Default
-          m_Preset: {fileID: 0}
-          m_BlockList: []
-          m_Default: 1
-        m_Enabled: 0
-        m_StartType: 1
-        m_StopType: 1
-        m_InputNames: []
-        m_WaitForDoublePressTapTimeout: 0
-        m_LongPressDuration: 0.5
-        m_WaitForLongPressRelease: 0
-        m_AbilityStarter:
-          rid: -2
-        m_AbilityStopper:
-          rid: -2
-        m_AttributeModifier:
-          m_AttributeName: 
-          m_Amount: 0
-          m_AutoUpdate: 0
-          m_AutoUpdateStartDelay: 1
-          m_AutoUpdateInterval: 0.1
-          m_AutoUpdateDuration: -1
-        m_State: Crawl
-        m_StateAppendItemIdentifierName: 0
-        m_AbilityIndexParameter: 103
-        m_StartAudioClipSet:
-          m_AudioConfig: {fileID: 0}
-          m_AudioClips: []
-        m_StopAudioClipSet:
-          m_AudioConfig: {fileID: 0}
-          m_AudioClips: []
-        m_AllowPositionalInput: 1
-        m_AllowRotationalInput: 1
-        m_UseGravity: 0
-        m_UseRootMotionPosition: 1
-        m_UseRootMotionRotation: 0
-        m_DetectHorizontalCollisions: 0
-        m_DetectVerticalCollisions: 0
-        m_DetectGroundCollisions: 0
-        m_AnimatorMotion: {fileID: 0}
-        m_StartEffectName: 
-        m_StartEffectIndex: -1
-        m_AllowEquippedSlotsMask: -1
-        m_AllowItemDefinitions: []
-        m_ImmediateUnequip: 0
-        m_ReequipSlots: 1
-        m_AbilityMessageText: 
-        m_AbilityMessageIcon: {fileID: 0}
-        m_InspectorDescription: 
-        m_ConcurrentAbility: 1
-        m_Height: 1
-        m_CapsuleColliderHeightAdjustment: -0.4
-        m_AllowSpeedChange: 0
-        m_CrawlActiveStateName: CrawlActive
-        m_MaxTriggerObjectCount: 1
-        m_TriggerLayerMask:
-          serializedVersion: 2
-          m_Bits: 2415919071
-        m_TriggerObjectID: -1
-    - rid: 7444518841798098953
-      type: {class: Dodge, ns: Opsive.UltimateCharacterController.AddOns.Agility,
-        asm: Opsive.UltimateCharacterController.AddOns}
-      data:
-        m_States:
-        - m_Name: Default
-          m_Preset: {fileID: 0}
-          m_BlockList: []
-          m_Default: 1
-        m_Enabled: 1
-        m_StartType: 2
-        m_StopType: 1
-        m_InputNames:
-        - Jump
-        m_WaitForDoublePressTapTimeout: 0
-        m_LongPressDuration: 0.5
-        m_WaitForLongPressRelease: 0
-        m_AbilityStarter:
-          rid: -2
-        m_AbilityStopper:
-          rid: -2
-        m_AttributeModifier:
-          m_AttributeName: 
-          m_Amount: 0
-          m_AutoUpdate: 0
-          m_AutoUpdateStartDelay: 1
-          m_AutoUpdateInterval: 0.1
-          m_AutoUpdateDuration: -1
-        m_State: 
-        m_StateAppendItemIdentifierName: 0
-        m_AbilityIndexParameter: 101
-        m_StartAudioClipSet:
-          m_AudioConfig: {fileID: 0}
-          m_AudioClips: []
-        m_StopAudioClipSet:
-          m_AudioConfig: {fileID: 0}
-          m_AudioClips: []
-        m_AllowPositionalInput: 1
-        m_AllowRotationalInput: 1
-        m_UseGravity: 0
-        m_UseRootMotionPosition: 1
-        m_UseRootMotionRotation: 0
-        m_DetectHorizontalCollisions: 0
-        m_DetectVerticalCollisions: 0
-        m_DetectGroundCollisions: 0
-        m_AnimatorMotion: {fileID: 0}
-        m_StartEffectName: 
-        m_StartEffectIndex: -1
-        m_AllowEquippedSlotsMask: -1
-        m_AllowItemDefinitions: []
-        m_ImmediateUnequip: 0
-        m_ReequipSlots: 1
-        m_AbilityMessageText: 
-        m_AbilityMessageIcon: {fileID: 0}
-        m_InspectorDescription: 
-        m_DoubleMovementStart: 0
-        m_DoubleMovementTimeout: 0.2
-        m_RequireAim: 1
-        m_RequireTarget: 1
-        m_NoVelocityDirection: 4
     - rid: 7444518841798098954
       type: {class: Hang, ns: Opsive.UltimateCharacterController.AddOns.Agility, asm: Opsive.UltimateCharacterController.AddOns}
       data:
@@ -2175,7 +2054,7 @@ MonoBehaviour:
         m_StartType: 2
         m_StopType: 4
         m_InputNames:
-        - Action
+        - Jump
         m_WaitForDoublePressTapTimeout: 0
         m_LongPressDuration: 0.5
         m_WaitForLongPressRelease: 0
@@ -2220,7 +2099,7 @@ MonoBehaviour:
         m_ObjectDetection: 16
         m_DetectLayers:
           serializedVersion: 2
-          m_Bits: 2415919067
+          m_Bits: 2181038080
         m_UseLookPosition: 0
         m_UseLookDirection: 0
         m_AngleThreshold: 360
@@ -2237,7 +2116,7 @@ MonoBehaviour:
         m_MinimumStartOffset: {x: 0.6, y: 2, z: -0.4}
         m_MaximumStartOffset: {x: 2, y: 3.5, z: -0.4}
         m_RelativeHangOffset: {x: 0, y: -0.22, z: -0.2}
-        m_StartMoveTowardsSpeed: 1
+        m_StartMoveTowardsSpeed: 3
         m_InPositionShimmyDistance: 0.1
         m_InPositionStateName: HangInPosition
         m_MoveUpButtonName: 
@@ -2246,6 +2125,8 @@ MonoBehaviour:
         m_HandIKOffset: {x: 0, y: 0, z: -0.02}
         m_PullUpCastDistance: 0.5
         m_StopHangOnJump: 1
+        m_StartClimbOffset: {x: 0.5, y: 1.65}
+        m_StartVerticalClimbOffset: 2.15
     - rid: 7444518841798098955
       type: {class: LedgeStrafe, ns: Opsive.UltimateCharacterController.AddOns.Agility,
         asm: Opsive.UltimateCharacterController.AddOns}
@@ -2303,7 +2184,7 @@ MonoBehaviour:
         m_ObjectID: -1
         m_LayerMask:
           serializedVersion: 2
-          m_Bits: 4294967295
+          m_Bits: 33554432
         m_GroundNormalSensitivity: 0.5
         m_AngleThreshold: 180
         m_MoveWithObject: 0
@@ -2317,6 +2198,7 @@ MonoBehaviour:
         m_StartMoveTowardsWallSpeed: 0.05
         m_StopForce: 0.1
         m_StopForceFrames: 10
+        m_StartFromClimb: 1
     - rid: 7444518841798098956
       type: {class: Roll, ns: Opsive.UltimateCharacterController.AddOns.Agility, asm: Opsive.UltimateCharacterController.AddOns}
       data:
@@ -2372,11 +2254,11 @@ MonoBehaviour:
         m_AbilityMessageIcon: {fileID: 0}
         m_InspectorDescription: 
         m_StartCastDistance: 2
-        m_RollFallHeight: 3.5
+        m_RollFallHeight: 12
         m_CheckForSlope: 1
         m_SwitchToThirdPerson: 0
-    - rid: 7444518841798098957
-      type: {class: Vault, ns: Opsive.UltimateCharacterController.AddOns.Agility,
+    - rid: 7444518890196697093
+      type: {class: FreeClimb, ns: Opsive.UltimateCharacterController.AddOns.Climbing,
         asm: Opsive.UltimateCharacterController.AddOns}
       data:
         m_States:
@@ -2384,12 +2266,11 @@ MonoBehaviour:
           m_Preset: {fileID: 0}
           m_BlockList: []
           m_Default: 1
-        m_Enabled: 0
+        m_Enabled: 1
         m_StartType: 2
-        m_StopType: 1
+        m_StopType: 4
         m_InputNames:
         - Action
-        - Jump
         m_WaitForDoublePressTapTimeout: 0
         m_LongPressDuration: 0.5
         m_WaitForLongPressRelease: 0
@@ -2404,27 +2285,211 @@ MonoBehaviour:
           m_AutoUpdateStartDelay: 1
           m_AutoUpdateInterval: 0.1
           m_AutoUpdateDuration: -1
-        m_State: Vault
+        m_State: FreeClimb
         m_StateAppendItemIdentifierName: 0
-        m_AbilityIndexParameter: 105
+        m_AbilityIndexParameter: 503
         m_StartAudioClipSet:
           m_AudioConfig: {fileID: 0}
           m_AudioClips: []
         m_StopAudioClipSet:
           m_AudioConfig: {fileID: 0}
           m_AudioClips: []
-        m_AllowPositionalInput: 0
+        m_AllowPositionalInput: 1
         m_AllowRotationalInput: 0
-        m_UseGravity: 0
+        m_UseGravity: 2
         m_UseRootMotionPosition: 1
         m_UseRootMotionRotation: 0
-        m_DetectHorizontalCollisions: 0
-        m_DetectVerticalCollisions: 0
+        m_DetectHorizontalCollisions: 2
+        m_DetectVerticalCollisions: 2
         m_DetectGroundCollisions: 0
         m_AnimatorMotion: {fileID: 0}
         m_StartEffectName: 
         m_StartEffectIndex: -1
-        m_AllowEquippedSlotsMask: -1
+        m_AllowEquippedSlotsMask: 0
+        m_AllowItemDefinitions: []
+        m_ImmediateUnequip: 0
+        m_ReequipSlots: 1
+        m_AbilityMessageText: 
+        m_AbilityMessageIcon: {fileID: 0}
+        m_InspectorDescription: 
+        m_ObjectDetection: 2
+        m_DetectLayers:
+          serializedVersion: 2
+          m_Bits: 2415919067
+        m_UseLookPosition: 0
+        m_UseLookDirection: 1
+        m_AngleThreshold: 360
+        m_ObjectID: -1
+        m_CastDistance: 1
+        m_CastFrameInterval: 0
+        m_CastOffset: {x: 0, y: 0.4, z: -0.25}
+        m_TriggerInteraction: 1
+        m_SpherecastRadius: 0.5
+        m_MaxTriggerObjectCount: 1
+        m_MoveWithObject: 0
+        m_AirborneAutoStart: 1
+        m_DrawDebugLines: 0
+        m_AllowedMovements: -1
+        m_BottomMountDistance: 0.5
+        m_ClimbOffset: 0.45
+        m_MoveTowardsSpeed: 0.02
+        m_StopClimbOnJump: 1
+        m_HorizontalEdgeOffset: 0.35
+        m_InnerCornerOffset: 0.1
+        m_BottomEdgeOffset: 0.5
+        m_TopEdgeOffset: 0.65
+        m_HandIKCastOffset: {x: 0, y: 0.1, z: 0}
+        m_FootIKCastOffset: {x: 0, y: 0, z: 0}
+        m_HandIKOffset: {x: 0, y: 0, z: -0.02}
+        m_FootIKOffset: {x: 0, y: 0, z: -0.05}
+        m_BottomDismountOffset: 0.3
+        m_TopDismountOffset: 1.47
+        m_LeapEdgeOffset: {x: 0.8, y: 3}
+        m_StartHangOffset: {x: 1.5, y: 1, z: -0.5}
+    - rid: 7444518890196697094
+      type: {class: LadderClimb, ns: Opsive.UltimateCharacterController.AddOns.Climbing,
+        asm: Opsive.UltimateCharacterController.AddOns}
+      data:
+        m_States:
+        - m_Name: LadderBottomDismount
+          m_Preset: {fileID: 11400000, guid: e2d0a537bd75e9d4bb9e301c72ddf550, type: 2}
+          m_BlockList: []
+          m_Default: 0
+        - m_Name: LadderTopDismount
+          m_Preset: {fileID: 11400000, guid: 9d04a6fa6de4d6d43a08dbeb03496dd2, type: 2}
+          m_BlockList: []
+          m_Default: 0
+        - m_Name: LadderNoDismount
+          m_Preset: {fileID: 11400000, guid: dcfe92e850c096349af8fd1226259ed8, type: 2}
+          m_BlockList: []
+          m_Default: 0
+        - m_Name: MovingLadder
+          m_Preset: {fileID: 11400000, guid: d44365cae32586e4da8fbf7645483318, type: 2}
+          m_BlockList: []
+          m_Default: 0
+        - m_Name: Airborne
+          m_Preset: {fileID: 11400000, guid: ea19ca3ae3038fe44a6a1d327fa0f5c8, type: 2}
+          m_BlockList: []
+          m_Default: 0
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Enabled: 1
+        m_StartType: 2
+        m_StopType: 4
+        m_InputNames:
+        - Fire3
+        m_WaitForDoublePressTapTimeout: 0
+        m_LongPressDuration: 0.5
+        m_WaitForLongPressRelease: 0
+        m_AbilityStarter:
+          rid: -2
+        m_AbilityStopper:
+          rid: -2
+        m_AttributeModifier:
+          m_AttributeName: 
+          m_Amount: 0
+          m_AutoUpdate: 0
+          m_AutoUpdateStartDelay: 1
+          m_AutoUpdateInterval: 0.1
+          m_AutoUpdateDuration: -1
+        m_State: LadderClimb
+        m_StateAppendItemIdentifierName: 0
+        m_AbilityIndexParameter: 501
+        m_StartAudioClipSet:
+          m_AudioConfig: {fileID: 0}
+          m_AudioClips: []
+        m_StopAudioClipSet:
+          m_AudioConfig: {fileID: 0}
+          m_AudioClips: []
+        m_AllowPositionalInput: 1
+        m_AllowRotationalInput: 0
+        m_UseGravity: 2
+        m_UseRootMotionPosition: 1
+        m_UseRootMotionRotation: 1
+        m_DetectHorizontalCollisions: 2
+        m_DetectVerticalCollisions: 2
+        m_DetectGroundCollisions: 0
+        m_AnimatorMotion: {fileID: 0}
+        m_StartEffectName: 
+        m_StartEffectIndex: -1
+        m_AllowEquippedSlotsMask: 0
+        m_AllowItemDefinitions: []
+        m_ImmediateUnequip: 0
+        m_ReequipSlots: 1
+        m_AbilityMessageText: 
+        m_AbilityMessageIcon: {fileID: 0}
+        m_InspectorDescription: 
+        m_ObjectDetection: 2
+        m_DetectLayers:
+          serializedVersion: 2
+          m_Bits: 2415919067
+        m_UseLookPosition: 0
+        m_UseLookDirection: 1
+        m_AngleThreshold: 360
+        m_ObjectID: 501
+        m_CastDistance: 1
+        m_CastFrameInterval: 0
+        m_CastOffset: {x: 0, y: 1, z: 0}
+        m_TriggerInteraction: 1
+        m_SpherecastRadius: 0.5
+        m_MaxTriggerObjectCount: 1
+        m_MoveWithObject: 1
+        m_AirborneAutoStart: 1
+        m_AllowedMovements: -1
+        m_AirborneMoveTowardsSpeed: 0.2
+        m_StopClimbOnJump: 1
+        m_StartHangOffset: {x: 1, y: 0, z: 0}
+    - rid: 7444518890196697095
+      type: {class: ShortClimb, ns: Opsive.UltimateCharacterController.AddOns.Climbing,
+        asm: Opsive.UltimateCharacterController.AddOns}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Enabled: 1
+        m_StartType: 2
+        m_StopType: 1
+        m_InputNames:
+        - Action
+        m_WaitForDoublePressTapTimeout: 0
+        m_LongPressDuration: 0.5
+        m_WaitForLongPressRelease: 0
+        m_AbilityStarter:
+          rid: -2
+        m_AbilityStopper:
+          rid: -2
+        m_AttributeModifier:
+          m_AttributeName: 
+          m_Amount: 0
+          m_AutoUpdate: 0
+          m_AutoUpdateStartDelay: 1
+          m_AutoUpdateInterval: 0.1
+          m_AutoUpdateDuration: -1
+        m_State: ShortClimb
+        m_StateAppendItemIdentifierName: 0
+        m_AbilityIndexParameter: 502
+        m_StartAudioClipSet:
+          m_AudioConfig: {fileID: 0}
+          m_AudioClips: []
+        m_StopAudioClipSet:
+          m_AudioConfig: {fileID: 0}
+          m_AudioClips: []
+        m_AllowPositionalInput: 1
+        m_AllowRotationalInput: 0
+        m_UseGravity: 2
+        m_UseRootMotionPosition: 1
+        m_UseRootMotionRotation: 0
+        m_DetectHorizontalCollisions: 2
+        m_DetectVerticalCollisions: 2
+        m_DetectGroundCollisions: 0
+        m_AnimatorMotion: {fileID: 0}
+        m_StartEffectName: 
+        m_StartEffectIndex: -1
+        m_AllowEquippedSlotsMask: 0
         m_AllowItemDefinitions: []
         m_ImmediateUnequip: 0
         m_ReequipSlots: 1
@@ -2441,45 +2506,13 @@ MonoBehaviour:
         m_ObjectID: -1
         m_CastDistance: 1
         m_CastFrameInterval: 0
-        m_CastOffset: {x: 0, y: 1, z: 0}
+        m_CastOffset: {x: 0, y: 0, z: 0}
         m_TriggerInteraction: 1
         m_SpherecastRadius: 0.5
         m_MaxTriggerObjectCount: 1
         m_MoveWithObject: 0
         m_MaxHeight: 2
-        m_StartLocationDepthOffset:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: 0
-            value: 0
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 4
-            value: 0.35
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - serializedVersion: 3
-            time: 8
-            value: 0.45
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
+        m_HeightMultiplier: 1
 --- !u!54 &514368700
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3720,6 +3753,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: -4396642182433536433, guid: e88266b54de15624ab3bb0c2b6251323,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 918c2dec12a4fdb4585051b70cfed921, type: 2}
     - target: {fileID: -4390648313368148372, guid: e88266b54de15624ab3bb0c2b6251323,
         type: 3}
       propertyPath: m_Layer
@@ -3845,6 +3883,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 1630794972795428178, guid: e88266b54de15624ab3bb0c2b6251323,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 918c2dec12a4fdb4585051b70cfed921, type: 2}
+    - target: {fileID: 1630794972795428178, guid: e88266b54de15624ab3bb0c2b6251323,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 918c2dec12a4fdb4585051b70cfed921, type: 2}
     - target: {fileID: 1785740171465925784, guid: e88266b54de15624ab3bb0c2b6251323,
         type: 3}
       propertyPath: m_Layer
@@ -3905,6 +3953,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5797384429611982230, guid: e88266b54de15624ab3bb0c2b6251323,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 918c2dec12a4fdb4585051b70cfed921, type: 2}
+    - target: {fileID: 5797384429611982230, guid: e88266b54de15624ab3bb0c2b6251323,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 918c2dec12a4fdb4585051b70cfed921, type: 2}
+    - target: {fileID: 5797384429611982230, guid: e88266b54de15624ab3bb0c2b6251323,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 918c2dec12a4fdb4585051b70cfed921, type: 2}
     - target: {fileID: 5866666021909216657, guid: e88266b54de15624ab3bb0c2b6251323,
         type: 3}
       propertyPath: m_Controller
@@ -3978,6 +4041,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1982658850}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e88266b54de15624ab3bb0c2b6251323,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1982658854}
     - targetCorrespondingSourceObject: {fileID: 7208574437936612750, guid: e88266b54de15624ab3bb0c2b6251323,
         type: 3}
       insertIndex: -1
@@ -5186,6 +5253,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_States:
+  - m_Name: MySword
+    m_Preset: {fileID: 11400000, guid: 437d7dfc915835144a0610bf988455d8, type: 2}
+    m_BlockList: []
+    m_Default: 0
+  - m_Name: LadderClimb
+    m_Preset: {fileID: 11400000, guid: 19db434d1cd180a42b4bf21e8c8e97c4, type: 2}
+    m_BlockList: []
+    m_Default: 0
   - m_Name: Default
     m_Preset: {fileID: 0}
     m_BlockList: []
@@ -5279,6 +5354,19 @@ MonoBehaviour:
   m_LogAbilityParameterChanges: 0
   m_LogItemParameterChanges: 0
   m_LogEvents: 0
+--- !u!114 &1982658854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525308044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ebcf42a9d8f9145a73c60c46c60bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ID: 50099999
 --- !u!54 &1996443782
 Rigidbody:
   m_ObjectHideFlags: 0
