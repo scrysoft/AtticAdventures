@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.33694, g: 325.04984, b: 430.2193, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -854,6 +854,12 @@ MonoBehaviour:
   - ItemDefinition: {fileID: -8815583931237348038, guid: a1bfb1af875d6db419f271dd13545256,
       type: 2}
     Amount: 1
+  - ItemDefinition: {fileID: 3458957999157895444, guid: a1bfb1af875d6db419f271dd13545256,
+      type: 2}
+    Amount: 1
+  - ItemDefinition: {fileID: 8420577731181468025, guid: a1bfb1af875d6db419f271dd13545256,
+      type: 2}
+    Amount: 4
   m_RemoveExceptions: []
 --- !u!114 &514368697
 MonoBehaviour:
@@ -980,7 +986,7 @@ MonoBehaviour:
   m_ContinuousCollisionDetection: 1
   m_ColliderLayerMask:
     serializedVersion: 2
-    m_Bits: 2415919099
+    m_Bits: 2365587699
   m_MaxCollisionCount: 100
   m_MaxSoftForceFrames: 100
   m_MaxMovementCollisionChecks: 5
