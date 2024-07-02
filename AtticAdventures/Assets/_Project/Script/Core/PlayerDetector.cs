@@ -20,8 +20,8 @@ namespace AtticAdventures.Core
 
         private void Awake()
         {
-            Player = GameObject.FindGameObjectWithTag("Player").transform; // Make sure to TAG the player!
-            PlayerHealth = Player.GetComponent<Health>();
+            // Player = GameObject.FindGameObjectWithTag("Player").transform; // Make sure to TAG the player!
+            // PlayerHealth = Player.GetComponent<Health>();
         }
 
         private void Start()
@@ -34,7 +34,8 @@ namespace AtticAdventures.Core
 
         public bool CanDetectPlayer()
         {
-            return detectionTimer.IsRunning || detectionStrategy.Execute(Player, transform, detectionTimer);
+            // return detectionTimer.IsRunning || detectionStrategy.Execute(Player, transform, detectionTimer);
+            return false;
         }
 
         public bool CanAttackPlayer()

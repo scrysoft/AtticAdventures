@@ -429,16 +429,26 @@ MonoBehaviour:
   loadingCanvas: {fileID: 1393997908}
   loadingCamera: {fileID: 2036129067}
   sceneGroups:
-  - GroupName: LevelNewController
+  - GroupName: TestRooms
     Scenes:
     - Reference:
         asset: {fileID: 102900000, guid: 94020e721e739a04891a26221517c8bd, type: 3}
         guid: 94020e721e739a04891a26221517c8bd
       SceneType: 0
     - Reference:
+        asset: {fileID: 102900000, guid: 340f453aa92941b4ba4de9a1fda49c87, type: 3}
+        guid: 340f453aa92941b4ba4de9a1fda49c87
+      SceneType: 5
+  - GroupName: LevelNewController
+    Scenes:
+    - Reference:
         asset: {fileID: 102900000, guid: fdc70cc200c53914e93f8d79270c15c8, type: 3}
         guid: fdc70cc200c53914e93f8d79270c15c8
       SceneType: 5
+    - Reference:
+        asset: {fileID: 102900000, guid: 94020e721e739a04891a26221517c8bd, type: 3}
+        guid: 94020e721e739a04891a26221517c8bd
+      SceneType: 0
     - Reference:
         asset: {fileID: 102900000, guid: a531736aa20c803479e8b0de6e568cfa, type: 3}
         guid: a531736aa20c803479e8b0de6e568cfa
@@ -447,12 +457,6 @@ MonoBehaviour:
         asset: {fileID: 102900000, guid: f524c16c8d9c38547a295eca7311620d, type: 3}
         guid: f524c16c8d9c38547a295eca7311620d
       SceneType: 5
-  - GroupName: Climbing
-    Scenes:
-    - Reference:
-        asset: {fileID: 102900000, guid: da6ae6026905b624c9ca70030211d8ad, type: 3}
-        guid: da6ae6026905b624c9ca70030211d8ad
-      SceneType: 0
 --- !u!1 &1393997904
 GameObject:
   m_ObjectHideFlags: 0

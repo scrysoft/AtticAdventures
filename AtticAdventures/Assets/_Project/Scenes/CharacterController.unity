@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 262.33694, g: 325.04984, b: 430.2193, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -229,6 +229,50 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &383850129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 383850130}
+  - component: {fileID: 383850131}
+  m_Layer: 0
+  m_Name: Test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &383850130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383850129}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &383850131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383850129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe1a2bc84af42745abc90e660fad2e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &414144832
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,7 +752,7 @@ GameObject:
   - component: {fileID: 514368691}
   - component: {fileID: 514368703}
   m_Layer: 31
-  m_Name: Atlas
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -793,11 +837,11 @@ MonoBehaviour:
   m_OnDeathEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ApplyFallDamage: 0
-  m_MinFallDamageHeight: 3
-  m_MinFallDamage: 1
-  m_MaxFallDamage: 50
-  m_DeathHeight: 20
+  m_ApplyFallDamage: 1
+  m_MinFallDamageHeight: 6
+  m_MinFallDamage: 20
+  m_MaxFallDamage: 100
+  m_DeathHeight: 26
   m_DamageCurve:
     serializedVersion: 2
     m_Curve:
@@ -1095,7 +1139,7 @@ MonoBehaviour:
   m_ContinuousCollisionDetection: 1
   m_ColliderLayerMask:
     serializedVersion: 2
-    m_Bits: 2365587699
+    m_Bits: 2348810483
   m_MaxCollisionCount: 100
   m_MaxSoftForceFrames: 100
   m_MaxMovementCollisionChecks: 5
@@ -1119,16 +1163,17 @@ MonoBehaviour:
   - rid: 7444518890196697093
   - rid: 7444518890196697094
   - rid: 7444518890196697095
-  - rid: 7444518841222430722
-  - rid: 7444518841798098951
+  - rid: 7444518841222430723
   - rid: 7444518841798098954
   - rid: 7444518841798098955
+  - rid: 7444518841222430722
+  - rid: 7444518841798098951
   - rid: 7444518841798098956
-  - rid: 7444518841222430723
   - rid: 7444518841222430724
   - rid: 7444518841222430725
   - rid: 7444518841222430728
   - rid: 7444518841222430729
+  - rid: 7759232709349867520
   m_ItemAbilities:
   - rid: 7444518841222430730
   - rid: 7444518841222430731
@@ -1298,7 +1343,7 @@ MonoBehaviour:
         m_ForceHold: 0.003
         m_ForceDampingHold: 0.5
         m_MaxAirborneJumpCount: 1
-        m_AirborneJumpForce: 0.6
+        m_AirborneJumpForce: 0.3
         m_AirborneJumpFrames: 10
         m_AirborneJumpAudioClipSet:
           m_AudioConfig: {fileID: 0}
@@ -2099,7 +2144,8 @@ MonoBehaviour:
         m_Enabled: 1
         m_StartType: 0
         m_StopType: 1
-        m_InputNames: []
+        m_InputNames:
+        - Jump
         m_WaitForDoublePressTapTimeout: 0
         m_LongPressDuration: 0.5
         m_WaitForLongPressRelease: 0
@@ -2141,7 +2187,7 @@ MonoBehaviour:
         m_AbilityMessageText: 
         m_AbilityMessageIcon: {fileID: 0}
         m_InspectorDescription: 
-        m_ObjectID: -1
+        m_ObjectID: 107
         m_LayerMask:
           serializedVersion: 2
           m_Bits: 16777216
@@ -2166,8 +2212,8 @@ MonoBehaviour:
           m_BlockList: []
           m_Default: 1
         m_Enabled: 1
-        m_StartType: 2
-        m_StopType: 4
+        m_StartType: 0
+        m_StopType: 1
         m_InputNames:
         - Jump
         m_WaitForDoublePressTapTimeout: 0
@@ -2296,7 +2342,7 @@ MonoBehaviour:
         m_AbilityMessageText: 
         m_AbilityMessageIcon: {fileID: 0}
         m_InspectorDescription: 
-        m_ObjectID: -1
+        m_ObjectID: 106
         m_LayerMask:
           serializedVersion: 2
           m_Bits: 33554432
@@ -2381,7 +2427,7 @@ MonoBehaviour:
           m_Preset: {fileID: 0}
           m_BlockList: []
           m_Default: 1
-        m_Enabled: 1
+        m_Enabled: 0
         m_StartType: 2
         m_StopType: 4
         m_InputNames:
@@ -2490,7 +2536,7 @@ MonoBehaviour:
           m_Preset: {fileID: 0}
           m_BlockList: []
           m_Default: 1
-        m_Enabled: 1
+        m_Enabled: 0
         m_StartType: 2
         m_StopType: 4
         m_InputNames:
@@ -2565,7 +2611,7 @@ MonoBehaviour:
           m_Preset: {fileID: 0}
           m_BlockList: []
           m_Default: 1
-        m_Enabled: 1
+        m_Enabled: 0
         m_StartType: 2
         m_StopType: 1
         m_InputNames:
@@ -2628,6 +2674,162 @@ MonoBehaviour:
         m_MoveWithObject: 0
         m_MaxHeight: 2
         m_HeightMultiplier: 1
+    - rid: 7759232709349867520
+      type: {class: AssistAim, ns: Opsive.UltimateCharacterController.Character.Abilities,
+        asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Aim
+          m_Preset: {fileID: 11400000, guid: 7d9977608fa141a4da838a951f95f825, type: 2}
+          m_BlockList: []
+          m_Default: 0
+        - m_Name: Use
+          m_Preset: {fileID: 11400000, guid: 077e49e285060a14c83cf6f65d01d266, type: 2}
+          m_BlockList: []
+          m_Default: 0
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Enabled: 1
+        m_StartType: 0
+        m_StopType: 1
+        m_InputNames: []
+        m_WaitForDoublePressTapTimeout: 0
+        m_LongPressDuration: 0.5
+        m_WaitForLongPressRelease: 0
+        m_AbilityStarter:
+          rid: -2
+        m_AbilityStopper:
+          rid: -2
+        m_AttributeModifier:
+          m_AttributeName: 
+          m_Amount: 0
+          m_AutoUpdate: 0
+          m_AutoUpdateStartDelay: 1
+          m_AutoUpdateInterval: 0.1
+          m_AutoUpdateDuration: -1
+        m_State: AssistAim
+        m_StateAppendItemIdentifierName: 0
+        m_AbilityIndexParameter: -1
+        m_StartAudioClipSet:
+          m_AudioConfig: {fileID: 0}
+          m_AudioClips: []
+        m_StopAudioClipSet:
+          m_AudioConfig: {fileID: 0}
+          m_AudioClips: []
+        m_AllowPositionalInput: 1
+        m_AllowRotationalInput: 1
+        m_UseGravity: 0
+        m_UseRootMotionPosition: 0
+        m_UseRootMotionRotation: 0
+        m_DetectHorizontalCollisions: 0
+        m_DetectVerticalCollisions: 0
+        m_DetectGroundCollisions: 0
+        m_AnimatorMotion: {fileID: 0}
+        m_StartEffectName: 
+        m_StartEffectIndex: -1
+        m_AllowEquippedSlotsMask: -1
+        m_AllowItemDefinitions: []
+        m_ImmediateUnequip: 0
+        m_ReequipSlots: 1
+        m_AbilityMessageText: 
+        m_AbilityMessageIcon: {fileID: 0}
+        m_InspectorDescription: 
+        m_AutoSelectTarget: 1
+        m_Radius: 10
+        m_Angle: 10
+        m_RequireLineOfSight: 1
+        m_CenterOffset: {x: 0, y: 0, z: 0}
+        m_DistanceInfluence:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 50
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        m_AngleInfluence:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 100
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        m_StickinessAngle: 180
+        m_StickinessScore: 10
+        m_TargetHumanoidBone: 0
+        m_HumanoidBoneTarget: 8
+        m_LookAtTarget: 0
+        m_TargetOffset: {x: 0, y: 0, z: 0}
+        m_RotateCharacterTowardsTarget: 1
+        m_RotateCameraTowardsTarget: 1
+        m_MoveCharacterTowardsTarget: 1
+        m_MinDistance: 2
+        m_MotorDistanceMultiplier:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 2
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        m_CanSwitchTargets: 0
+        m_SwitchTargetInputName: Horizontal
+        m_SwitchTargetMagnitude: 0.8
+        m_BreakForce: 1.5
+        m_HorizontalBreakForceInputName: Mouse X
+        m_VerticalBreakForceInputName: Mouse Y
+        m_StopSpeedChange: 1
 --- !u!54 &514368700
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2689,8 +2891,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514368689}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -5, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2698,7 +2900,7 @@ Transform:
   - {fileID: 1750353350}
   - {fileID: 1625658204}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!195 &514368703
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4977,6 +5179,18 @@ PrefabInstance:
       propertyPath: m_States.Array.data[0].m_Default
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1262460373735626, guid: b5bf2e4077598914b83fc5e4ca20f2f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1355036071681136, guid: b5bf2e4077598914b83fc5e4ca20f2f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609930378290692, guid: b5bf2e4077598914b83fc5e4ca20f2f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1814214236125630, guid: b5bf2e4077598914b83fc5e4ca20f2f4, type: 3}
       propertyPath: m_Name
       value: Monitors
@@ -6347,3 +6561,4 @@ SceneRoots:
   - {fileID: 1379203280}
   - {fileID: 514368702}
   - {fileID: 1100404800}
+  - {fileID: 383850130}
