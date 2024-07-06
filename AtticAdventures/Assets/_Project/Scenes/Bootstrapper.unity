@@ -429,16 +429,6 @@ MonoBehaviour:
   loadingCanvas: {fileID: 1393997908}
   loadingCamera: {fileID: 2036129067}
   sceneGroups:
-  - GroupName: TestRooms
-    Scenes:
-    - Reference:
-        asset: {fileID: 102900000, guid: 94020e721e739a04891a26221517c8bd, type: 3}
-        guid: 94020e721e739a04891a26221517c8bd
-      SceneType: 0
-    - Reference:
-        asset: {fileID: 102900000, guid: 340f453aa92941b4ba4de9a1fda49c87, type: 3}
-        guid: 340f453aa92941b4ba4de9a1fda49c87
-      SceneType: 5
   - GroupName: LevelNewController
     Scenes:
     - Reference:
@@ -456,6 +446,20 @@ MonoBehaviour:
     - Reference:
         asset: {fileID: 102900000, guid: f524c16c8d9c38547a295eca7311620d, type: 3}
         guid: f524c16c8d9c38547a295eca7311620d
+      SceneType: 5
+    - Reference:
+        asset: {fileID: 102900000, guid: 7fd46a3260e2b444f8eb9a561d4cd059, type: 3}
+        guid: 7fd46a3260e2b444f8eb9a561d4cd059
+      SceneType: 5
+  - GroupName: TestRooms
+    Scenes:
+    - Reference:
+        asset: {fileID: 102900000, guid: 94020e721e739a04891a26221517c8bd, type: 3}
+        guid: 94020e721e739a04891a26221517c8bd
+      SceneType: 0
+    - Reference:
+        asset: {fileID: 102900000, guid: 340f453aa92941b4ba4de9a1fda49c87, type: 3}
+        guid: 340f453aa92941b4ba4de9a1fda49c87
       SceneType: 5
 --- !u!1 &1393997904
 GameObject:
