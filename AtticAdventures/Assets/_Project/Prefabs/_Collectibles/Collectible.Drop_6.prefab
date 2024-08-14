@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1826189096071161140}
   - component: {fileID: 8345489583498994028}
   - component: {fileID: -7443332423657464144}
+  - component: {fileID: -4528076920286863686}
   m_Layer: 0
   m_Name: Collectible.Drop_6
   m_TagString: Untagged
@@ -52,6 +53,7 @@ MonoBehaviour:
   score: 1
   scoreChannel: {fileID: 11400000, guid: d99bf360e10b5b947a5ee60c0391a7b5, type: 2}
   moveSpeed: 20
+  initallyActive: 0
 --- !u!82 &1667178771904032406
 AudioSource:
   m_ObjectHideFlags: 0
@@ -219,6 +221,34 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.6
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &-4528076920286863686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3251059397716761499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2945100e5799e5c4facb963e4e8f72ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 2
+  onEventTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2836430952436717343}
+        m_TargetAssemblyTypeName: AtticAdventures.Core.Collectible, Assembly-CSharp
+        m_MethodName: SetActivity
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &4788207664327768752
 GameObject:
   m_ObjectHideFlags: 0

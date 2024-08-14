@@ -1,5 +1,4 @@
 using AtticAdventures.EventSystem;
-using TMPro;
 using UnityEngine;
 
 namespace AtticAdventures.Core
@@ -14,6 +13,13 @@ namespace AtticAdventures.Core
         private Transform playerTransform;
         private bool playerIsInRange = false;
 
+        [SerializeField] bool initallyActive = true;
+
+        public void SetActivity(bool value)
+        {
+            initallyActive = value;
+        }
+
         private void Start()
         {
             playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
@@ -21,15 +27,15 @@ namespace AtticAdventures.Core
 
         private void Update()
         {
-            if (playerIsInRange)
+            if (playerIsInRange && initallyActive)
             {
                 transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, moveSpeed * Time.deltaTime);
             }
         }
 
-        void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player"))
+            if (other.CompareTag("Player") && initallyActive)
             {
                 scoreChannel.Invoke(score);
                 Destroy(gameObject);
@@ -38,7 +44,7 @@ namespace AtticAdventures.Core
             if (other.CompareTag("Magnet"))
             {
                 bool isMagnetActive = other.GetComponent<Magnet>().GetActivity();
-                if(isMagnetActive) playerIsInRange = true;
+                if (isMagnetActive) playerIsInRange = true;
             }
         }
 

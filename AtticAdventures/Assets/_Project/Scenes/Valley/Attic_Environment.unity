@@ -375,13 +375,13 @@ MonoBehaviour:
     volumeMask: {fileID: 0}
     textureScrollingSpeed: {x: 0, y: 0, z: 0}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.005, y: 0.2, z: 0.005}
-    negativeFade: {x: 0.005, y: 0.2, z: 0.005}
-    m_EditorUniformFade: 2
-    m_EditorPositiveFade: {x: 0.00024999998, y: 0.01, z: 0.00024999998}
-    m_EditorNegativeFade: {x: 0.00024999998, y: 0.01, z: 0.00024999998}
+    positiveFade: {x: 0.0025, y: 0.025, z: 0.0025}
+    negativeFade: {x: 0.0025, y: 0.025, z: 0.0025}
+    m_EditorUniformFade: 1
+    m_EditorPositiveFade: {x: 0.00024999998, y: 0.0025, z: 0.00024999998}
+    m_EditorNegativeFade: {x: 0.00024999998, y: 0.0025, z: 0.00024999998}
     m_EditorAdvancedFade: 0
-    size: {x: 400, y: 10, z: 400}
+    size: {x: 400, y: 40, z: 400}
     invertFade: 0
     distanceFadeStart: 10000
     distanceFadeEnd: 10000
@@ -399,7 +399,7 @@ Transform:
   m_GameObject: {fileID: 504637568}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -150.9, y: -5, z: 114.5}
+  m_LocalPosition: {x: -150.9, y: -20, z: 114.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -872,7 +872,7 @@ Transform:
   m_GameObject: {fileID: 1030976268}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4.6765814, y: 4.7557697, z: 3.5626345}
+  m_LocalPosition: {x: -4.676583, y: 4.7557697, z: 3.5626354}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
