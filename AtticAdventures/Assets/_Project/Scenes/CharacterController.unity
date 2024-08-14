@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 262.33694, g: 325.04984, b: 430.2193, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1193,6 +1193,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_States:
+  - m_Name: ThirdPerson
+    m_Preset: {fileID: 11400000, guid: d83b6ff1e5dac7f4eb146704110ff4c5, type: 2}
+    m_BlockList: []
+    m_Default: 0
   - m_Name: MoveTowards
     m_Preset: {fileID: 11400000, guid: 69afbe578b168cd4f99b2873bfca1a8f, type: 2}
     m_BlockList: []
@@ -1309,9 +1313,11 @@ MonoBehaviour:
   - rid: 7444518841222430729
   - rid: 7759232709349867520
   m_ItemAbilities:
-  - rid: 7444518841222430730
-  - rid: 7444518841222430731
   - rid: 7444518841222430732
+  - rid: 7444518841222430730
+  - rid: 4172022428656992276
+  - rid: 7444518841222430731
+  - rid: 4172022428656992275
   - rid: 7444518841222430733
   - rid: 7444518841222430734
   - rid: 7444518841222430735
@@ -1344,6 +1350,143 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 4172022428656992275
+      type: {class: InAirMeleeUse, ns: Opsive.UltimateCharacterController.Character.Abilities.Items,
+        asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Enabled: 1
+        m_StartType: 2
+        m_StopType: 1
+        m_InputNames:
+        - Fire1
+        m_WaitForDoublePressTapTimeout: 0
+        m_LongPressDuration: 0.5
+        m_WaitForLongPressRelease: 0
+        m_AbilityStarter:
+          rid: -2
+        m_AbilityStopper:
+          rid: -2
+        m_AttributeModifier:
+          m_AttributeName: 
+          m_Amount: 0
+          m_AutoUpdate: 0
+          m_AutoUpdateStartDelay: 1
+          m_AutoUpdateInterval: 0.1
+          m_AutoUpdateDuration: -1
+        m_State: Use
+        m_StateAppendItemIdentifierName: 0
+        m_AbilityIndexParameter: -1
+        m_StartAudioClipSet:
+          m_AudioConfig: {fileID: 0}
+          m_AudioClips: []
+        m_StopAudioClipSet:
+          m_AudioConfig: {fileID: 0}
+          m_AudioClips: []
+        m_AllowPositionalInput: 1
+        m_AllowRotationalInput: 1
+        m_UseGravity: 0
+        m_UseRootMotionPosition: 0
+        m_UseRootMotionRotation: 0
+        m_DetectHorizontalCollisions: 0
+        m_DetectVerticalCollisions: 0
+        m_DetectGroundCollisions: 0
+        m_AnimatorMotion: {fileID: 0}
+        m_StartEffectName: 
+        m_StartEffectIndex: -1
+        m_AllowEquippedSlotsMask: -1
+        m_AllowItemDefinitions: []
+        m_ImmediateUnequip: 0
+        m_ReequipSlots: 1
+        m_AbilityMessageText: 
+        m_AbilityMessageIcon: {fileID: 0}
+        m_InspectorDescription: 
+        m_ItemStateIndex: 2
+        m_SlotID: -1
+        m_ActionID: 2
+        m_RotateTowardsLookSourceTarget: 1
+        m_BlockOverUI: 1
+        m_UpwardForce: {x: 0, y: 1, z: 0}
+        m_UpwardForceFrames: 4
+        m_DownwardForce: {x: 0, y: -15, z: 0}
+        m_DownwardForceFrames: 4
+        m_AllowInAirStop: 0
+        m_OnGroundedSubstateIndex: 11
+        m_GroundImpact: {fileID: 0}
+        m_GroundPositionCameraRecoil:
+          m_MinValue: {x: 0, y: 0, z: 0}
+          m_MaxValue: {x: 0, y: 0, z: 0}
+          m_MinMagnitude: {x: 0, y: 0, z: 0}
+        m_GroundRotationCameraRecoil:
+          m_MinValue: {x: -40, y: -40, z: 0}
+          m_MaxValue: {x: 40, y: 40, z: 0}
+          m_MinMagnitude: {x: 20, y: 20, z: 0}
+    - rid: 4172022428656992276
+      type: {class: MeleeCounterAttack, ns: Opsive.UltimateCharacterController.Character.Abilities.Items,
+        asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Enabled: 1
+        m_StartType: 2
+        m_StopType: 1
+        m_InputNames:
+        - Fire1
+        m_WaitForDoublePressTapTimeout: 0
+        m_LongPressDuration: 0.5
+        m_WaitForLongPressRelease: 0
+        m_AbilityStarter:
+          rid: -2
+        m_AbilityStopper:
+          rid: -2
+        m_AttributeModifier:
+          m_AttributeName: 
+          m_Amount: 0
+          m_AutoUpdate: 0
+          m_AutoUpdateStartDelay: 1
+          m_AutoUpdateInterval: 0.1
+          m_AutoUpdateDuration: -1
+        m_State: Use
+        m_StateAppendItemIdentifierName: 0
+        m_AbilityIndexParameter: -1
+        m_StartAudioClipSet:
+          m_AudioConfig: {fileID: 0}
+          m_AudioClips: []
+        m_StopAudioClipSet:
+          m_AudioConfig: {fileID: 0}
+          m_AudioClips: []
+        m_AllowPositionalInput: 1
+        m_AllowRotationalInput: 1
+        m_UseGravity: 0
+        m_UseRootMotionPosition: 0
+        m_UseRootMotionRotation: 0
+        m_DetectHorizontalCollisions: 0
+        m_DetectVerticalCollisions: 0
+        m_DetectGroundCollisions: 0
+        m_AnimatorMotion: {fileID: 0}
+        m_StartEffectName: 
+        m_StartEffectIndex: -1
+        m_AllowEquippedSlotsMask: -1
+        m_AllowItemDefinitions: []
+        m_ImmediateUnequip: 0
+        m_ReequipSlots: 1
+        m_AbilityMessageText: 
+        m_AbilityMessageIcon: {fileID: 0}
+        m_InspectorDescription: 
+        m_ItemStateIndex: 2
+        m_SlotID: -1
+        m_ActionID: 0
+        m_RotateTowardsLookSourceTarget: 1
+        m_BlockOverUI: 1
+        m_AttackDistance: 0.6
+        m_CounterAttackTimeFrame: 1
     - rid: 7444518841222430721
       type: {class: Adventure, ns: Opsive.UltimateCharacterController.ThirdPersonController.Character.MovementTypes,
         asm: Opsive.UltimateCharacterController}
@@ -1412,6 +1555,10 @@ MonoBehaviour:
         asm: Opsive.UltimateCharacterController}
       data:
         m_States:
+        - m_Name: DoubleJump
+          m_Preset: {fileID: 11400000, guid: 489a1f0589d5c0442a3377574df90337, type: 2}
+          m_BlockList: []
+          m_Default: 0
         - m_Name: Default
           m_Preset: {fileID: 0}
           m_BlockList: []
@@ -1473,7 +1620,8 @@ MonoBehaviour:
         m_JumpEvent:
           m_WaitForAnimationEvent: 1
           m_Duration: 0
-        m_JumpSurfaceImpact: {fileID: 0}
+        m_JumpSurfaceImpact: {fileID: 11400000, guid: ae3293091deec7540ad441d1d2ec21dd,
+          type: 2}
         m_ForceHold: 0.003
         m_ForceDampingHold: 0.5
         m_MaxAirborneJumpCount: 1
@@ -2236,7 +2384,7 @@ MonoBehaviour:
           m_AutoUpdateInterval: 0.1
           m_AutoUpdateDuration: -1
         m_State: Aim
-        m_StateAppendItemIdentifierName: 0
+        m_StateAppendItemIdentifierName: 1
         m_AbilityIndexParameter: -1
         m_StartAudioClipSet:
           m_AudioConfig: {fileID: 0}
