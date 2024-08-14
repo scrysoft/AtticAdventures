@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3033645238457829701}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.53, y: 3.77, z: -6.81}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -53,5 +53,5 @@ MonoBehaviour:
   - {fileID: 3251059397716761499, guid: bad55112dbd6e08419486aa23342147a, type: 3}
   - {fileID: 3251059397716761499, guid: 00d3f946aaf33c141af5e9ba7e59dff0, type: 3}
   numberOfObjectsToSpawn: 20
-  spawnRadius: 1
-  forceMagnitude: 10
+  spawnRadius: 2
+  forceMagnitude: 20
