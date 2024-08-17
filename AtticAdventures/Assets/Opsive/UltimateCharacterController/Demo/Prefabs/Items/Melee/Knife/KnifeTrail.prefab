@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8594487973479184024}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8590227451163112354
 MeshFilter:
@@ -98,9 +98,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MinDistance: 0.1
   m_Length: 0.1
-  m_MaxSliceCount: 10
+  m_MaxSliceCount: 6
   m_CurveSmoothness: 10
   m_CurveSteepness: 0.5
   m_StartColor: {r: 1, g: 1, b: 1, a: 1}
   m_EndColor: {r: 1, g: 1, b: 1, a: 1}
-  m_VisibilityTime: 0.25
+  m_VisibilityTime: 0.1
