@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 7993171530915941298}
   - component: {fileID: 6282799759040737773}
   - component: {fileID: 6771493987721376497}
+  - component: {fileID: 6351622866669307088}
   m_Layer: 0
   m_Name: FuseBox
   m_TagString: Untagged
@@ -174,6 +175,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6351622866669307088
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3113015365919758765}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5586514819798486678, guid: 816605d8706f9874185b4120cb38264a, type: 3}
 --- !u!1 &8708829980740021078
 GameObject:
   m_ObjectHideFlags: 0

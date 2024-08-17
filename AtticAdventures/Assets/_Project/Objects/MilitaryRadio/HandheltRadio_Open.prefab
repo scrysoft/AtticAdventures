@@ -1011,6 +1011,7 @@ GameObject:
   - component: {fileID: 6846120025323353839}
   - component: {fileID: 3745231371585064649}
   - component: {fileID: 3303973476327352389}
+  - component: {fileID: 1747584339339764604}
   m_Layer: 0
   m_Name: HandheltRadio_Open
   m_TagString: Untagged
@@ -1107,6 +1108,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1747584339339764604
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4382285331390940356}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.008758804, y: 0.004288463, z: 0.018420752}
+  m_Center: {x: 0.0007043176, y: 0.00036652974, z: 0.0021248832}
 --- !u!1 &4968792961167658421
 GameObject:
   m_ObjectHideFlags: 0
