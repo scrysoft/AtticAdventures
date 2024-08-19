@@ -230,7 +230,7 @@ MonoBehaviour:
     - rid: 7444518894382874629
   m_ProjectileModuleGroup:
     m_Modules:
-    - rid: 7444518894382874630
+    - rid: 4172022548776353811
   m_FireEffectsModuleGroup:
     m_Modules:
     - rid: 7444518894382874631
@@ -253,6 +253,20 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 4172022548776353811
+      type: {class: BasicProjectile, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Shootable,
+        asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_ID: -1
+        m_Name: 
     - rid: 7444518894382874626
       type: {class: Repeat, ns: Opsive.UltimateCharacterController.Items.Actions.Modules,
         asm: Opsive.UltimateCharacterController}
@@ -365,20 +379,6 @@ MonoBehaviour:
         m_ID: -1
         m_Name: 
         m_ClipSize: 1
-    - rid: 7444518894382874630
-      type: {class: BasicProjectile, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Shootable,
-        asm: Opsive.UltimateCharacterController}
-      data:
-        m_States:
-        - m_Name: Default
-          m_Preset: {fileID: 0}
-          m_BlockList: []
-          m_Default: 1
-        m_Bindings:
-          m_Bindings: []
-        m_Enabled: 1
-        m_ID: -1
-        m_Name: 
     - rid: 7444518894382874631
       type: {class: MuzzleEffect, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Shootable,
         asm: Opsive.UltimateCharacterController}
@@ -393,7 +393,8 @@ MonoBehaviour:
         m_Enabled: 1
         m_ID: -1
         m_Name: 
-        m_MuzzleFlash: {fileID: 0}
+        m_MuzzleFlash: {fileID: 6756225262336711168, guid: 45d26fba8aeefca4a820e97b9f8ad09a,
+          type: 3}
         m_PoolMuzzleFlash: 1
         m_MuzzleLocation:
           m_FirstPerson:
@@ -833,7 +834,7 @@ Transform:
   m_GameObject: {fileID: 3765332925689844875}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1.552, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -864,7 +865,7 @@ Transform:
   m_GameObject: {fileID: 6472527871634471283}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.791, z: -0.243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1048,7 +1049,7 @@ Transform:
   m_GameObject: {fileID: 9125485627928703521}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.25, z: 0}
+  m_LocalPosition: {x: 0, y: 1.532, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
