@@ -1499,7 +1499,7 @@ MonoBehaviour:
   m_ContinuousCollisionDetection: 1
   m_ColliderLayerMask:
     serializedVersion: 2
-    m_Bits: 2348810483
+    m_Bits: 2147483699
   m_MaxCollisionCount: 100
   m_MaxSoftForceFrames: 100
   m_MaxMovementCollisionChecks: 5
@@ -1519,6 +1519,8 @@ MonoBehaviour:
   m_MovementTypes:
   - rid: 7444518841222430721
   m_Abilities:
+  - rid: 7444518841222430729
+  - rid: 4172022620829777921
   - rid: 7444518841222430726
   - rid: 7444518890196697093
   - rid: 7444518890196697094
@@ -1532,8 +1534,9 @@ MonoBehaviour:
   - rid: 7444518841222430724
   - rid: 7444518841222430725
   - rid: 7444518841222430728
-  - rid: 7444518841222430729
+  - rid: 4172022620829777920
   - rid: 7759232709349867520
+  - rid: 4172022620829777925
   m_ItemAbilities:
   - rid: 7444518841222430732
   - rid: 7444518841222430730
@@ -1709,6 +1712,195 @@ MonoBehaviour:
         m_BlockOverUI: 1
         m_AttackDistance: 0.6
         m_CounterAttackTimeFrame: 1
+    - rid: 4172022620829777920
+      type: {class: Slide, ns: Opsive.UltimateCharacterController.Character.Abilities,
+        asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Enabled: 1
+        m_StartType: 0
+        m_StopType: 0
+        m_InputNames: []
+        m_WaitForDoublePressTapTimeout: 0
+        m_LongPressDuration: 0.5
+        m_WaitForLongPressRelease: 0
+        m_AbilityStarter:
+          rid: -2
+        m_AbilityStopper:
+          rid: -2
+        m_AttributeModifier:
+          m_AttributeName: 
+          m_Amount: 0
+          m_AutoUpdate: 0
+          m_AutoUpdateStartDelay: 1
+          m_AutoUpdateInterval: 0.1
+          m_AutoUpdateDuration: -1
+        m_State: 
+        m_StateAppendItemIdentifierName: 0
+        m_AbilityIndexParameter: -1
+        m_StartAudioClipSet:
+          m_AudioConfig: {fileID: 0}
+          m_AudioClips: []
+        m_StopAudioClipSet:
+          m_AudioConfig: {fileID: 0}
+          m_AudioClips: []
+        m_AllowPositionalInput: 1
+        m_AllowRotationalInput: 1
+        m_UseGravity: 0
+        m_UseRootMotionPosition: 0
+        m_UseRootMotionRotation: 0
+        m_DetectHorizontalCollisions: 0
+        m_DetectVerticalCollisions: 0
+        m_DetectGroundCollisions: 0
+        m_AnimatorMotion: {fileID: 0}
+        m_StartEffectName: 
+        m_StartEffectIndex: -1
+        m_AllowEquippedSlotsMask: -1
+        m_AllowItemDefinitions: []
+        m_ImmediateUnequip: 0
+        m_ReequipSlots: 1
+        m_AbilityMessageText: 
+        m_AbilityMessageIcon: {fileID: 0}
+        m_InspectorDescription: 
+        m_SlideLimit:
+          m_MinValue: 50
+          m_MaxValue: 89
+        m_EdgeSlideLimit: 30
+        m_Acceleration: 0.14
+        m_MaxSlideSpeed: 0.54
+        m_SlideDamping: 0.08
+        m_OverrideUpDirection: {x: 0, y: 0, z: 0}
+    - rid: 4172022620829777921
+      type: {class: Die, ns: Opsive.UltimateCharacterController.Character.Abilities,
+        asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Enabled: 1
+        m_StartType: 1
+        m_StopType: 1
+        m_InputNames: []
+        m_WaitForDoublePressTapTimeout: 0
+        m_LongPressDuration: 0.5
+        m_WaitForLongPressRelease: 0
+        m_AbilityStarter:
+          rid: -2
+        m_AbilityStopper:
+          rid: -2
+        m_AttributeModifier:
+          m_AttributeName: 
+          m_Amount: 0
+          m_AutoUpdate: 0
+          m_AutoUpdateStartDelay: 1
+          m_AutoUpdateInterval: 0.1
+          m_AutoUpdateDuration: -1
+        m_State: Death
+        m_StateAppendItemIdentifierName: 0
+        m_AbilityIndexParameter: 4
+        m_StartAudioClipSet:
+          m_AudioConfig: {fileID: 0}
+          m_AudioClips: []
+        m_StopAudioClipSet:
+          m_AudioConfig: {fileID: 0}
+          m_AudioClips: []
+        m_AllowPositionalInput: 1
+        m_AllowRotationalInput: 1
+        m_UseGravity: 2
+        m_UseRootMotionPosition: 0
+        m_UseRootMotionRotation: 0
+        m_DetectHorizontalCollisions: 0
+        m_DetectVerticalCollisions: 0
+        m_DetectGroundCollisions: 0
+        m_AnimatorMotion: {fileID: 0}
+        m_StartEffectName: 
+        m_StartEffectIndex: -1
+        m_AllowEquippedSlotsMask: -1
+        m_AllowItemDefinitions: []
+        m_ImmediateUnequip: 0
+        m_ReequipSlots: 1
+        m_AbilityMessageText: 
+        m_AbilityMessageIcon: {fileID: 0}
+        m_InspectorDescription: 
+        m_CameraRotationalForce: {x: 0, y: 0, z: 0.75}
+        m_DisableColliders: 1
+    - rid: 4172022620829777925
+      type: {class: LookAt, ns: Opsive.UltimateCharacterController.Character.Abilities,
+        asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Enabled: 1
+        m_StartType: 0
+        m_StopType: 1
+        m_InputNames: []
+        m_WaitForDoublePressTapTimeout: 0
+        m_LongPressDuration: 0.5
+        m_WaitForLongPressRelease: 0
+        m_AbilityStarter:
+          rid: -2
+        m_AbilityStopper:
+          rid: -2
+        m_AttributeModifier:
+          m_AttributeName: 
+          m_Amount: 0
+          m_AutoUpdate: 0
+          m_AutoUpdateStartDelay: 1
+          m_AutoUpdateInterval: 0.1
+          m_AutoUpdateDuration: -1
+        m_State: 
+        m_StateAppendItemIdentifierName: 0
+        m_AbilityIndexParameter: -1
+        m_StartAudioClipSet:
+          m_AudioConfig: {fileID: 0}
+          m_AudioClips: []
+        m_StopAudioClipSet:
+          m_AudioConfig: {fileID: 0}
+          m_AudioClips: []
+        m_AllowPositionalInput: 1
+        m_AllowRotationalInput: 1
+        m_UseGravity: 0
+        m_UseRootMotionPosition: 0
+        m_UseRootMotionRotation: 0
+        m_DetectHorizontalCollisions: 0
+        m_DetectVerticalCollisions: 0
+        m_DetectGroundCollisions: 0
+        m_AnimatorMotion: {fileID: 0}
+        m_StartEffectName: 
+        m_StartEffectIndex: -1
+        m_AllowEquippedSlotsMask: -1
+        m_AllowItemDefinitions: []
+        m_ImmediateUnequip: 0
+        m_ReequipSlots: 1
+        m_AbilityMessageText: 
+        m_AbilityMessageIcon: {fileID: 0}
+        m_InspectorDescription: 
+        m_ObjectDetection: 1
+        m_DetectLayers:
+          serializedVersion: 2
+          m_Bits: 2147483671
+        m_UseLookPosition: 0
+        m_UseLookDirection: 1
+        m_AngleThreshold: 360
+        m_ObjectID: 8
+        m_CastDistance: 1
+        m_CastFrameInterval: 0
+        m_CastOffset: {x: 0, y: 1, z: 0}
+        m_TriggerInteraction: 1
+        m_SpherecastRadius: 0.5
+        m_MaxTriggerObjectCount: 10
+        m_MoveWithObject: 0
+        m_FieldOfView: 160
+        m_Origin: {fileID: 0}
     - rid: 7444518841222430721
       type: {class: Adventure, ns: Opsive.UltimateCharacterController.ThirdPersonController.Character.MovementTypes,
         asm: Opsive.UltimateCharacterController}
@@ -3242,7 +3434,7 @@ MonoBehaviour:
         m_InspectorDescription: 
         m_AutoSelectTarget: 1
         m_Radius: 10
-        m_Angle: 10
+        m_Angle: 90
         m_RequireLineOfSight: 1
         m_CenterOffset: {x: 0, y: 0, z: 0}
         m_DistanceInfluence:
@@ -3299,9 +3491,9 @@ MonoBehaviour:
         m_HumanoidBoneTarget: 8
         m_LookAtTarget: 0
         m_TargetOffset: {x: 0, y: 0, z: 0}
-        m_RotateCharacterTowardsTarget: 1
-        m_RotateCameraTowardsTarget: 1
-        m_MoveCharacterTowardsTarget: 1
+        m_RotateCharacterTowardsTarget: 0
+        m_RotateCameraTowardsTarget: 0
+        m_MoveCharacterTowardsTarget: 0
         m_MinDistance: 2
         m_MotorDistanceMultiplier:
           serializedVersion: 2
@@ -5869,6 +6061,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_States:
+  - m_Name: Aim
+    m_Preset: {fileID: 11400000, guid: 125fdbf554277614c98954f15a007234, type: 2}
+    m_BlockList: []
+    m_Default: 0
   - m_Name: MyBody
     m_Preset: {fileID: 11400000, guid: 437d7dfc915835144a0610bf988455d8, type: 2}
     m_BlockList: []
@@ -5890,7 +6086,7 @@ MonoBehaviour:
   m_UpperBodyLayerIndex: 4
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 268435401
+    m_Bits: 1
   m_LookAtOffset: {x: 0, y: 0, z: 0}
   m_LookAtBodyWeight: 0.025
   m_LookAtHeadWeight: 0.2
@@ -5977,7 +6173,7 @@ MonoBehaviour:
     m_BlockList: []
     m_Default: 1
   m_SurfaceImpact: {fileID: 11400000, guid: 8d265f95d76979647ae3d90f06c88211, type: 2}
-  m_FootstepMode: 0
+  m_FootstepMode: 1
   m_Feet:
   - m_Object: {fileID: 1525308040}
     m_Group: 0
