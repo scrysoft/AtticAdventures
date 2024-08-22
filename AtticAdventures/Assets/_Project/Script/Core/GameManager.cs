@@ -6,7 +6,7 @@ namespace AtticAdventures.Core
     {
         public static GameManager Instance { get; private set; }
 
-        public int Score { get; private set; }
+        private int spawnPointIndex = 0;
 
         private void Awake()
         {
@@ -20,9 +20,14 @@ namespace AtticAdventures.Core
             }
         }
 
-        public void AddScore(int score)
+        public void SetSpawnPointIndex(int value)
         {
-            Score += score;
+            spawnPointIndex = value;
+        }
+
+        public int GetSpawnPointIndex()
+        {
+            return spawnPointIndex;
         }
     }
 }

@@ -23,7 +23,7 @@ namespace AtticAdventures.UI
         {
             // Make sure all logic has run before updating the score
             yield return null;
-            scoreText.text = GameManager.Instance.Score.ToString();
+            // scoreText.text = GameManager.Instance.Score.ToString();
         }
     }
 }
