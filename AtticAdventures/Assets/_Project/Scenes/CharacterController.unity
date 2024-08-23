@@ -1179,8 +1179,8 @@ MonoBehaviour:
     m_Preset: {fileID: 0}
     m_BlockList: []
     m_Default: 1
-  m_PositioningMode: 1
-  m_Grouping: -1
+  m_PositioningMode: 2
+  m_Grouping: 0
   m_MinRespawnTime: 2
   m_MaxRespawnTime: 3
   m_ScheduleRespawnOnDeath: 1
@@ -7026,6 +7026,7 @@ MonoBehaviour:
   - {fileID: 136664396}
   - {fileID: 197695751}
   player: {fileID: 514368702}
+  respawnPoint: {fileID: 1530708260}
 --- !u!4 &1402358760
 Transform:
   m_ObjectHideFlags: 0
@@ -8134,6 +8135,63 @@ CapsuleCollider:
   m_Height: 0.46098068
   m_Direction: 1
   m_Center: {x: 0, y: 0.23049034, z: 0}
+--- !u!1 &1530708259
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1530708260}
+  - component: {fileID: 1530708261}
+  m_Layer: 0
+  m_Name: RespawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1530708260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530708259}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1530708261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530708259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c3920022c7fba4bb45557e85435be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Grouping: 0
+  m_Shape: 0
+  m_Size: 0
+  m_RandomShapeSpawn: 1
+  m_GroundSnapHeight: 0
+  m_RandomDirection: 0
+  m_CheckForObstruction: 0
+  m_MaxCollisionCount: 20
+  m_ObstructionLayers:
+    serializedVersion: 2
+    m_Bits: 2147483696
+  m_PlacementAttempts: 10
+  m_GizmoColor: {r: 1, g: 0, b: 0, a: 0.3}
 --- !u!1 &1549062502
 GameObject:
   m_ObjectHideFlags: 0
@@ -10390,3 +10448,4 @@ SceneRoots:
   - {fileID: 1100404800}
   - {fileID: 383850130}
   - {fileID: 1402358760}
+  - {fileID: 1530708260}

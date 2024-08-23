@@ -8,12 +8,14 @@ namespace AtticAdventures.Core
         [SerializeField] Transform[] spawnPoints = null;
 
         [SerializeField] Transform player = null;
+        [SerializeField] Transform respawnPoint = null;
 
         private void Start()
         {
             int spawnPointIndex = GameManager.Instance.GetSpawnPointIndex();
 
             Vector3 spawnPoint = spawnPoints[spawnPointIndex].position;
+            respawnPoint.position = spawnPoint;
 
             if (player != null)
             {
