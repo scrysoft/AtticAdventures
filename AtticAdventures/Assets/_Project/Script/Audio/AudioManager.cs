@@ -42,7 +42,22 @@ namespace AtticAdventures.Audio
                 return;
             }
 
+            Debug.Log(s.source.clip.name);
             s.source.Play();
+        }
+
+        public void StopMusic(string name)
+        {
+            Sound s = Array.Find(music, sound => sound.name == name);
+
+            if (s == null)
+            {
+                Debug.LogWarning("Sound: " + name + " not found in Music Sources.");
+                return;
+            }
+
+            Debug.Log(s.source.clip.name);
+            s.source.Stop();
         }
 
         public void PlaySFX(string name)

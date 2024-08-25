@@ -13,8 +13,12 @@ namespace AtticAdventures.SpawnSystem
         private CountdownTimer spawnTimer;
         private int counter;
 
+        [SerializeField] bool spawnAtStart = true;
+
         protected override void Awake()
         {
+            if (spawnAtStart == false) return;
+
             base.Awake();
 
             spawner = new EntitySpawner<Collectible>(
@@ -22,6 +26,8 @@ namespace AtticAdventures.SpawnSystem
                 spawnPointStrategy);
 
             spawnTimer = new CountdownTimer(spawnInterval);
+
+
             spawnTimer.OnTimerStop += () =>
             {
                 if(counter++ >= spawnPoints.Length)
