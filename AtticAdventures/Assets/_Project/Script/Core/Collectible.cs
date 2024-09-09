@@ -11,6 +11,8 @@ namespace AtticAdventures.Core
         [SerializeField] float moveSpeed = 20f;
 
         private Transform playerTransform;
+        [SerializeField] Vector3 offSet = new Vector3(0, 1f, 0);
+
         private bool playerIsInRange = false;
 
         [SerializeField] bool initallyActive = true;
@@ -29,7 +31,7 @@ namespace AtticAdventures.Core
         {
             if (playerIsInRange && initallyActive)
             {
-                transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, moveSpeed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, playerTransform.position + offSet, moveSpeed * Time.deltaTime);
             }
         }
 
