@@ -1665,6 +1665,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3123030193983552752}
   - component: {fileID: 3083746450904951652}
+  - component: {fileID: 5742477305518369025}
   m_Layer: 0
   m_Name: soldier_8
   m_TagString: Untagged
@@ -1717,18 +1718,38 @@ Animation:
   m_GameObject: {fileID: 3117002631525980818}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400032, guid: b69d362dda29cbe41a4af495b4fd60c7, type: 3}
+  m_Animation: {fileID: 0}
   m_Animations:
-  - {fileID: 7400058, guid: b69d362dda29cbe41a4af495b4fd60c7, type: 3}
-  - {fileID: 7400064, guid: b69d362dda29cbe41a4af495b4fd60c7, type: 3}
-  - {fileID: 7400052, guid: b69d362dda29cbe41a4af495b4fd60c7, type: 3}
-  - {fileID: 7400042, guid: b69d362dda29cbe41a4af495b4fd60c7, type: 3}
-  - {fileID: 7400076, guid: b69d362dda29cbe41a4af495b4fd60c7, type: 3}
-  - {fileID: 7400032, guid: b69d362dda29cbe41a4af495b4fd60c7, type: 3}
+  - {fileID: 7400000, guid: b04444c4e27c0654aa7b4d05bb0cd194, type: 2}
+  - {fileID: 7400000, guid: d4aa87aaf40877749b3322456d9f3023, type: 2}
+  - {fileID: 7400000, guid: 4a2f4108c204d1f4d821b128b637eea6, type: 2}
+  - {fileID: 7400000, guid: 7488849451572c143b60803a6562a78e, type: 2}
+  - {fileID: 7400000, guid: cc47d77960078da41b364284887062e2, type: 2}
+  - {fileID: 7400000, guid: 6160f92799b153046add585efa25f329, type: 2}
+  - {fileID: 7400000, guid: 59705a55617bb5544b6a03eab3153edb, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &5742477305518369025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3117002631525980818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9ebb868b1d971f4588fb8973dafe3e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationComponent: {fileID: 0}
+  navMeshAgent: {fileID: 0}
+  idleName: B_idle
+  deathName: B_dead
+  hitName: A_hit
+  walkName: A_walk
+  walkAnimationSpeed: 1.5
 --- !u!1 &3117013585492288670
 GameObject:
   m_ObjectHideFlags: 0
@@ -7211,8 +7232,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startWhenEnabled: 1
   asynchronousLoad: 0
-  pauseWhenDisabled: 0
-  restartWhenComplete: 0
+  pauseWhenDisabled: 1
+  restartWhenComplete: 1
   logTaskChanges: 0
   group: 0
   resetValuesOnRestart: 0
