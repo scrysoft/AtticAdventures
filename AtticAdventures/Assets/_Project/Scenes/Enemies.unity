@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 262.33694, g: 325.04984, b: 430.2193, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -261,15 +261,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy.MachinGun
       objectReference: {fileID: 0}
-    - target: {fileID: 8421625424995250949, guid: 271d03355f68dfe42885cffbb5d646c2,
+    - target: {fileID: 4398441882110203246, guid: 271d03355f68dfe42885cffbb5d646c2,
         type: 3}
-      propertyPath: m_AnchorMax.x
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8421625424995250949, guid: 271d03355f68dfe42885cffbb5d646c2,
         type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421625424995250949, guid: 271d03355f68dfe42885cffbb5d646c2,
+        type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -286,23 +291,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1951553815195580871, guid: 898aab0fee382764ba199ba688d24244,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1951553815195580871, guid: 898aab0fee382764ba199ba688d24244,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1951553815195580871, guid: 898aab0fee382764ba199ba688d24244,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1951553815195580871, guid: 898aab0fee382764ba199ba688d24244,
-        type: 3}
       propertyPath: m_LocalPosition.x
-      value: -96.5
+      value: -35.16
       objectReference: {fileID: 0}
     - target: {fileID: 1951553815195580871, guid: 898aab0fee382764ba199ba688d24244,
         type: 3}
@@ -312,7 +302,7 @@ PrefabInstance:
     - target: {fileID: 1951553815195580871, guid: 898aab0fee382764ba199ba688d24244,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20.1
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 1951553815195580871, guid: 898aab0fee382764ba199ba688d24244,
         type: 3}
@@ -364,8 +354,7 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7559084259077040709, guid: 898aab0fee382764ba199ba688d24244, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
