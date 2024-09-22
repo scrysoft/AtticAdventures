@@ -1912,7 +1912,7 @@ MonoBehaviour:
   m_Invincible: 0
   m_TimeInvincibleAfterSpawn: 0
   m_HealthAttributeName: Health
-  m_ShieldAttributeName: Stamina
+  m_ShieldAttributeName: 
   m_Hitboxes: []
   m_MaxHitboxCollisionCount: 10
   m_SpawnedObjectsOnDeath: []
@@ -10946,7 +10946,6 @@ GameObject:
   - component: {fileID: 2018883829}
   - component: {fileID: 2018883832}
   - component: {fileID: 2018883831}
-  - component: {fileID: 2018883830}
   m_Layer: 5
   m_Name: BeadsItem
   m_TagString: Untagged
@@ -10975,33 +10974,6 @@ RectTransform:
   m_AnchoredPosition: {x: -25, y: -55}
   m_SizeDelta: {x: 136.8362, y: 50}
   m_Pivot: {x: 1, y: 1}
---- !u!114 &2018883830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2018883828}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c91328812a38fa4e8d06b81b3e96154, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_States:
-  - m_Name: Default
-    m_Preset: {fileID: 0}
-    m_BlockList: []
-    m_Default: 1
-  m_Character: {fileID: 514368689}
-  m_AttachToCamera: 1
-  m_Visible: 1
-  m_PrimaryCount:
-    m_UnityText: {fileID: 0}
-    m_TextMeshProText: {fileID: 902094933}
-  m_ItemDefinition: {fileID: 114074367643677680, guid: 5481010ef14c32f4cb7b6661b0c59fb4,
-    type: 2}
-  m_AlwaysVisible: 1
-  m_VisibleOnDeath: 0
 --- !u!114 &2018883831
 MonoBehaviour:
   m_ObjectHideFlags: 0

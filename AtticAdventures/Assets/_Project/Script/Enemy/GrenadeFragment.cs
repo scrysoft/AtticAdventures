@@ -26,7 +26,7 @@ public class GrenadeFragment : MonoBehaviour
 
         Vector3 spawnPosition = collision.contacts[0].point;
 
-        Instantiate(explosion, spawnPosition, Quaternion.identity);
+        Opsive.Shared.Game.ObjectPoolBase.Instantiate(explosion, spawnPosition, Quaternion.identity);
 
         RaycastHit hit;
         if (Physics.Raycast(spawnPosition + Vector3.up * 2f, Vector3.down, out hit))
