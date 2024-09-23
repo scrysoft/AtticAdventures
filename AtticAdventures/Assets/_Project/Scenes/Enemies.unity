@@ -371,17 +371,17 @@ PrefabInstance:
     - target: {fileID: 4398441882110203246, guid: 898aab0fee382764ba199ba688d24244,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8421625424995250949, guid: 898aab0fee382764ba199ba688d24244,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8421625424995250949, guid: 898aab0fee382764ba199ba688d24244,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -600,6 +600,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy.Mortar
       objectReference: {fileID: 0}
+    - target: {fileID: 4398441882110203246, guid: 3e1fc24a2bccc3e4aa9e94635839d6bc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7293335052791677932, guid: 3e1fc24a2bccc3e4aa9e94635839d6bc,
         type: 3}
       propertyPath: mBehaviorSource.mTaskData.JSONSerialization
@@ -657,12 +662,12 @@ PrefabInstance:
     - target: {fileID: 8421625424995250949, guid: 3e1fc24a2bccc3e4aa9e94635839d6bc,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8421625424995250949, guid: 3e1fc24a2bccc3e4aa9e94635839d6bc,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
