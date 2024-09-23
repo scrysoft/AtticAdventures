@@ -9,6 +9,7 @@ public class Mine : MonoBehaviour
 
     [SerializeField] float delay = 2.0f;
     public GameObject decalProjector;
+    public GameObject decalProjectorRing;
 
     [SerializeField] GameObject blinkingLightObject;
     [SerializeField] float warningBlinkTimeFactor = 4f;
@@ -23,7 +24,7 @@ public class Mine : MonoBehaviour
 
     private void ToogleDecalProjector(bool value)
     {
-        if (decalProjector == null) return;
+        if (decalProjector == null && decalProjectorRing == null) return;
 
         if (value == false)
         {
@@ -31,7 +32,8 @@ public class Mine : MonoBehaviour
         }
 
         decalProjector.SetActive(value);
-    }
+        decalProjectorRing.SetActive(value);
+}
 
     private void OnTriggerEnter(Collider other)
     {

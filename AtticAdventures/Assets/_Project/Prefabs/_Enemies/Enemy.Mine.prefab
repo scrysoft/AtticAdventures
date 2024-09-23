@@ -173,7 +173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1498665089731885485
 Transform:
   m_ObjectHideFlags: 0
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 241b44902a5e23e4ebd593fa925043c0, type: 2}
+  m_Material: {fileID: 2100000, guid: be0f4b1858505694ca8628958f8fecf1, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
   m_StartAngleFade: 180
@@ -288,6 +288,7 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 180702, guid: 37799c15ea5d54d439b82dea30a8e67c, type: 3}
   delay: 2
   decalProjector: {fileID: 3851472420842089222}
+  decalProjectorRing: {fileID: 5089885765248615944}
   blinkingLightObject: {fileID: 4052560071475627151}
   warningBlinkTimeFactor: 4
 --- !u!1001 &6437604090617028467
