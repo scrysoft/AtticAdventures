@@ -1,17 +1,17 @@
+using DG.Tweening;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
 
 public class DecalSizeAnimator : MonoBehaviour
 {
-    public DecalProjector decalProjector; // Dein Decal Projector
-    public float duration = 2f; // Zeitspanne für das Wachstum
+    public DecalProjector decalProjector;
+    public float duration = 2f;
 
     [SerializeField] Vector3 initialSize = new Vector3(2f, 2f, 40f);
 
-    void Start()
+    void OnEnable()
     {
-        // Starte die Coroutine zum Animieren
         StartCoroutine(AnimateDecalSize());
     }
 
@@ -21,16 +21,19 @@ public class DecalSizeAnimator : MonoBehaviour
 
         while (elapsedTime < duration)
         {
-            // Berechne den progressiven Wert für Ease-In
             float t = elapsedTime / duration;
-            float easedT = t * t; // Quadratische Ease-In
+            float easedT = t * t;
             decalProjector.size = Vector3.Lerp(Vector3.zero, initialSize, easedT);
 
             elapsedTime += Time.deltaTime;
-            yield return null; // Warten bis zum nächsten Frame
+            yield return null;
         }
 
-        // Stelle sicher, dass die Größe am Ende exakt die initiale Größe hat
         decalProjector.size = initialSize;
+    }
+
+    public void ResetSize()
+    {
+        decalProjector.size = new Vector3(0f, 0f, 40f);
     }
 }
