@@ -246,16 +246,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75cca15b061f92a499d880aae8439b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  initialSpeed: 12
+  speed: 8
+  initialSpeed: 10
   accelerationTime: 1
-  rotateSpeed: 200
-  lifeTime: 4
-  homingAccuracy: 0.5
+  rotateSpeed: 6
+  lifeTime: 3
+  homingAccuracy: 1
   explosionPrefab: {fileID: 1707519472764412, guid: 99be94b6ffbb48b48b053a92e219c6ef,
     type: 3}
+  otherCollisionPrefab: {fileID: 1027697777517218, guid: 628d050c815a3a3448ce1dcdf0578f21,
+    type: 3}
   targetOffset: {x: 0, y: 1.25, z: 0}
-  fallSpeed: 4
+  fallSpeed: 6
 --- !u!114 &7583567615417230809
 MonoBehaviour:
   m_ObjectHideFlags: 0

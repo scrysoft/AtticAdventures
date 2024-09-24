@@ -9,6 +9,7 @@ public class HomingMissile : MonoBehaviour
     public float lifeTime = 10f;
     public float homingAccuracy = 1f;
     public GameObject explosionPrefab;
+    public GameObject otherCollisionPrefab;
     public Vector3 targetOffset = Vector3.zero;
     public float fallSpeed = 50f;
 
@@ -21,12 +22,10 @@ public class HomingMissile : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
         currentSpeed = initialSpeed;
         accelerationTimer = accelerationTime;
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-
         if (player != null)
         {
             target = player.transform;
@@ -76,8 +75,25 @@ public class HomingMissile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision != null || isFalling)
-        Explode();
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            return;
+        }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Explode();
+        }
+        else
+        {
+            if (otherCollisionPrefab != null)
+            {
+                Quaternion upwardRotation = Quaternion.Euler(90f, 0f, 0f);
+                Instantiate(otherCollisionPrefab, transform.position, upwardRotation);
+            }
+
+            Explode();
+        }
     }
 
     public void Explode()

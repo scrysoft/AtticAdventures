@@ -233,7 +233,7 @@ PrefabInstance:
     - target: {fileID: 1951553815195580871, guid: 271d03355f68dfe42885cffbb5d646c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33
+      value: -31.91
       objectReference: {fileID: 0}
     - target: {fileID: 1951553815195580871, guid: 271d03355f68dfe42885cffbb5d646c2,
         type: 3}
@@ -466,7 +466,7 @@ PrefabInstance:
     - target: {fileID: 4398441882110203246, guid: 71adc6c41a5145940a1f09976ac19a75,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7057974209001594034, guid: 71adc6c41a5145940a1f09976ac19a75,
         type: 3}
@@ -525,12 +525,12 @@ PrefabInstance:
     - target: {fileID: 8421625424995250949, guid: 71adc6c41a5145940a1f09976ac19a75,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8421625424995250949, guid: 71adc6c41a5145940a1f09976ac19a75,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -707,10 +707,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy.Mine
       objectReference: {fileID: 0}
+    - target: {fileID: 5424115889411554051, guid: 4327e41cfbad5d1468b8318de22e2853,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5915783518706403035, guid: 4327e41cfbad5d1468b8318de22e2853,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33
+      value: -27.54
       objectReference: {fileID: 0}
     - target: {fileID: 5915783518706403035, guid: 4327e41cfbad5d1468b8318de22e2853,
         type: 3}
