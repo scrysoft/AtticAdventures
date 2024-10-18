@@ -1674,7 +1674,7 @@ MonoBehaviour:
     m_Preset: {fileID: 0}
     m_BlockList: []
     m_Default: 1
-  m_Invincible: 0
+  m_Invincible: 1
   m_TimeInvincibleAfterSpawn: 0
   m_HealthAttributeName: Health
   m_ShieldAttributeName: 
@@ -1994,7 +1994,7 @@ MonoBehaviour:
   m_GravityAmount: 0.6
   m_GravityDirection: {x: 0, y: -1, z: 0}
   m_SkinWidth: 0.08
-  m_StickToGround: 1
+  m_StickToGround: 0
   m_StickToGroundDistance: 0.3
   m_VerticalCastBuffer: 0
   m_ExternalForceDamping: 0.1
@@ -3985,10 +3985,6 @@ MonoBehaviour:
           m_Preset: {fileID: 11400000, guid: 7d9977608fa141a4da838a951f95f825, type: 2}
           m_BlockList: []
           m_Default: 0
-        - m_Name: Use
-          m_Preset: {fileID: 11400000, guid: 077e49e285060a14c83cf6f65d01d266, type: 2}
-          m_BlockList: []
-          m_Default: 0
         - m_Name: Default
           m_Preset: {fileID: 0}
           m_BlockList: []
@@ -4953,6 +4949,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1163283053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1163283054}
+  - component: {fileID: 1163283055}
+  m_Layer: 30
+  m_Name: GundamArmAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1163283054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163283053}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.3991181, y: -0.68561906, z: 0.1950385, w: 0.57670724}
+  m_LocalPosition: {x: 0.0062, y: -0.00566, z: -0.00574}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1607213663}
+  m_LocalEulerAnglesHint: {x: 46.702, y: -112.165, z: -28.034}
+--- !u!114 &1163283055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163283053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ebcf42a9d8f9145a73c60c46c60bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ID: 50006001
 --- !u!144 &1227289211
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -6132,6 +6173,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 592269628}
+    - targetCorrespondingSourceObject: {fileID: 5529273597542378840, guid: 7cfc1174ea8071543a5b855c53cb507f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1624898155}
+    - targetCorrespondingSourceObject: {fileID: 5529273597542378840, guid: 7cfc1174ea8071543a5b855c53cb507f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1163283054}
     - targetCorrespondingSourceObject: {fileID: 2058422921298708213, guid: 7cfc1174ea8071543a5b855c53cb507f,
         type: 3}
       insertIndex: -1
@@ -7699,6 +7748,57 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!4 &1607213663 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5529273597542378840, guid: 7cfc1174ea8071543a5b855c53cb507f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1267264352}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1624898154
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1624898155}
+  - component: {fileID: 1624898156}
+  m_Layer: 30
+  m_Name: SwordAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1624898155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624898154}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.1504827, y: 0.055235498, z: -0.34012127, w: 0.9266184}
+  m_LocalPosition: {x: -0.00108, y: -0.00155, z: -0.00372}
+  m_LocalScale: {x: 0.009, y: 0.009, z: 0.009}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1607213663}
+  m_LocalEulerAnglesHint: {x: 18.449, y: 0, z: -40.312}
+--- !u!114 &1624898156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624898154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ebcf42a9d8f9145a73c60c46c60bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ID: 50022001
 --- !u!1 &1625658203
 GameObject:
   m_ObjectHideFlags: 0
@@ -7815,6 +7915,10 @@ PrefabInstance:
     - target: {fileID: 1814214236125630, guid: b5bf2e4077598914b83fc5e4ca20f2f4, type: 3}
       propertyPath: m_Name
       value: Monitors
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836018674290374, guid: b5bf2e4077598914b83fc5e4ca20f2f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1950554584411702, guid: b5bf2e4077598914b83fc5e4ca20f2f4, type: 3}
       propertyPath: m_Name
@@ -8052,18 +8156,19 @@ PrefabInstance:
     - {fileID: 1609930378290692, guid: b5bf2e4077598914b83fc5e4ca20f2f4, type: 3}
     - {fileID: 1355036071681136, guid: b5bf2e4077598914b83fc5e4ca20f2f4, type: 3}
     - {fileID: 1262460373735626, guid: b5bf2e4077598914b83fc5e4ca20f2f4, type: 3}
+    - {fileID: 1836018674290374, guid: b5bf2e4077598914b83fc5e4ca20f2f4, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 224362287594313636, guid: b5bf2e4077598914b83fc5e4ca20f2f4,
         type: 3}
-      insertIndex: 1
+      insertIndex: 0
       addedObject: {fileID: 1322501877}
     - targetCorrespondingSourceObject: {fileID: 224362287594313636, guid: b5bf2e4077598914b83fc5e4ca20f2f4,
         type: 3}
-      insertIndex: 2
+      insertIndex: 1
       addedObject: {fileID: 733302479}
     - targetCorrespondingSourceObject: {fileID: 224362287594313636, guid: b5bf2e4077598914b83fc5e4ca20f2f4,
         type: 3}
-      insertIndex: 4
+      insertIndex: 3
       addedObject: {fileID: 2018883829}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5bf2e4077598914b83fc5e4ca20f2f4, type: 3}
@@ -8410,8 +8515,8 @@ MonoBehaviour:
           m_Default: 1
         m_Bindings:
           m_Bindings: []
-        m_Enabled: 1
-        m_ID: 0
+        m_Enabled: 0
+        m_ID: -1
         m_Name: 
         m_GizmoSettings:
           DrawGizmo: 0
@@ -8535,7 +8640,7 @@ MonoBehaviour:
           m_Default: 1
         m_Bindings:
           m_Bindings: []
-        m_Enabled: 0
+        m_Enabled: 1
         m_ID: -1
         m_Name: 
         m_GizmoSettings:

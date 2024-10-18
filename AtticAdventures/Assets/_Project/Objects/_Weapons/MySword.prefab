@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &931080978580455497
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7860077397495528362}
-  m_Layer: 0
-  m_Name: Trail
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7860077397495528362
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 931080978580455497}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0604, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1642429223007446217}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8880924582921227325
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +178,7 @@ MonoBehaviour:
   m_NonDominantHandIKTarget: {fileID: 0}
   m_NonDominantHandIKTargetHint: {fileID: 0}
   m_HolsterTarget:
-    m_ID: -1
+    m_ID: 50022001
     m_Object: {fileID: 0}
 --- !u!114 &8240980560333052917
 MonoBehaviour:
@@ -229,11 +198,11 @@ MonoBehaviour:
     m_BlockList: []
     m_Default: 1
   m_ID: 0
-  m_ActionName: Melee 1
+  m_ActionName: 
   m_ActionDescription: 
   m_DebugLogger:
     m_DebugAction: 0
-    m_CharacterItemActionDebugModuleType: 0
+    m_CharacterItemActionDebugModuleType: 1
   m_UseRate: 0.05
   m_FaceTarget: 0
   m_StopUseAbilityOnCompleteDelay: 0
@@ -246,7 +215,7 @@ MonoBehaviour:
     m_Duration: 0.05
     m_WaitForSlotEvent: 0
   m_ForceRootMotionPosition: 1
-  m_ForceRootMotionRotation: 0
+  m_ForceRootMotionRotation: 1
   m_TriggerActionModuleGroup:
     m_Modules:
     - rid: 4389866420185333859
@@ -258,7 +227,6 @@ MonoBehaviour:
   m_CollisionModuleGroup:
     m_Modules:
     - rid: 7444518890196697100
-    - rid: 4389866420185333832
   m_AttackEffectsModuleGroup:
     m_Modules:
     - rid: 4389866420185333835
@@ -362,39 +330,6 @@ MonoBehaviour:
         m_Frames: 5
         m_Mode: 1
         m_AddForceAtPosition: 0
-    - rid: 4389866420185333832
-      type: {class: SphereOverlapCollision, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Melee,
-        asm: Opsive.UltimateCharacterController}
-      data:
-        m_States:
-        - m_Name: Enable
-          m_Preset: {fileID: 11400000, guid: 5d91fb0d3f667ed4f86ae3d23d292fec, type: 2}
-          m_BlockList: []
-          m_Default: 0
-        - m_Name: Default
-          m_Preset: {fileID: 0}
-          m_BlockList: []
-          m_Default: 1
-        m_Bindings:
-          m_Bindings: []
-        m_Enabled: 1
-        m_ID: 0
-        m_Name: 
-        m_GizmoSettings:
-          DrawGizmo: 0
-          DrawGizmoOnSelected: 1
-          Color1: {r: 1, g: 0, b: 0, a: 1}
-          Color2: {r: 1, g: 0.1, b: 0.1, a: 0.3}
-          Color3: {r: 1, g: 0, b: 1, a: 1}
-        m_MultiHitFrameCount: 50
-        m_ImpactLayers:
-          serializedVersion: 2
-          m_Bits: 3758096345
-        m_TriggerInteraction: 1
-        m_MaxCollisionCount: 100
-        m_ForwardShieldSensitivity: -0.75
-        m_SphereCenter: {x: 0, y: 1, z: 1}
-        m_SphereRadius: 0.8
     - rid: 4389866420185333835
       type: {class: GenericItemEffects, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Melee,
         asm: Opsive.UltimateCharacterController}
@@ -449,7 +384,7 @@ MonoBehaviour:
         m_Bindings:
           m_Bindings: []
         m_Enabled: 0
-        m_ID: -3
+        m_ID: -1
         m_Name: Slash3
         m_OnStartAttack: 1
         m_OnCompleteAttack: 0
@@ -561,7 +496,7 @@ MonoBehaviour:
         m_Bindings:
           m_Bindings: []
         m_Enabled: 1
-        m_ID: 0
+        m_ID: -1
         m_Name: 
         m_PlayAudioOnStartUse: 1
         m_SubstateIndexData:
@@ -630,7 +565,7 @@ MonoBehaviour:
         m_Bindings:
           m_Bindings: []
         m_Enabled: 1
-        m_ID: 0
+        m_ID: -1
         m_Name: 
         m_ActiveAttackStartEventTrigger:
           m_WaitForAnimationEvent: 0
@@ -656,7 +591,7 @@ MonoBehaviour:
           m_Default: 1
         m_Bindings:
           m_Bindings: []
-        m_Enabled: 0
+        m_Enabled: 1
         m_ID: -1
         m_Name: 
         m_GizmoSettings:
@@ -668,9 +603,9 @@ MonoBehaviour:
         m_MultiHitFrameCount: 50
         m_ImpactLayers:
           serializedVersion: 2
-          m_Bits: 3758096345
+          m_Bits: 3481272529
         m_TriggerInteraction: 1
-        m_MaxCollisionCount: 20
+        m_MaxCollisionCount: 100
         m_ForwardShieldSensitivity: -0.75
         m_Hitboxes:
           m_FirstPerson: []
@@ -682,7 +617,8 @@ MonoBehaviour:
             m_MinimumZOffset: 0
             m_RequireMovement: 0
             m_SingleHit: 0
-            m_SurfaceImpact: {fileID: 0}
+            m_SurfaceImpact: {fileID: 11400000, guid: c5ab4290ae28ad645a9e5b3483fc05cb,
+              type: 2}
     - rid: 7444518890196697101
       type: {class: GenericMeleeImpactModule, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Melee,
         asm: Opsive.UltimateCharacterController}
@@ -695,7 +631,7 @@ MonoBehaviour:
         m_Bindings:
           m_Bindings: []
         m_Enabled: 1
-        m_ID: 0
+        m_ID: -1
         m_Name: 
         m_SubstateIndex: -1
         m_AttackID: -1
@@ -767,9 +703,9 @@ MonoBehaviour:
         m_Enabled: 1
         m_Delay: 0
         m_AllowMultiHits: 0
-        m_UseContextData: 1
+        m_UseContextData: 0
         m_SetDamageImpactData: 1
-        m_InvokeOnObjectImpact: 0
+        m_InvokeOnObjectImpact: 1
         m_DamageProcessor: {fileID: 0}
         m_DamageAmount: 10
         m_ImpactForce: 2
@@ -1214,11 +1150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5528796499686887765, guid: 3d75705398064214382e2097263014cc,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7860077397495528362}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d75705398064214382e2097263014cc, type: 3}
 --- !u!4 &1642429223007446217 stripped
