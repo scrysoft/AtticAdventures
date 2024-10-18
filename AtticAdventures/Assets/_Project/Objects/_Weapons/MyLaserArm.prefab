@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &948669885519439932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 418387394349461460}
+  m_Layer: 0
+  m_Name: FirePointLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &418387394349461460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948669885519439932}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.316, z: -0.172}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4984293443518137128}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1489685381096166092
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +42,8 @@ GameObject:
   - component: {fileID: 4199508617901574579}
   - component: {fileID: 9082370389815128192}
   - component: {fileID: 4936665571258887324}
-  - component: {fileID: 6024096034799348078}
+  - component: {fileID: 7625256348810629692}
+  - component: {fileID: 4666280178827974464}
   m_Layer: 0
   m_Name: MyLaserArm
   m_TagString: Untagged
@@ -178,7 +210,7 @@ MonoBehaviour:
   m_HolsterTarget:
     m_ID: -1
     m_Object: {fileID: 0}
---- !u!114 &6024096034799348078
+--- !u!114 &7625256348810629692
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,7 +219,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 1489685381096166092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebb0968eac9d95c4dba0758d04feb1c3, type: 3}
+  m_Script: {fileID: 11500000, guid: e30da4fa96ed67145a2c5310eca67bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Attributes:
+  - m_States:
+    - m_Name: Default
+      m_Preset: {fileID: 0}
+      m_BlockList: []
+      m_Default: 1
+    m_Name: Energy
+    m_MinValue: 0
+    m_MaxValue: 4
+    m_Value: 4
+    m_AutoUpdateValueType: 0
+    m_UpdateWhenInactive: 0
+    m_AutoUpdateStartDelay: 1
+    m_AutoUpdateInterval: 0.1
+    m_AutoUpdateAmount: 0.2
+--- !u!114 &4666280178827974464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489685381096166092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f1d5a87293b3747bb8ea73aee1eae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_States:
@@ -196,79 +255,59 @@ MonoBehaviour:
     m_BlockList: []
     m_Default: 1
   m_ID: 0
-  m_ActionName: Shootable 1
+  m_ActionName: 
   m_ActionDescription: 
   m_DebugLogger:
     m_DebugAction: 0
     m_CharacterItemActionDebugModuleType: 0
   m_UseRate: 0.1
   m_FaceTarget: 1
-  m_StopUseAbilityOnCompleteDelay: 1
+  m_StopUseAbilityOnCompleteDelay: 0
   m_UseEvent:
     m_WaitForAnimationEvent: 1
     m_Duration: 0.2
     m_WaitForSlotEvent: 0
   m_UseCompleteEvent:
-    m_WaitForAnimationEvent: 0
+    m_WaitForAnimationEvent: 1
     m_Duration: 0.05
     m_WaitForSlotEvent: 0
   m_ForceRootMotionPosition: 0
   m_ForceRootMotionRotation: 0
   m_TriggerActionModuleGroup:
     m_Modules:
-    - rid: 7444518894382874626
+    - rid: 4389866420185333788
   m_UsableActionModuleGroup:
+    m_Modules:
+    - rid: 4389866420185333790
+    - rid: 4389866420185333812
+  m_CasterModuleGroup:
+    m_Modules:
+    - rid: 4389866420185333793
+  m_BeginModuleGroup:
     m_Modules: []
-  m_ShooterModuleGroup:
+  m_CastEffectsModuleGroup:
     m_Modules:
-    - rid: 7444518894382874627
-  m_AmmoModuleGroup:
-    m_Modules:
-    - rid: 7444518894382874628
-  m_ClipModuleGroup:
-    m_Modules:
-    - rid: 7444518894382874629
-  m_ProjectileModuleGroup:
-    m_Modules:
-    - rid: 4172022548776353811
-  m_FireEffectsModuleGroup:
-    m_Modules:
-    - rid: 7444518894382874631
-    - rid: 7444518894382874632
-    - rid: 7444518894382874633
-    - rid: 7444518894382874634
-  m_DryFireEffectsModuleGroup:
-    m_Modules:
-    - rid: 7444518894382874635
+    - rid: 4389866420185333794
+    - rid: 4389866420185333795
+    - rid: 4389866420185333796
   m_ImpactModuleGroup:
     m_Modules:
-    - rid: 7444518894382874636
-  m_ReloaderModuleGroup:
-    m_Modules:
-    - rid: 7444518894382874637
+    - rid: 4389866420185333797
+  m_EndModuleGroup:
+    m_Modules: []
   m_ExtraModuleGroup:
-    m_Modules:
-    - rid: 7444518894382874638
-    - rid: 7444518894382874639
+    m_Modules: []
+  m_OnStartStopBeginEndActionsEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnCastEvent:
+    m_PersistentCalls:
+      m_Calls: []
   references:
     version: 2
     RefIds:
-    - rid: 4172022548776353811
-      type: {class: BasicProjectile, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Shootable,
-        asm: Opsive.UltimateCharacterController}
-      data:
-        m_States:
-        - m_Name: Default
-          m_Preset: {fileID: 0}
-          m_BlockList: []
-          m_Default: 1
-        m_Bindings:
-          m_Bindings: []
-        m_Enabled: 1
-        m_ID: -1
-        m_Name: 
-    - rid: 7444518894382874626
-      type: {class: Repeat, ns: Opsive.UltimateCharacterController.Items.Actions.Modules,
+    - rid: 4389866420185333788
+      type: {class: Simple, ns: Opsive.UltimateCharacterController.Items.Actions.Modules,
         asm: Opsive.UltimateCharacterController}
       data:
         m_States:
@@ -288,7 +327,7 @@ MonoBehaviour:
           m_Priority: 100
         m_UseAnimatorAudioStateSet:
           m_AnimatorAudioStateSelector:
-            rid: 7444518894382874640
+            rid: 4389866420185333789
           m_States:
           - m_States:
             - m_Name: Default
@@ -305,8 +344,13 @@ MonoBehaviour:
               m_AudioClips: []
         m_CanStopIfInputStop: 0
         m_CanStopSubstateIndexAddition: 10
-    - rid: 7444518894382874627
-      type: {class: HitscanShooter, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Shootable,
+    - rid: 4389866420185333789
+      type: {class: Sequence, ns: Opsive.UltimateCharacterController.Items.AnimatorAudioStates,
+        asm: Opsive.UltimateCharacterController}
+      data:
+        m_ResetDelay: -1
+    - rid: 4389866420185333790
+      type: {class: UseAttribute, ns: Opsive.UltimateCharacterController.Items.Actions.Modules,
         asm: Opsive.UltimateCharacterController}
       data:
         m_States:
@@ -319,35 +363,63 @@ MonoBehaviour:
         m_Enabled: 1
         m_ID: -1
         m_Name: 
-        m_FireInLookSourceDirection: 1
-        m_HitscanFireDelay: 0
-        m_HitscanFireRange: 3.4028235e+38
-        m_MaxHitscanCollisionCount: 15
-        m_ImpactLayers:
+        m_UseAttributeName: Energy
+        m_UseAttributeAmount: 1
+        m_DropWhenUseDepleted: 0
+    - rid: 4389866420185333793
+      type: {class: SimpleCaster, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Magic,
+        asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_ID: -1
+        m_Name: 
+        m_StartCastEventTrigger:
+          m_WaitForAnimationEvent: 0
+          m_Duration: 0
+          m_WaitForSlotEvent: 0
+        m_RepeatCastEventTrigger:
+          m_WaitForAnimationEvent: 0
+          m_Duration: 0
+          m_WaitForSlotEvent: 0
+        m_EndCastEventTrigger:
+          m_WaitForAnimationEvent: 0
+          m_Duration: 0
+          m_WaitForSlotEvent: 0
+        m_CharacterAsCastOrigin: 0
+        m_CastOrigin:
+          m_FirstPerson:
+            m_ID: -1
+            m_Object: {fileID: 0}
+          m_ThirdPerson:
+            m_ID: -1
+            m_Object: {fileID: 418387394349461460}
+        m_RequireGrounded: 1
+        m_Direction: 1
+        m_UseLookSource: 1
+        m_MaxDistance: 40
+        m_Radius: 0.1
+        m_DetectLayers:
           serializedVersion: 2
-          m_Bits: 3758096345
-        m_HitscanTriggerInteraction: 1
-        m_Tracer: {fileID: 0}
-        m_TracerDefaultLength: 100
-        m_TracerSpawnDelay: 0
-        m_Spread: 0.01
-        m_FireCount: 1
-        m_FirePointLocation:
-          m_FirstPerson:
-            m_ID: -1
-            m_Object: {fileID: 0}
-          m_ThirdPerson:
-            m_ID: -1
-            m_Object: {fileID: 4444977291992032619}
-        m_TracerLocation:
-          m_FirstPerson:
-            m_ID: -1
-            m_Object: {fileID: 0}
-          m_ThirdPerson:
-            m_ID: -1
-            m_Object: {fileID: 0}
-    - rid: 7444518894382874628
-      type: {class: ItemAmmo, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Shootable,
+          m_Bits: 2147483667
+        m_MaxAngle: 30
+        m_MaxCollisionCount: 100
+        m_MaxTargetCount: 1
+        m_SurfaceIndicator: {fileID: 0}
+        m_SurfaceIndicatorOffset: {x: 0, y: 0.1, z: 0}
+        m_UseType: 1
+        m_MinContinuousUseDuration: 1
+        m_ContinuousCast: 1
+        m_InterruptSource: 0
+        m_CastUpdateOnCast: 1
+    - rid: 4389866420185333794
+      type: {class: TargetImpact, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Magic.CastEffects,
         asm: Opsive.UltimateCharacterController}
       data:
         m_States:
@@ -360,12 +432,17 @@ MonoBehaviour:
         m_Enabled: 1
         m_ID: -1
         m_Name: 
-        m_AmmoItemDefinition: {fileID: 8420577731181468025, guid: a1bfb1af875d6db419f271dd13545256,
-          type: 2}
-        m_DropOption: 2
-        m_SharedAmmoItemIdentifier: 0
-    - rid: 7444518894382874629
-      type: {class: SimpleClip, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Shootable,
+        m_Delay: 0.2
+        m_InitialDelay: 0
+        m_AllowMultiTarget: 1
+        m_GizmoSettings:
+          DrawGizmo: 0
+          DrawGizmoOnSelected: 1
+          Color1: {r: 1, g: 0, b: 0, a: 1}
+          Color2: {r: 1, g: 0, b: 1, a: 1}
+          Color3: {r: 1, g: 0, b: 1, a: 1}
+    - rid: 4389866420185333795
+      type: {class: SpawnParticle, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Magic.CastEffects,
         asm: Opsive.UltimateCharacterController}
       data:
         m_States:
@@ -378,9 +455,25 @@ MonoBehaviour:
         m_Enabled: 1
         m_ID: -1
         m_Name: 
-        m_ClipSize: 1
-    - rid: 7444518894382874631
-      type: {class: MuzzleEffect, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Shootable,
+        m_Delay: 0
+        m_InitialDelay: 0
+        m_AllowMultiTarget: 1
+        m_ParticlePrefab: {fileID: 6756225262336711168, guid: 45d26fba8aeefca4a820e97b9f8ad09a,
+          type: 3}
+        m_PositionOffset: {x: 0, y: 0, z: 0}
+        m_RotationOffset: {x: 0, y: 180, z: 0}
+        m_ParentToOrigin: 1
+        m_ProjectDirectionOnPlane: 0
+        m_ClearParentOnStop: 0
+        m_SetRendererLengthScale: 1
+        m_AdditionalLength: 0.1
+        m_ParticleLayer: 2
+        m_FadeInDuration: 0.25
+        m_FadeOutDuration: 0.05
+        m_MaterialColorName: _TintColor
+        m_FadeStep: 0.05
+    - rid: 4389866420185333796
+      type: {class: PlayAudioClip, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Magic.CastEffects,
         asm: Opsive.UltimateCharacterController}
       data:
         m_States:
@@ -393,110 +486,19 @@ MonoBehaviour:
         m_Enabled: 1
         m_ID: -1
         m_Name: 
-        m_MuzzleFlash: {fileID: 0}
-        m_PoolMuzzleFlash: 1
-        m_MuzzleLocation:
-          m_FirstPerson:
-            m_ID: -1
-            m_Object: {fileID: 0}
-          m_ThirdPerson:
-            m_ID: -1
-            m_Object: {fileID: 7522936869070147811}
-    - rid: 7444518894382874632
-      type: {class: ShellEffect, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Shootable,
-        asm: Opsive.UltimateCharacterController}
-      data:
-        m_States:
-        - m_Name: Default
-          m_Preset: {fileID: 0}
-          m_BlockList: []
-          m_Default: 1
-        m_Bindings:
-          m_Bindings: []
-        m_Enabled: 1
-        m_ID: -1
-        m_Name: 
-        m_Shell: {fileID: 0}
-        m_ShellVelocity:
-          m_MinValue: {x: 3, y: 0, z: 0}
-          m_MaxValue: {x: 4, y: 2, z: 0}
-          m_MinMagnitude: {x: 0, y: 0, z: 0}
-        m_ShellTorque:
-          m_MinValue: {x: -50, y: -50, z: -50}
-          m_MaxValue: {x: 50, y: 50, z: 50}
-          m_MinMagnitude: {x: 0, y: 0, z: 0}
-        m_ShellEjectDelay: 0
-        m_ShellLocation:
-          m_FirstPerson:
-            m_ID: -1
-            m_Object: {fileID: 0}
-          m_ThirdPerson:
-            m_ID: -1
-            m_Object: {fileID: 3825724491250868462}
-    - rid: 7444518894382874633
-      type: {class: RecoilEffect, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Shootable,
-        asm: Opsive.UltimateCharacterController}
-      data:
-        m_States:
-        - m_Name: Default
-          m_Preset: {fileID: 0}
-          m_BlockList: []
-          m_Default: 1
-        m_Bindings:
-          m_Bindings: []
-        m_Enabled: 1
-        m_ID: -1
-        m_Name: 
-        m_PositionRecoil:
-          m_MinValue: {x: 0, y: 0, z: -0.3}
-          m_MaxValue: {x: 0, y: 0.01, z: -0.1}
-          m_MinMagnitude: {x: 0, y: 0, z: 0}
-        m_RotationRecoil:
-          m_MinValue: {x: -0.5, y: -0.5, z: 0}
-          m_MaxValue: {x: 0.5, y: 0.5, z: 0}
-          m_MinMagnitude: {x: 0, y: 0, z: 0}
-        m_PositionCameraRecoil:
-          m_MinValue: {x: 0, y: 0, z: 0}
-          m_MaxValue: {x: 0, y: 0, z: 0}
-          m_MinMagnitude: {x: 0, y: 0, z: 0}
-        m_RotationCameraRecoil:
-          m_MinValue: {x: -2, y: -1, z: 0}
-          m_MaxValue: {x: -1, y: 1, z: 0}
-          m_MinMagnitude: {x: 0, y: 0, z: 0}
-        m_CameraRecoilAccumulation: 0
-        m_LocalizeRecoilForce: 0
-    - rid: 7444518894382874634
-      type: {class: CrosshairsSpread, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Shootable,
-        asm: Opsive.UltimateCharacterController}
-      data:
-        m_States:
-        - m_Name: Default
-          m_Preset: {fileID: 0}
-          m_BlockList: []
-          m_Default: 1
-        m_Bindings:
-          m_Bindings: []
-        m_Enabled: 1
-        m_ID: -1
-        m_Name: 
-    - rid: 7444518894382874635
-      type: {class: GenericItemEffects, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Shootable,
-        asm: Opsive.UltimateCharacterController}
-      data:
-        m_States:
-        - m_Name: Default
-          m_Preset: {fileID: 0}
-          m_BlockList: []
-          m_Default: 1
-        m_Bindings:
-          m_Bindings: []
-        m_Enabled: 1
-        m_ID: -1
-        m_Name: 
-        m_EffectGroup:
-          m_Effects: []
-    - rid: 7444518894382874636
-      type: {class: GenericShootableImpactModule, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Shootable,
+        m_Delay: 0
+        m_InitialDelay: 0
+        m_AllowMultiTarget: 1
+        m_AudioClipSet:
+          m_AudioConfig: {fileID: 11400000, guid: c2c94f07069a8e94bbf764a3e555ee2e,
+            type: 2}
+          m_AudioClips: []
+        m_PlayAtOrigin: 1
+        m_Loop: 1
+        m_FadeOutDuration: 0.1
+        m_FadeStep: 0.05
+    - rid: 4389866420185333797
+      type: {class: GenericMagicImpactModule, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Magic,
         asm: Opsive.UltimateCharacterController}
       data:
         m_States:
@@ -511,127 +513,15 @@ MonoBehaviour:
         m_Name: 
         m_Conditions:
           m_ImpactActionConditions:
-          - rid: 7444518894382874641
+          - rid: 4389866420185333798
         m_ImpactActions:
           m_ImpactActions:
-          - rid: 7444518894382874642
-          - rid: 7444518894382874643
-          - rid: 7444518894382874644
+          - rid: 4389866420185333802
+          - rid: 4389866420185333803
+          - rid: 4389866420185333799
         m_FailImpactActions:
           m_ImpactActions: []
-    - rid: 7444518894382874637
-      type: {class: GenericReloader, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Shootable,
-        asm: Opsive.UltimateCharacterController}
-      data:
-        m_States:
-        - m_Name: Default
-          m_Preset: {fileID: 0}
-          m_BlockList: []
-          m_Default: 1
-        m_Bindings:
-          m_Bindings: []
-        m_Enabled: 1
-        m_ID: -1
-        m_Name: 
-        m_SubstateIndexData:
-          m_Additive: 0
-          m_Index: 0
-          m_Priority: 100
-        m_AutoReload: 3
-        m_ReloadType: 0
-        m_ReloadCanCameraZoom: 1
-        m_ReloadCrosshairsSpread: 1
-        m_ReloadAnimatorAudioStateSet:
-          m_AnimatorAudioStateSelector:
-            rid: 7444518894382874645
-          m_States: []
-        m_ReloadEvent:
-          m_WaitForAnimationEvent: 1
-          m_Duration: 0
-          m_WaitForSlotEvent: 0
-        m_ReloadCompleteEvent:
-          m_WaitForAnimationEvent: 1
-          m_Duration: 0
-          m_WaitForSlotEvent: 0
-        m_ReloadCompleteAudioClipSet:
-          m_AudioConfig: {fileID: 0}
-          m_AudioClips: []
-        m_InstantiateReloadClip: 0
-        m_ResetClipTransformOnDetach: 0
-        m_ReactivateClipEvent:
-          m_WaitForAnimationEvent: 1
-          m_Duration: 0.1
-          m_WaitForSlotEvent: 0
-        m_ReloadDetachAttachClip: 0
-        m_ReloadDetachClipEvent:
-          m_WaitForAnimationEvent: 1
-          m_Duration: 0.4
-        m_ReloadAddClipPrefab: {fileID: 0}
-        m_ReloadDropClipPrefab: {fileID: 0}
-        m_ReloadClipLayerChangeDelay: 0.1
-        m_ReloadClipTargetLayer: 28
-        m_ReloadDropClipEvent:
-          m_WaitForAnimationEvent: 1
-          m_Duration: 0.1
-        m_ReloadAttachClipEvent:
-          m_WaitForAnimationEvent: 1
-          m_Duration: 0.4
-        m_ReloadableClip:
-          m_FirstPerson:
-            m_ID: -1
-            m_Object: {fileID: 0}
-          m_ThirdPerson:
-            m_ID: -1
-            m_Object: {fileID: 0}
-        m_ReloadableClipAttachment:
-          m_FirstPerson:
-            m_ID: -1
-            m_Object: {fileID: 0}
-          m_ThirdPerson:
-            m_ID: -1
-            m_Object: {fileID: 0}
-    - rid: 7444518894382874638
-      type: {class: DryFireSubstate, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Shootable,
-        asm: Opsive.UltimateCharacterController}
-      data:
-        m_States:
-        - m_Name: Default
-          m_Preset: {fileID: 0}
-          m_BlockList: []
-          m_Default: 1
-        m_Bindings:
-          m_Bindings: []
-        m_Enabled: 1
-        m_ID: -1
-        m_Name: 
-        m_SubstateIndexData:
-          m_Additive: 0
-          m_Index: 11
-          m_Priority: 200
-        m_PreventAutoWhileDry: 1
-    - rid: 7444518894382874639
-      type: {class: SlotItemMonitorModule, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Shootable,
-        asm: Opsive.UltimateCharacterController}
-      data:
-        m_States:
-        - m_Name: Default
-          m_Preset: {fileID: 0}
-          m_BlockList: []
-          m_Default: 1
-        m_Bindings:
-          m_Bindings: []
-        m_Enabled: 1
-        m_ID: -1
-        m_Name: 
-        m_Priority: 0
-        m_ShowLoaded: 1
-        m_ShowUnloaded: 1
-    - rid: 7444518894382874640
-      type: {class: Sequence, ns: Opsive.UltimateCharacterController.Items.AnimatorAudioStates,
-        asm: Opsive.UltimateCharacterController}
-      data:
-        m_ResetDelay: -1
-    - rid: 7444518894382874641
+    - rid: 4389866420185333798
       type: {class: CheckTargetImpactConditionBehaviour, ns: Opsive.UltimateCharacterController.Items.Actions.Impact,
         asm: Opsive.UltimateCharacterController}
       data:
@@ -643,7 +533,7 @@ MonoBehaviour:
         m_Bindings:
           m_Bindings: []
         m_Enabled: 1
-    - rid: 7444518894382874642
+    - rid: 4389866420185333799
       type: {class: SimpleDamage, ns: Opsive.UltimateCharacterController.Items.Actions.Impact,
         asm: Opsive.UltimateCharacterController}
       data:
@@ -657,17 +547,17 @@ MonoBehaviour:
         m_Enabled: 1
         m_Delay: 0
         m_AllowMultiHits: 0
-        m_UseContextData: 1
+        m_UseContextData: 0
         m_SetDamageImpactData: 1
         m_InvokeOnObjectImpact: 0
         m_DamageProcessor: {fileID: 0}
-        m_DamageAmount: 10
-        m_ImpactForce: 2
+        m_DamageAmount: 2
+        m_ImpactForce: 0
         m_ImpactForceFrames: 15
         m_ImpactRadius: 0
         m_ScaleDamageByImpactStrength: 0
-    - rid: 7444518894382874643
-      type: {class: SpawnSurfaceEffect, ns: Opsive.UltimateCharacterController.Items.Actions.Impact,
+    - rid: 4389866420185333802
+      type: {class: SpawnParticle, ns: Opsive.UltimateCharacterController.Items.Actions.Impact,
         asm: Opsive.UltimateCharacterController}
       data:
         m_States:
@@ -680,10 +570,13 @@ MonoBehaviour:
         m_Enabled: 1
         m_Delay: 0
         m_AllowMultiHits: 0
-        m_UseContextData: 1
-        m_SurfaceImpact: {fileID: 0}
-    - rid: 7444518894382874644
-      type: {class: ImpactEvent, ns: Opsive.UltimateCharacterController.Items.Actions.Impact,
+        m_ParticlePrefab: {fileID: 6167959196816370920, guid: e6ab9167bb901044495ea4a024d74c34,
+          type: 3}
+        m_PositionOffset: {x: 0, y: 0.05, z: 0.1}
+        m_RotationOffset: {x: 0, y: 0, z: 0}
+        m_ParentToImpactedObject: 0
+    - rid: 4389866420185333803
+      type: {class: AddForce, ns: Opsive.UltimateCharacterController.Items.Actions.Impact,
         asm: Opsive.UltimateCharacterController}
       data:
         m_States:
@@ -696,13 +589,30 @@ MonoBehaviour:
         m_Enabled: 1
         m_Delay: 0
         m_AllowMultiHits: 0
-        m_CallImpactCallbackOnOriginator: 1
-        m_CallImpactCallbackOnTarget: 1
-    - rid: 7444518894382874645
-      type: {class: Sequence, ns: Opsive.UltimateCharacterController.Items.AnimatorAudioStates,
+        m_UseSourceDirection: 0
+        m_Amount: {x: 0, y: 0, z: 5}
+        m_Frames: 5
+        m_Mode: 1
+        m_AddForceAtPosition: 1
+    - rid: 4389866420185333812
+      type: {class: ActivateStates, ns: Opsive.UltimateCharacterController.Items.Actions.Modules,
         asm: Opsive.UltimateCharacterController}
       data:
-        m_ResetDelay: -1
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_ID: -1
+        m_Name: 
+        m_WhileEquipped: 0
+        m_WhileStartUse: 1
+        m_WhileUse: 1
+        m_StateNames:
+        - UsingParticleStream
 --- !u!1 &1639594332881477647
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,10 +812,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1551563494717518165}
-  - {fileID: 4444977291992032619}
   - {fileID: 7522936869070147811}
   - {fileID: 3825724491250868462}
   - {fileID: 5534957829499249082}
+  - {fileID: 418387394349461460}
   m_Father: {fileID: 4199508617901574579}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5591772864587954388
@@ -1023,37 +933,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &9125485627928703521
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4444977291992032619}
-  m_Layer: 0
-  m_Name: FirePointLocation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4444977291992032619
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9125485627928703521}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.532, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4984293443518137128}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5672939342009864489
 PrefabInstance:
   m_ObjectHideFlags: 0
