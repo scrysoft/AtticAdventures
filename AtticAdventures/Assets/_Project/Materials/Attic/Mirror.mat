@@ -8,7 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mirror
-  m_Shader: {fileID: 4800000, guid: abc00000000001647224915846123170, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: c5a0521d4042b484382dac225d012147,
+    type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
@@ -91,6 +92,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _NormalMapOS:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleCubemap_ce7725c4da994dfcb7a0507ecbbcb5f9_Cube_1_Cubemap:
+        m_Texture: {fileID: 8900000, guid: 94434815c5cb40340ac2e6717cbd2dee, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleCubemap_d14169a4108b4a3d8789ea555ce561a6_Cube_1_Cubemap:
+        m_Texture: {fileID: 8900000, guid: 94434815c5cb40340ac2e6717cbd2dee, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecularColorMap:
@@ -197,6 +206,7 @@ Material:
     - _Metallic: 0
     - _MetallicRemapMax: 0.80702627
     - _MetallicRemapMin: 0.7333004
+    - _Noise_Size: 600
     - _NormalMapSpace: 0
     - _NormalScale: 1
     - _ObjectSpaceUVMapping: 0
@@ -276,3 +286,19 @@ Material:
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
+--- !u!114 &721311421183472866
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 13
+  hdPluginSubTargetMaterialVersions:
+    m_Keys: []
+    m_Values: 
