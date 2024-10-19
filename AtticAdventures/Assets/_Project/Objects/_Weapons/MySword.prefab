@@ -198,11 +198,11 @@ MonoBehaviour:
     m_BlockList: []
     m_Default: 1
   m_ID: 0
-  m_ActionName: 
+  m_ActionName: Melee 1
   m_ActionDescription: 
   m_DebugLogger:
     m_DebugAction: 0
-    m_CharacterItemActionDebugModuleType: 1
+    m_CharacterItemActionDebugModuleType: 0
   m_UseRate: 0.05
   m_FaceTarget: 0
   m_StopUseAbilityOnCompleteDelay: 0
@@ -498,7 +498,7 @@ MonoBehaviour:
         m_Enabled: 1
         m_ID: -1
         m_Name: 
-        m_PlayAudioOnStartUse: 1
+        m_PlayAudioOnStartUse: 0
         m_SubstateIndexData:
           m_Additive: 0
           m_Index: 0
@@ -585,6 +585,10 @@ MonoBehaviour:
         asm: Opsive.UltimateCharacterController}
       data:
         m_States:
+        - m_Name: Sword_Collision_Hitbox
+          m_Preset: {fileID: 11400000, guid: 52ac5ee291e03fc40b30c77b8af63742, type: 2}
+          m_BlockList: []
+          m_Default: 0
         - m_Name: Default
           m_Preset: {fileID: 0}
           m_BlockList: []
@@ -605,7 +609,7 @@ MonoBehaviour:
           serializedVersion: 2
           m_Bits: 3481272529
         m_TriggerInteraction: 1
-        m_MaxCollisionCount: 100
+        m_MaxCollisionCount: 20
         m_ForwardShieldSensitivity: -0.75
         m_Hitboxes:
           m_FirstPerson: []
@@ -617,8 +621,7 @@ MonoBehaviour:
             m_MinimumZOffset: 0
             m_RequireMovement: 0
             m_SingleHit: 0
-            m_SurfaceImpact: {fileID: 11400000, guid: c5ab4290ae28ad645a9e5b3483fc05cb,
-              type: 2}
+            m_SurfaceImpact: {fileID: 0}
     - rid: 7444518890196697101
       type: {class: GenericMeleeImpactModule, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Melee,
         asm: Opsive.UltimateCharacterController}
@@ -631,7 +634,7 @@ MonoBehaviour:
         m_Bindings:
           m_Bindings: []
         m_Enabled: 1
-        m_ID: -1
+        m_ID: 0
         m_Name: 
         m_SubstateIndex: -1
         m_AttackID: -1
@@ -703,9 +706,9 @@ MonoBehaviour:
         m_Enabled: 1
         m_Delay: 0
         m_AllowMultiHits: 0
-        m_UseContextData: 0
+        m_UseContextData: 1
         m_SetDamageImpactData: 1
-        m_InvokeOnObjectImpact: 1
+        m_InvokeOnObjectImpact: 0
         m_DamageProcessor: {fileID: 0}
         m_DamageAmount: 10
         m_ImpactForce: 2
