@@ -565,7 +565,7 @@ MonoBehaviour:
         m_Bindings:
           m_Bindings: []
         m_Enabled: 1
-        m_ID: -1
+        m_ID: 0
         m_Name: 
         m_ActiveAttackStartEventTrigger:
           m_WaitForAnimationEvent: 0
@@ -573,11 +573,11 @@ MonoBehaviour:
           m_WaitForSlotEvent: 1
         m_ActiveAttackCompleteEventTrigger:
           m_WaitForAnimationEvent: 0
-          m_Duration: 0
+          m_Duration: 0.2
           m_WaitForSlotEvent: 0
         m_AllowChainAttackEventTrigger:
           m_WaitForAnimationEvent: 0
-          m_Duration: 0
+          m_Duration: 0.2
           m_WaitForSlotEvent: 0
         m_SingleHit: 0
     - rid: 7444518890196697100

@@ -128,6 +128,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleCubemap_831f4aa158a24389bd9c7aa54c20f6e4_Cube_1_Cubemap:
+        m_Texture: {fileID: 8900000, guid: 94434815c5cb40340ac2e6717cbd2dee, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Specular:
         m_Texture: {fileID: 2800000, guid: d712762ff49a3e34e966e9142ae217a6, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -261,7 +265,7 @@ Material:
     - _RepeatingGradient: 0.77
     - _RequireSplitLighting: 0
     - _Roughness_Strength: 1
-    - _Smoothness: 0.7
+    - _Smoothness: 0.8
     - _SmoothnessRemapMax: 0.63445735
     - _SmoothnessRemapMin: 0
     - _SpecularAAScreenSpaceVariance: 0.1
