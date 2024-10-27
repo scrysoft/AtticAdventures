@@ -226,7 +226,7 @@ MonoBehaviour:
     - rid: 7444518890196697099
   m_CollisionModuleGroup:
     m_Modules:
-    - rid: 7444518890196697100
+    - rid: 4389866664240873472
   m_AttackEffectsModuleGroup:
     m_Modules:
     - rid: 4389866420185333835
@@ -553,6 +553,35 @@ MonoBehaviour:
         asm: Opsive.UltimateCharacterController}
       data:
         m_ResetDelay: -1
+    - rid: 4389866664240873472
+      type: {class: SphereOverlapCollision, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Melee,
+        asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_ID: -2
+        m_Name: 
+        m_GizmoSettings:
+          DrawGizmo: 0
+          DrawGizmoOnSelected: 1
+          Color1: {r: 1, g: 0, b: 0, a: 1}
+          Color2: {r: 1, g: 0.1, b: 0.1, a: 0.3}
+          Color3: {r: 1, g: 0, b: 1, a: 1}
+        m_MultiHitFrameCount: 50
+        m_ImpactLayers:
+          serializedVersion: 2
+          m_Bits: 3758096345
+        m_TriggerInteraction: 1
+        m_MaxCollisionCount: 100
+        m_ForwardShieldSensitivity: -0.75
+        m_SphereCenter: {x: 0, y: 1, z: 1}
+        m_SphereRadius: 1
     - rid: 7444518890196697099
       type: {class: SimpleAttack, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Melee,
         asm: Opsive.UltimateCharacterController}
@@ -580,48 +609,6 @@ MonoBehaviour:
           m_Duration: 0.2
           m_WaitForSlotEvent: 0
         m_SingleHit: 0
-    - rid: 7444518890196697100
-      type: {class: HitboxCollision, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Melee,
-        asm: Opsive.UltimateCharacterController}
-      data:
-        m_States:
-        - m_Name: Sword_Collision_Hitbox
-          m_Preset: {fileID: 11400000, guid: 52ac5ee291e03fc40b30c77b8af63742, type: 2}
-          m_BlockList: []
-          m_Default: 0
-        - m_Name: Default
-          m_Preset: {fileID: 0}
-          m_BlockList: []
-          m_Default: 1
-        m_Bindings:
-          m_Bindings: []
-        m_Enabled: 1
-        m_ID: -1
-        m_Name: 
-        m_GizmoSettings:
-          DrawGizmo: 0
-          DrawGizmoOnSelected: 1
-          Color1: {r: 1, g: 0, b: 0, a: 1}
-          Color2: {r: 1, g: 0.1, b: 0.1, a: 0.3}
-          Color3: {r: 1, g: 0, b: 1, a: 1}
-        m_MultiHitFrameCount: 50
-        m_ImpactLayers:
-          serializedVersion: 2
-          m_Bits: 3481272529
-        m_TriggerInteraction: 1
-        m_MaxCollisionCount: 20
-        m_ForwardShieldSensitivity: -0.75
-        m_Hitboxes:
-          m_FirstPerson: []
-          m_ThirdPerson:
-          - m_Collider: {fileID: 7348633074757585749}
-            m_DamageMultiplier: 1
-            m_ColliderObjectID: -1
-            m_MinimumYOffset: 0
-            m_MinimumZOffset: 0
-            m_RequireMovement: 0
-            m_SingleHit: 0
-            m_SurfaceImpact: {fileID: 0}
     - rid: 7444518890196697101
       type: {class: GenericMeleeImpactModule, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Melee,
         asm: Opsive.UltimateCharacterController}
