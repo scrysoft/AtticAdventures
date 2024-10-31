@@ -20,10 +20,11 @@ namespace AtticAdventures.SceneManagement
 
         void Awake()
         {
-            // TODO can remove
+            /*
             manager.OnSceneLoaded += sceneName => Debug.Log("Loaded: " + sceneName);
             manager.OnSceneUnloaded += sceneName => Debug.Log("Unloaded: " + sceneName);
             manager.OnSceneGroupLoaded += () => Debug.Log("Scene group loaded");
+            */
         }
 
         async void Start()
