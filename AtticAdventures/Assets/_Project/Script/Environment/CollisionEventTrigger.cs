@@ -9,8 +9,6 @@ public class CollisionEventTrigger : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collide");
-
         if (collision.gameObject.CompareTag(targetTag))
         {
             onCollisionWithTarget.Invoke();

@@ -30,8 +30,6 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _MATERIAL_AFFECTS_ALBEDO
-  - _MATERIAL_AFFECTS_MASKMAP
-  - _MATERIAL_AFFECTS_NORMAL
   m_InvalidKeywords:
   - _DISABLE_SSR_TRANSPARENT
   - _NORMALMAP_TANGENT_SPACE
@@ -153,9 +151,9 @@ Material:
     - _ATDistance: 1
     - _AddPrecomputedVelocity: 0
     - _AffectAlbedo: 1
-    - _AffectMetal: 1
-    - _AffectNormal: 1
-    - _AffectSmoothness: 1
+    - _AffectMetal: 0
+    - _AffectNormal: 0
+    - _AffectSmoothness: 0
     - _AlbedoAffectEmissive: 0
     - _Alpha: 0
     - _AlphaCutoff: 0.5
@@ -174,9 +172,9 @@ Material:
     - _CullModeForward: 2
     - _Cutoff: 0.5
     - _DecalColorMask0: 15
-    - _DecalColorMask1: 15
-    - _DecalColorMask2: 11
-    - _DecalColorMask3: 8
+    - _DecalColorMask1: 0
+    - _DecalColorMask2: 0
+    - _DecalColorMask3: 0
     - _DecalMeshBiasType: 0
     - _DecalMeshDepthBias: 0
     - _DecalMeshViewBias: 0

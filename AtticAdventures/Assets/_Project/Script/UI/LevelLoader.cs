@@ -14,12 +14,12 @@ namespace AtticAdventures.UI
             sceneLoader = FindObjectOfType<SceneLoader>();
         }
 
-        public void LoadLevelAtSpawnPoint(int spawnPointIndex)
+        public async void LoadLevelAtSpawnPoint(int spawnPointIndex)
         {
             GameManager.Instance.SetSpawnPointIndex(spawnPointIndex);
             Debug.Log("Spawnpoint Index set to " + spawnPointIndex);
 
-            sceneLoader.LoadSceneGroup(sceneIndex);
+            await sceneLoader.LoadSceneGroup(sceneIndex);
         }
     }
 }
