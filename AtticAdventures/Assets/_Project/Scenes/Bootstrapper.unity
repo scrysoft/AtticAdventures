@@ -872,6 +872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1884408733}
   - component: {fileID: 1884408734}
+  - component: {fileID: 1884408735}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -906,6 +907,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e611e41c374abf34eb9fda468c631a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1884408735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884408732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c0832dbba980847b62d67e3eeaf961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 11400000, guid: d99bf360e10b5b947a5ee60c0391a7b5, type: 2}
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1884408734}
+        m_TargetAssemblyTypeName: AtticAdventures.Core.GameManager, Assembly-CSharp
+        m_MethodName: AddScore
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2036129065
 GameObject:
   m_ObjectHideFlags: 0

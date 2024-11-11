@@ -8,6 +8,8 @@ namespace AtticAdventures.Core
 
         private int spawnPointIndex = 0;
 
+        public int Score { get; private set; }
+
         private void Awake()
         {
             if (Instance == null)
@@ -28,6 +30,11 @@ namespace AtticAdventures.Core
         public int GetSpawnPointIndex()
         {
             return spawnPointIndex;
+        }
+
+        public void AddScore(int score)
+        {
+            Score += score;
         }
     }
 }

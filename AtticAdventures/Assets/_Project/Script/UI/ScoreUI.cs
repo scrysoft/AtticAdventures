@@ -21,9 +21,8 @@ namespace AtticAdventures.UI
 
         private IEnumerator UpdateScoreNextFrame()
         {
-            // Make sure all logic has run before updating the score
             yield return null;
-            // scoreText.text = GameManager.Instance.Score.ToString();
+            scoreText.text = GameManager.Instance.Score.ToString();
         }
     }
 }

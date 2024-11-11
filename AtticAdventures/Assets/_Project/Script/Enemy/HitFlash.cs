@@ -5,10 +5,10 @@ public class HitFlash : MonoBehaviour
 {
     private Material material;
     private Color originalColor;
-    private Color flashColor = new Color(0.46f, 0f, 0f, 0.64f); // Red
-    // private Color flashColor = new Color(1f, 1f, 1f, 1f); // White
+    // private Color flashColor = new Color(0.46f, 0f, 0f, 0.64f); // Red
+    private Color flashColor = new Color(1f, 1f, 1f, 1f); // White
     private Coroutine flashCoroutine;
-    private float flashIntensity = 3f;
+    private float flashIntensity = 0.5f;
 
     private float flashDuration = 0.05f;
 
