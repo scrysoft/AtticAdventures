@@ -10,13 +10,15 @@ namespace AtticAdventures.Core
         [SerializeField] float animationDuration = 1f;
         [SerializeField] Ease easeType = Ease.OutBack;
 
+        [SerializeField] bool isSpawnParticleActive = false;
+
         private void Start()
         {
             transform.localScale = Vector3.zero;
             transform.DOScale(Vector3.one, animationDuration)
                 .SetEase(easeType);
 
-            if(spawnVFX != null )
+            if(spawnVFX != null && isSpawnParticleActive)
             {
                 Instantiate(spawnVFX, transform.position, Quaternion.identity);
             }
