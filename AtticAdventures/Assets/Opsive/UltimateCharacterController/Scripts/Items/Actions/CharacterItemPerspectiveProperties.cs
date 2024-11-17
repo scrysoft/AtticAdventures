@@ -133,7 +133,7 @@ namespace Opsive.UltimateCharacterController.Items.Actions
             // With the model changes the FirstPersonObject also may have changed. Retrieve the updated object.
 #if FIRST_PERSON_CONTROLLER
             if (m_ModelManager != null) {
-                m_FirstPerspectiveItemObjectParent = m_ModelManager.GetFirstPersonObjects(characterModel).gameObject;
+                // m_FirstPerspectiveItemObjectParent = m_ModelManager.GetFirstPersonObjects(characterModel).gameObject; // Attic Adventures Quick Fix
             } else {
                 m_FirstPerspectiveItemObjectParent = m_FirstPersonPerspectiveItem.GetFirstPersonObjects(characterModel).gameObject;
             }

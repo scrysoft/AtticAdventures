@@ -15,8 +15,7 @@ MonoBehaviour:
   m_ID: 0
   m_CategoryIDs: 87ec7e45
   m_Capacity: 2147483647
-  m_Prefabs:
-  - {fileID: 8880924582921227325, guid: 27e220e8ffd395540adda69431e1f657, type: 3}
+  m_Prefabs: []
 --- !u!114 &-1215034664463877999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29,7 +28,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e74c32144565264eb86dc7514aca7f7, type: 3}
   m_Name: MyBody
   m_EditorClassIdentifier: 
-  m_ID: 3
+  m_ID: 2
   m_CategoryIDs: 87ec7e45
   m_Capacity: 2147483647
   m_Prefabs: []
@@ -63,7 +62,6 @@ MonoBehaviour:
   m_ItemTypes:
   - {fileID: -8815583931237348038}
   - {fileID: 3458957999157895444}
-  - {fileID: 8420577731181468025}
   - {fileID: -1215034664463877999}
 --- !u!114 &3458957999157895444
 MonoBehaviour:
@@ -80,22 +78,4 @@ MonoBehaviour:
   m_ID: 1
   m_CategoryIDs: 87ec7e45
   m_Capacity: 2147483647
-  m_Prefabs:
-  - {fileID: 1489685381096166092, guid: 55b8fb8c2d02bc14da4089d73e299ed4, type: 3}
---- !u!114 &8420577731181468025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e74c32144565264eb86dc7514aca7f7, type: 3}
-  m_Name: LaserGunLaser
-  m_EditorClassIdentifier: 
-  m_ID: 2
-  m_CategoryIDs: 87ec7e45
-  m_Capacity: 2147483647
-  m_Prefabs:
-  - {fileID: 0}
+  m_Prefabs: []
