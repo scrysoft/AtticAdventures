@@ -241,6 +241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5528898062014778885}
+  - component: {fileID: 2348425484895140785}
   m_Layer: 0
   m_Name: BeadsSampler
   m_TagString: Untagged
@@ -266,6 +267,18 @@ Transform:
   - {fileID: 6655040001008792617}
   m_Father: {fileID: 4929155315418819407}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2348425484895140785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9179479344770880604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d71006442e5af4781e8f5bf1cec3e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1145610760229127706
 PrefabInstance:
   m_ObjectHideFlags: 0
