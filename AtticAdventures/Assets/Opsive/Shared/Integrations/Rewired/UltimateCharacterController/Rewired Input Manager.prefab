@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 139612}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &11403150
 MonoBehaviour:
@@ -47,6 +47,7 @@ MonoBehaviour:
   _dontDestroyOnLoad: 1
   _userData:
     configVars:
+      updateMode: 0
       updateLoop: 1
       alwaysUseUnityInput: 0
       windowsStandalonePrimaryInputSource: 0
@@ -59,11 +60,9 @@ MonoBehaviour:
       ps4_primaryInputSource: 0
       ps5_primaryInputSource: 0
       webGL_primaryInputSource: 0
-      stadia_primaryInputSource: 0
       useXInput: 1
       useNativeMouse: 1
       useEnhancedDeviceSupport: 1
-      windowsStandalone_useSteamRawInputControllerWorkaround: 1
       osxStandalone_useEnhancedDeviceSupport: 1
       android_supportUnknownGamepads: 0
       ps4_assignJoysticksByPS4JoyId: 1
@@ -71,22 +70,30 @@ MonoBehaviour:
       logToScreen: 0
       runInEditMode: 0
       allowInputInEditorSceneView: 0
+      unityUsePhysicalKeys: 0
+      keyCombinationOverrideMode: 1
+      generateKeyEventsOnKeyCombinationOverride: 0
       platformVars_windowsStandalone:
         disableKeyboard: 0
         disableMouse: 0
         ignoreInputWhenAppNotInFocus: 1
         useNativeKeyboard: 1
         joystickRefreshRate: 240
+        useWindowsGamingInput: 0
+        enhancedDeviceSupportExcludedDeviceTypes: 
       platformVars_linuxStandalone:
         disableKeyboard: 0
         disableMouse: 0
         ignoreInputWhenAppNotInFocus: 1
+        useEnhancedDeviceSupport: 1
+        enhancedDeviceSupportExcludedDeviceTypes: 
       platformVars_osxStandalone:
         disableKeyboard: 0
         disableMouse: 0
         ignoreInputWhenAppNotInFocus: 1
         useAppleGameController: 0
         assignJoysticksByUserId: 0
+        enhancedDeviceSupportExcludedDeviceTypes: 
       platformVars_windowsUWP:
         disableKeyboard: 0
         disableMouse: 0
@@ -140,12 +147,6 @@ MonoBehaviour:
         disableKeyboard: 0
         disableMouse: 0
         ignoreInputWhenAppNotInFocus: 1
-      platformVars_stadia:
-        disableKeyboard: 0
-        disableMouse: 0
-        ignoreInputWhenAppNotInFocus: 1
-        useNativeKeyboard: 1
-        useNativeMouse: 1
       maxJoysticksPerPlayer: 1
       autoAssignJoysticks: 1
       assignJoysticksToPlayingPlayersOnly: 0
@@ -189,6 +190,7 @@ MonoBehaviour:
     - _id: 9999999
       _name: System
       _descriptiveName: System
+      _key: 
       _startPlaying: 1
       _defaultJoystickMaps: []
       _defaultMouseMaps: []
@@ -211,6 +213,7 @@ MonoBehaviour:
     - _id: 1
       _name: Player0
       _descriptiveName: Player0
+      _key: 
       _startPlaying: 1
       _defaultJoystickMaps:
       - _enabled: 1
@@ -243,6 +246,9 @@ MonoBehaviour:
       _descriptiveName: Horizontal
       _positiveDescriptiveName: Right
       _negativeDescriptiveName: Left
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -252,6 +258,9 @@ MonoBehaviour:
       _descriptiveName: Vertical
       _positiveDescriptiveName: Forward
       _negativeDescriptiveName: Backward
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -261,6 +270,9 @@ MonoBehaviour:
       _descriptiveName: Fire1
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -270,6 +282,21 @@ MonoBehaviour:
       _descriptiveName: Fire2
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 0
+    - _id: 45
+      _name: Fire3
+      _type: 1
+      _descriptiveName: Fire3
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -279,6 +306,9 @@ MonoBehaviour:
       _descriptiveName: Jump
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -288,6 +318,9 @@ MonoBehaviour:
       _descriptiveName: Mouse X
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -297,6 +330,9 @@ MonoBehaviour:
       _descriptiveName: Controller X
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -306,6 +342,9 @@ MonoBehaviour:
       _descriptiveName: Controller Y
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -315,6 +354,9 @@ MonoBehaviour:
       _descriptiveName: Mouse Y
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -324,15 +366,21 @@ MonoBehaviour:
       _descriptiveName: Reload
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
     - _id: 9
-      _name: Change Speeds
+      _name: Dive Roll
       _type: 1
-      _descriptiveName: Change Speeds
+      _descriptiveName: Dive Roll
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -342,6 +390,9 @@ MonoBehaviour:
       _descriptiveName: Grenade
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -351,6 +402,9 @@ MonoBehaviour:
       _descriptiveName: Crouch
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -360,6 +414,9 @@ MonoBehaviour:
       _descriptiveName: Equip Next Item
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -369,6 +426,9 @@ MonoBehaviour:
       _descriptiveName: Equip Previous Item
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -378,6 +438,9 @@ MonoBehaviour:
       _descriptiveName: Action
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -387,6 +450,9 @@ MonoBehaviour:
       _descriptiveName: Equip First Item
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -396,6 +462,9 @@ MonoBehaviour:
       _descriptiveName: Equip Second Item
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -405,6 +474,9 @@ MonoBehaviour:
       _descriptiveName: Equip Third Item
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -414,6 +486,9 @@ MonoBehaviour:
       _descriptiveName: Equip Fifth Item
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -423,6 +498,9 @@ MonoBehaviour:
       _descriptiveName: Equip Sixth Item
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -432,6 +510,9 @@ MonoBehaviour:
       _descriptiveName: Equip Seventh Item
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -441,6 +522,9 @@ MonoBehaviour:
       _descriptiveName: Equip Eighth Item
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -450,6 +534,9 @@ MonoBehaviour:
       _descriptiveName: Equip Ninth Item
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -459,6 +546,9 @@ MonoBehaviour:
       _descriptiveName: Equip Tenth Item
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -468,6 +558,9 @@ MonoBehaviour:
       _descriptiveName: Equip Fourth Item
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -477,6 +570,9 @@ MonoBehaviour:
       _descriptiveName: Right Joystick X
       _positiveDescriptiveName: Right Joystick Right
       _negativeDescriptiveName: Right Joystick Left
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -486,6 +582,9 @@ MonoBehaviour:
       _descriptiveName: Right Joystick Y
       _positiveDescriptiveName: Right Joystick Up
       _negativeDescriptiveName: Right Joystick Down
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -495,6 +594,9 @@ MonoBehaviour:
       _descriptiveName: Mouse Wheel
       _positiveDescriptiveName: Mouse Wheel Up
       _negativeDescriptiveName: Mouse Wheel Down
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -504,6 +606,9 @@ MonoBehaviour:
       _descriptiveName: Unlock Cursor
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 0
       _categoryId: 1
@@ -513,6 +618,9 @@ MonoBehaviour:
       _descriptiveName: Toggle Perspective
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -522,6 +630,9 @@ MonoBehaviour:
       _descriptiveName: SecondaryUse
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -531,6 +642,9 @@ MonoBehaviour:
       _descriptiveName: Drop
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -540,6 +654,9 @@ MonoBehaviour:
       _descriptiveName: Toggle Item Equip
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -549,6 +666,9 @@ MonoBehaviour:
       _descriptiveName: Lean
       _positiveDescriptiveName: LeanRight
       _negativeDescriptiveName: LeanLeft
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -558,6 +678,9 @@ MonoBehaviour:
       _descriptiveName: Open Panel
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -567,6 +690,9 @@ MonoBehaviour:
       _descriptiveName: Close Panel
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -576,6 +702,9 @@ MonoBehaviour:
       _descriptiveName: Previous
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -585,24 +714,29 @@ MonoBehaviour:
       _descriptiveName: Next
       _positiveDescriptiveName: 
       _negativeDescriptiveName: 
+      _key: 
+      _positiveKey: 
+      _negativeKey: 
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
     actionCategories:
     - _name: Default
       _descriptiveName: Default
+      _key: 
       _tag: 
       _id: 0
       _userAssignable: 1
     - _name: System
       _descriptiveName: System
+      _key: 
       _tag: 
       _id: 1
       _userAssignable: 0
     actionCategoryMap:
       list:
       - categoryId: 0
-        actionIds: 000000000200000005000000060000002b0000002c00000003000000070000000800000004000000090000000a0000000b0000000c0000000d0000000f00000010000000110000001200000013000000140000002100000024000000230000002200000025000000190000001a0000001b0000001d0000001e0000001f00000020000000260000002700000028000000290000002a000000
+        actionIds: 000000000200000005000000060000002b0000002c00000003000000070000002d0000000800000004000000090000000a0000000b0000000c0000000d0000000f00000010000000110000001200000013000000140000002100000024000000230000002200000025000000190000001a0000001b0000001d0000001e0000001f00000020000000260000002700000028000000290000002a000000
       - categoryId: 1
         actionIds: 1c000000
     inputBehaviors:
@@ -632,6 +766,7 @@ MonoBehaviour:
     mapCategories:
     - _name: Default
       _descriptiveName: Default
+      _key: 
       _tag: 
       _id: 0
       _userAssignable: 1
@@ -639,6 +774,7 @@ MonoBehaviour:
       _checkConflictsCategoryIds: 
     - _name: System
       _descriptiveName: System
+      _key: 
       _tag: 
       _id: 1
       _userAssignable: 0
@@ -647,18 +783,22 @@ MonoBehaviour:
     joystickLayouts:
     - _name: Default
       _descriptiveName: Default
+      _key: 
       _id: 0
     keyboardLayouts:
     - _name: Default
       _descriptiveName: Default
+      _key: 
       _id: 0
     mouseLayouts:
     - _name: Default
       _descriptiveName: Default
+      _key: 
       _id: 0
     customControllerLayouts:
     - _name: Default
       _descriptiveName: Default
+      _key: 
       _id: 0
     joystickMaps:
     - id: 0
@@ -1561,7 +1701,7 @@ MonoBehaviour:
     controllerMapLayoutManagerRuleSets: []
     controllerMapEnablerRuleSets: []
     playerIdCounter: 2
-    actionIdCounter: 45
+    actionIdCounter: 46
     actionCategoryIdCounter: 2
     inputBehaviorIdCounter: 1
     mapCategoryIdCounter: 2
