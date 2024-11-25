@@ -21,16 +21,19 @@ namespace AtticAdventures.UI
 
     public class InteractableDialogue : MonoBehaviour, IInteractableTarget
     {
+        public enum DialogueMode { Sequential, Random }
+
+        [SerializeField] private DialogueMode dialogueMode = DialogueMode.Sequential;
         [SerializeField] private List<DialogueEntry> dialogues;
         [SerializeField] private StringEventChannel stringEventChannel;
         [SerializeField] private AudioSource audioSource;
-        
-        private CanvasGroup canvasGroup;
-        private float fadeDuration = 0.2f;
 
+        private DialogueUI dialogueUI;
         private Coroutine dialogueCoroutine;
-
         private bool dialogueIsRunning = false;
+
+        private int currentDialogueIndex = -1;
+        private int lastRandomIndex = -1;
 
         public bool CanInteract(GameObject character, Interact interactAbility)
         {
@@ -44,7 +47,7 @@ namespace AtticAdventures.UI
 
         public void StartDialogue()
         {
-            canvasGroup = FindObjectOfType<DialogueUI>().GetCanvasGroup();
+            dialogueUI = FindObjectOfType<DialogueUI>();
 
             if (dialogueCoroutine == null)
             {
@@ -64,53 +67,105 @@ namespace AtticAdventures.UI
 
         private IEnumerator PlayDialogueSequence()
         {
-            foreach (var dialogue in dialogues)
+            dialogueIsRunning = true;
+
+            if (dialogueMode == DialogueMode.Random)
             {
-                dialogueIsRunning = true;
-                dialogue.onDialogueStart?.Invoke();
-
-                yield return StartCoroutine(FadeCanvasGroup(1, fadeDuration));
-
-                stringEventChannel?.Invoke($"{dialogue.name}: {dialogue.text}");
-
-                if (dialogue.audioClip != null && audioSource != null)
+                int randomIndex = GetNextRandomIndex();
+                yield return PlayDialogueAtIndex(randomIndex);
+            }
+            else if (dialogueMode == DialogueMode.Sequential)
+            {
+                while (true)
                 {
-                    audioSource.clip = dialogue.audioClip;
-                    audioSource.Play();
+                    var dialogueIndex = GetNextDialogueIndex();
+                    yield return PlayDialogueAtIndex(dialogueIndex);
 
-                    yield return new WaitForSeconds(audioSource.clip.length);
+                    if (dialogueIndex == dialogues.Count - 1)
+                    {
+                        break;
+                    }
                 }
-
-                if (dialogue.delay > 0)
-                {
-                    yield return new WaitForSeconds(dialogue.delay);
-                }
-
-                yield return StartCoroutine(FadeCanvasGroup(0, fadeDuration));
-                
-                stringEventChannel?.Invoke("");
-                dialogue.onDialogueEnd?.Invoke();
             }
 
             dialogueCoroutine = null;
             dialogueIsRunning = false;
         }
 
-        private IEnumerator FadeCanvasGroup(float targetAlpha, float duration)
+        private int GetNextDialogueIndex()
         {
-            if (canvasGroup == null) yield break;
-
-            float startAlpha = canvasGroup.alpha;
-            float elapsed = 0f;
-
-            while (elapsed < duration)
+            if (dialogues.Count == 1)
             {
-                elapsed += Time.deltaTime;
-                canvasGroup.alpha = Mathf.Lerp(startAlpha, targetAlpha, elapsed / duration);
-                yield return null;
+                return 0;
             }
 
-            canvasGroup.alpha = targetAlpha;
+            if (dialogueMode == DialogueMode.Sequential)
+            {
+                currentDialogueIndex = (currentDialogueIndex + 1) % dialogues.Count;
+                return currentDialogueIndex;
+            }
+
+            return -1;
+        }
+
+        private int GetNextRandomIndex()
+        {
+            if (dialogues.Count == 1)
+            {
+                return 0;
+            }
+
+            int randomIndex;
+            do
+            {
+                randomIndex = Random.Range(0, dialogues.Count);
+            } while (randomIndex == lastRandomIndex);
+
+            lastRandomIndex = randomIndex;
+            return randomIndex;
+        }
+
+        private IEnumerator PlayDialogueAtIndex(int index)
+        {
+            var dialogue = dialogues[index];
+
+            dialogue.onDialogueStart?.Invoke();
+
+            yield return dialogueUI.FadeCanvasGroup(1);
+
+            stringEventChannel?.Invoke($"{dialogue.name}: {dialogue.text}");
+
+            if (dialogue.audioClip != null && audioSource != null)
+            {
+                audioSource.clip = dialogue.audioClip;
+                audioSource.Play();
+
+                yield return new WaitForSeconds(audioSource.clip.length);
+            }
+
+            if (dialogue.delay > 0)
+            {
+                yield return new WaitForSeconds(dialogue.delay);
+            }
+
+            yield return dialogueUI.FadeCanvasGroup(0);
+
+            stringEventChannel?.Invoke("");
+
+            dialogue.onDialogueEnd?.Invoke();
+        }
+
+        public void PlaySpecificDialogue(int index)
+        {
+            if (index < 0 || index >= dialogues.Count)
+            {
+                return;
+            }
+
+            if (dialogueCoroutine == null)
+            {
+                dialogueCoroutine = StartCoroutine(PlayDialogueAtIndex(index));
+            }
         }
     }
 }
