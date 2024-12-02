@@ -1,4 +1,3 @@
-using DG.Tweening;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
@@ -10,7 +9,7 @@ public class DecalSizeAnimator : MonoBehaviour
 
     [SerializeField] Vector3 initialSize = new Vector3(2f, 2f, 40f);
 
-    void OnEnable()
+    private void OnEnable()
     {
         StartCoroutine(AnimateDecalSize());
     }

@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2571479629535442554}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -108.77, y: 54.3, z: -58.15}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -49,6 +49,7 @@ MonoBehaviour:
   spawnVFX: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
   animationDuration: 1
   easeType: 27
+  isSpawnParticleActive: 0
 --- !u!82 &8934464833043052429
 AudioSource:
   m_ObjectHideFlags: 0
