@@ -7,6 +7,8 @@ namespace AtticAdventures
         public void OwlCollected(int index)
         {
             OwlCollectibleTracker.Instance.ActivateOwl(index);
+
+            OwlCollectibleTrackerUI.Instance.ActivateOwl(index);
         }
     }
 }

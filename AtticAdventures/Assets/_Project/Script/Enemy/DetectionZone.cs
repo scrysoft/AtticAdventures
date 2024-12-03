@@ -6,13 +6,19 @@ public class DetectionZone : MonoBehaviour
     public RotateAndShoot rotateAndShoot;
     public Canvas canvas;
 
+    private bool isCanvasActivatedEntirely = true;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             tankMovement.SetPlayerInZone(true, other.transform);
             rotateAndShoot.StartRotationAndShoot(true, other.transform);
-            canvas.gameObject.SetActive(true);
+
+            if (isCanvasActivatedEntirely)
+            {
+                canvas.gameObject.SetActive(true);
+            }
         }
     }
 
@@ -22,7 +28,16 @@ public class DetectionZone : MonoBehaviour
         {
             tankMovement.SetPlayerInZone(false, null);
             rotateAndShoot.StartRotationAndShoot(false, null);
-            canvas.gameObject.SetActive(false);
+
+            if (isCanvasActivatedEntirely)
+            {
+                canvas.gameObject.SetActive(false);
+            }
         }
+    }
+
+    public void DeactivateCanvasEntirely()
+    {
+        isCanvasActivatedEntirely = false;
     }
 }
