@@ -4,23 +4,24 @@ public class ApplyForce : MonoBehaviour
 {
     public float forceMultiplier = 10f;
     public Vector3 forceDirection = Vector3.up;
+    public float forceHeightOffset = 1f;
 
     private Rigidbody rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        if (rb == null)
-        {
-            Debug.LogError("Kein Rigidbody gefunden! Bitte füge einen Rigidbody zu diesem Objekt hinzu.");
-        }
     }
 
     public void ApplyForceToObject()
     {
         if (rb != null)
         {
-            rb.AddForce(forceDirection.normalized * forceMultiplier, ForceMode.Impulse);
+            Vector3 forcePosition = transform.position + Vector3.up * forceHeightOffset;
+
+            rb.AddForceAtPosition(forceDirection.normalized * forceMultiplier, forcePosition, ForceMode.Impulse);
+
+            Debug.DrawLine(forcePosition, forcePosition + forceDirection.normalized * forceMultiplier, Color.red, 2f);
         }
     }
 }

@@ -249,6 +249,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4434491996398147168}
+    - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OwlCollected
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AtticAdventures.OwlMessenger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6597685690503651716, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
         type: 3}
       propertyPath: m_Name
@@ -257,8 +297,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6597685690503651716, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4434491996398147168}
   m_SourcePrefab: {fileID: 100100000, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d, type: 3}
+--- !u!1 &3057177694571766547 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6597685690503651716, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8206392808099496599}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4434491996398147168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057177694571766547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a4f1e058bf44ff478c291ce1c46e39c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8133073495986265512 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 89101705252216639, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
