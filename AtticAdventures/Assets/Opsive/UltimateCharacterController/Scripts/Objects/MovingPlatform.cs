@@ -281,6 +281,12 @@ namespace Opsive.UltimateCharacterController.Objects
             ApplyPosition();
         }
 
+        // CustomEdit
+        public void SetMovementTypeToPingPong()
+        {
+            MovementType = PathMovementType.PingPong;
+        }
+
         /// <summary>
         /// If the platform has arrived at the current waypoint then the next waypoint should be determined.
         /// </summary>
