@@ -1,6 +1,7 @@
 using Rewired;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace AtticAdventures
 {
@@ -12,16 +13,21 @@ namespace AtticAdventures
         [SerializeField]
         private List<GameObject> objectsToDeactivate;
 
+        [SerializeField]
+        private UnityEvent onDucked;
+
+        [SerializeField]
+        private UnityEvent onUnducked;
+
         private int playerId = 0;
-
         private Player rewiredPlayer;
-
         private bool isDucked = false;
 
         void Awake()
         {
             rewiredPlayer = ReInput.players.GetPlayer(playerId);
         }
+
         void Update()
         {
             if (rewiredPlayer.GetButtonDown("Equip Fourth Item"))
@@ -49,6 +55,15 @@ namespace AtticAdventures
             }
 
             isDucked = !isDucked;
+
+            if (isDucked)
+            {
+                onDucked?.Invoke();
+            }
+            else
+            {
+                onUnducked?.Invoke();
+            }
         }
     }
 }
