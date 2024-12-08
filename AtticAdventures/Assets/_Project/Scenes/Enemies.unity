@@ -11254,6 +11254,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4c9a96beab31c3c4dba0c9ba61b7a944,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1002441103}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4c9a96beab31c3c4dba0c9ba61b7a944,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1002441098}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4c9a96beab31c3c4dba0c9ba61b7a944,
         type: 3}
@@ -11493,7 +11497,8 @@ MonoBehaviour:
   - m_Collider: {fileID: 1002441100}
     m_DamageMultiplier: 1
   m_MaxHitboxCollisionCount: 10
-  m_SpawnedObjectsOnDeath: []
+  m_SpawnedObjectsOnDeath:
+  - {fileID: 3251059397716761499, guid: 972ea2b4645beed40ba52aabfcd39723, type: 3}
   m_DestroyedObjectsOnDeath: []
   m_DeactivateOnDeath: 0
   m_DeactivateOnDeathDelay: 0.5
@@ -11547,6 +11552,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1002441103}
+        m_TargetAssemblyTypeName: AtticAdventures.ObjectListDeactivator, Assembly-CSharp
+        m_MethodName: DeactivateAllObjects
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11657,6 +11674,29 @@ MonoBehaviour:
   - {fileID: 1055666986}
   - {fileID: 1654888739}
   - {fileID: 1576539259}
+--- !u!114 &1002441103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002441096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2f056736b39cdb4f976a10dad1891c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToDeactivate:
+  - {fileID: 711492308}
+  - {fileID: 711492307}
+  - {fileID: 1974012882}
+  - {fileID: 1974012881}
+  - {fileID: 1974012884}
+  - {fileID: 1974012883}
+  - {fileID: 1974012900}
+  - {fileID: 1974012899}
+  - {fileID: 1974012898}
+  - {fileID: 1974012897}
 --- !u!1001 &1004133100
 PrefabInstance:
   m_ObjectHideFlags: 0
