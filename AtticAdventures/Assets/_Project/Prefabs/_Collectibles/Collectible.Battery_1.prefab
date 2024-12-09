@@ -385,6 +385,9 @@ MonoBehaviour:
   - {fileID: 3273771685330702333}
   - {fileID: 3790796187236820813}
   - {fileID: 8243718295534536981}
+  interactableTrigger: {fileID: 4121287863728656798, guid: cec04d81bc2c89744981dae27fa60928,
+    type: 3}
+  vfxPrefab: {fileID: 1278727605926722, guid: 181798a00482bb14c94d17af8dce84f9, type: 3}
   AllObjectsDisabled:
     m_PersistentCalls:
       m_Calls:
@@ -567,7 +570,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1980904193246100084}
-  - component: {fileID: 241807644885988654}
   m_Layer: 0
   m_Name: Models
   m_TagString: Untagged
@@ -591,18 +593,6 @@ Transform:
   - {fileID: 9137350696123818169}
   m_Father: {fileID: 4255151556061300030}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &241807644885988654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9215786836560873729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2d71006442e5af4781e8f5bf1cec3e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &45116879913292127
 PrefabInstance:
   m_ObjectHideFlags: 0

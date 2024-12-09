@@ -5,6 +5,8 @@ using UnityEngine.Events;
 public class BatteryObjectDisabler : MonoBehaviour
 {
     [SerializeField] private List<GameObject> objects = new List<GameObject>(6);
+    [SerializeField] private GameObject interactableTrigger;
+    [SerializeField] private GameObject vfxPrefab;
     private float ejectForce = 10f;
     private Vector3 objectSize = new Vector3(2.5f, 2.5f, 2.5f);
 
@@ -35,6 +37,7 @@ public class BatteryObjectDisabler : MonoBehaviour
         if (rb == null)
         {
             rb = copy.AddComponent<Rigidbody>();
+            rb.drag = 5f;
         }
 
         CapsuleCollider capsuleCollider = copy.GetComponent<CapsuleCollider>();
@@ -44,6 +47,19 @@ public class BatteryObjectDisabler : MonoBehaviour
         }
 
         copy.transform.localScale = objectSize;
+
+        if (interactableTrigger != null)
+        {
+            GameObject child1 = Instantiate(interactableTrigger, copy.transform);
+            child1.transform.localPosition = Vector3.zero;
+        }
+
+        if (vfxPrefab != null)
+        {
+            GameObject child2 = Instantiate(vfxPrefab, copy.transform);
+            child2.transform.localPosition = Vector3.zero;
+            child2.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        }
 
         Vector3 randomDirection = Random.insideUnitSphere.normalized;
         rb.AddForce(randomDirection * ejectForce, ForceMode.Impulse);
