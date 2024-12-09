@@ -37,7 +37,7 @@ public class BatteryObjectDisabler : MonoBehaviour
         if (rb == null)
         {
             rb = copy.AddComponent<Rigidbody>();
-            rb.drag = 5f;
+            rb.drag = 2f;
         }
 
         CapsuleCollider capsuleCollider = copy.GetComponent<CapsuleCollider>();
