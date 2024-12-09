@@ -10,13 +10,11 @@ namespace AtticAdventures
 
         public void TriggerEventOne()
         {
-            Debug.Log("TEST: Invincible");
             OnEventOneTriggered?.Invoke();
         }
 
         public void TriggerEventTwo()
         {
-            Debug.Log("TEST: Not Invincible");
             OnEventTwoTriggered?.Invoke();
         }
     }
