@@ -6,10 +6,10 @@ namespace AtticAdventures
 {
     public class ObjectSpawner : MonoBehaviour
     {
-        public GameObject[] objectsToSpawn; // Liste der Objekte, die gespawnt werden können
-        public int numberOfObjectsToSpawn = 10; // Anzahl der zu spawnenden Objekte
-        public float spawnRadius = 5f; // Radius, in dem die Objekte gespawnt werden
-        public float forceMagnitude = 10f; // Stärke des Impulses
+        public GameObject[] objectsToSpawn;
+        public int numberOfObjectsToSpawn = 10;
+        public float spawnRadius = 5f;
+        public float forceMagnitude = 10f;
 
         void Start()
         {
