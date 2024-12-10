@@ -8,12 +8,12 @@ namespace AtticAdventures
         public UnityEvent OnEventOneTriggered;
         public UnityEvent OnEventTwoTriggered;
 
-        public void TriggerEventOne()
+        public void TriggerEventOneChipArms()
         {
             OnEventOneTriggered?.Invoke();
         }
 
-        public void TriggerEventTwo()
+        public void TriggerEventTwoChipArms()
         {
             OnEventTwoTriggered?.Invoke();
         }
