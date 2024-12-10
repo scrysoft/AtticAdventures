@@ -1,7 +1,7 @@
 using AtticAdventures.SceneManagement;
+using Rewired;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
@@ -9,9 +9,17 @@ public class PauseManager : MonoBehaviour
     public UnityEvent onResume;
     private bool isPaused = false;
 
+    private Player rewiredPlayer;
+    private int playerId = 0;
+
+    void Awake()
+    {
+        rewiredPlayer = ReInput.players.GetPlayer(playerId);
+    }
+
     void Update()
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (Input.GetButtonDown("Cancel") || rewiredPlayer.GetButtonDown("Cancel"))
         {
             if (isPaused)
             {

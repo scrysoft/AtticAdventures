@@ -251,6 +251,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
         type: 3}
+      propertyPath: m_SpawnedObjectsOnDeath.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
+        type: 3}
+      propertyPath: m_SpawnedObjectsOnDeath.Array.data[4]
+      value: 
+      objectReference: {fileID: 3251059397716761499, guid: e33bc9dbc67cc124abad93ef43ee6a63,
+        type: 3}
+    - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
+        type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
