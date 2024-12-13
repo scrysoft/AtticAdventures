@@ -22,8 +22,10 @@ namespace AtticAdventures.UI
     public class InteractableDialogue : MonoBehaviour, IInteractableTarget
     {
         public enum DialogueMode { Sequential, Random }
+        public enum DialogueProgressMode { Automatic, Manual }
 
         [SerializeField] private DialogueMode dialogueMode = DialogueMode.Sequential;
+        [SerializeField] private DialogueProgressMode progressMode = DialogueProgressMode.Automatic;
         [SerializeField] private List<DialogueEntry> dialogues;
         [SerializeField] private StringEventChannel stringEventChannel;
         [SerializeField] private AudioSource audioSource;
@@ -65,6 +67,19 @@ namespace AtticAdventures.UI
             }
         }
 
+        public void ContinueDialogue()
+        {
+            if (!dialogueIsRunning || progressMode != DialogueProgressMode.Manual)
+            {
+                return;
+            }
+
+            if (dialogueCoroutine == null)
+            {
+                dialogueCoroutine = StartCoroutine(PlayDialogueSequence());
+            }
+        }
+
         private IEnumerator PlayDialogueSequence()
         {
             dialogueIsRunning = true;
@@ -80,6 +95,13 @@ namespace AtticAdventures.UI
                 {
                     var dialogueIndex = GetNextDialogueIndex();
                     yield return PlayDialogueAtIndex(dialogueIndex);
+
+                    if (progressMode == DialogueProgressMode.Manual)
+                    {
+                        // Warten, bis ContinueDialogue aufgerufen wird
+                        dialogueCoroutine = null;
+                        yield break;
+                    }
 
                     if (dialogueIndex == dialogues.Count - 1)
                     {
