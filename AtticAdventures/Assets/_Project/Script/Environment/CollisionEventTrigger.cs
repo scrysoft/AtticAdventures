@@ -12,7 +12,6 @@ public class CollisionEventTrigger : MonoBehaviour
         if (collision.gameObject.CompareTag(targetTag))
         {
             onCollisionWithTarget.Invoke();
-
         }
     }
 }

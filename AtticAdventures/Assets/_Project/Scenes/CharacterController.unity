@@ -4861,6 +4861,59 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1267264352}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &365184953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 365184954}
+  - component: {fileID: 365184955}
+  m_Layer: 0
+  m_Name: PowerArmFIstCollider
+  m_TagString: PowerArmFist
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &365184954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365184953}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.21430875, y: -0.6663044, z: 0.18536137, w: 0.68974733}
+  m_LocalPosition: {x: 0.00002, y: 0.00148, z: -0.00007}
+  m_LocalScale: {x: 0.009999997, y: 0.009999998, z: 0.009999996}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 651418216}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &365184955
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365184953}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Radius: 0.16
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &368620063 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6500833211384501044, guid: 7cfc1174ea8071543a5b855c53cb507f,
@@ -11127,6 +11180,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 506013913}
+    - targetCorrespondingSourceObject: {fileID: -1157215158506559437, guid: f261abc5c645bdc419f45599811dabb3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1444388107}
     - targetCorrespondingSourceObject: {fileID: 4962630599575025857, guid: f261abc5c645bdc419f45599811dabb3,
         type: 3}
       insertIndex: -1
@@ -11135,6 +11192,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 706435711}
+    - targetCorrespondingSourceObject: {fileID: 4962630599575025857, guid: f261abc5c645bdc419f45599811dabb3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 365184954}
     - targetCorrespondingSourceObject: {fileID: -7640861403799980709, guid: f261abc5c645bdc419f45599811dabb3,
         type: 3}
       insertIndex: -1
@@ -18345,6 +18406,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1435895934}
   m_CullTransparentMesh: 0
+--- !u!1 &1444388106
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1444388107}
+  - component: {fileID: 1444388108}
+  m_Layer: 0
+  m_Name: PowerArmFIstCollider
+  m_TagString: PowerArmFist
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1444388107
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444388106}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.21430875, y: -0.6663044, z: 0.18536137, w: 0.68974733}
+  m_LocalPosition: {x: 0.00002, y: 0.00148, z: -0.00007}
+  m_LocalScale: {x: 0.009999997, y: 0.009999998, z: 0.009999996}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1411400140}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1444388108
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444388106}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Radius: 0.16
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1455902843
 GameObject:
   m_ObjectHideFlags: 0
@@ -22051,6 +22165,8 @@ MonoBehaviour:
           - rid: 6085966505200320521
           - rid: 6085966505200320522
           - rid: 6085966505200320523
+          - rid: 6085966505200320532
+          - rid: 6085966505200320533
         m_FailImpactActions:
           m_ImpactActions: []
     - rid: 6085966505200320520
@@ -22120,6 +22236,88 @@ MonoBehaviour:
         m_AllowMultiHits: 0
         m_CallImpactCallbackOnOriginator: 1
         m_CallImpactCallbackOnTarget: 1
+    - rid: 6085966505200320532
+      type: {class: ImpactUnityEvent, ns: Opsive.UltimateCharacterController.Items.Actions.Impact,
+        asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_Delay: 0
+        m_AllowMultiHits: 0
+        m_OnImpactEvent:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 1444388108}
+              m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+              m_MethodName: set_enabled
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 1
+              m_CallState: 2
+            - m_Target: {fileID: 365184955}
+              m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+              m_MethodName: set_enabled
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 1
+              m_CallState: 2
+    - rid: 6085966505200320533
+      type: {class: ImpactUnityEvent, ns: Opsive.UltimateCharacterController.Items.Actions.Impact,
+        asm: Opsive.UltimateCharacterController}
+      data:
+        m_States:
+        - m_Name: Default
+          m_Preset: {fileID: 0}
+          m_BlockList: []
+          m_Default: 1
+        m_Bindings:
+          m_Bindings: []
+        m_Enabled: 1
+        m_Delay: 0.2
+        m_AllowMultiHits: 0
+        m_OnImpactEvent:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 1444388108}
+              m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+              m_MethodName: set_enabled
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+            - m_Target: {fileID: 365184955}
+              m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+              m_MethodName: set_enabled
+              m_Mode: 6
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
     - rid: 7444518895230648323
       type: {class: SimpleAttack, ns: Opsive.UltimateCharacterController.Items.Actions.Modules.Melee,
         asm: Opsive.UltimateCharacterController}

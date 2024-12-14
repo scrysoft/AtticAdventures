@@ -1,21 +1,49 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class RotateObject : MonoBehaviour
+public class AutomaticDoor : MonoBehaviour
 {
     public AnimationCurve easeCurve;
     public float duration = 2.0f;
+    public Vector3 eulerRotation = new Vector3(-90f, 0f, 0f);
+    public UnityEvent onTargetRotationReached;
+
+    private bool isEnabled = true;
 
     public void RotateOverTime()
     {
-        StartCoroutine(RotateCoroutine());
+        if (isEnabled)
+        {
+            StartCoroutine(RotateCoroutine());
+        }
+    }
+
+    public void SetActivity(bool value)
+    {
+        isEnabled = value;
+    }
+
+    public void SetXRotation(float value)
+    {
+        eulerRotation.x = value;
+    }
+
+    public void SetYRotation(float value)
+    {
+        eulerRotation.y = value;
+    }
+
+    public void SetZRotation(float value)
+    {
+        eulerRotation.z = value;
     }
 
     private IEnumerator RotateCoroutine()
     {
         float timeElapsed = 0f;
         Quaternion startRotation = transform.localRotation;
-        Quaternion targetRotation = Quaternion.Euler(-90f, 0f, 0f) * startRotation;
+        Quaternion targetRotation = Quaternion.Euler(eulerRotation) * startRotation;
 
         while (timeElapsed < duration)
         {
@@ -29,5 +57,7 @@ public class RotateObject : MonoBehaviour
         }
 
         transform.localRotation = targetRotation;
+        SetActivity(false);
+        onTargetRotationReached?.Invoke();
     }
 }
