@@ -114,6 +114,17 @@ namespace AtticAdventures.UI
             dialogueIsRunning = false;
         }
 
+        public void SetDialogueIsRunning(bool value)
+        {
+            dialogueIsRunning = value;
+
+            if(value == false)
+            {
+                dialogueCoroutine = null;
+                currentDialogueIndex = -1;
+    }
+        }
+
         private int GetNextDialogueIndex()
         {
             if (dialogues.Count == 1)
