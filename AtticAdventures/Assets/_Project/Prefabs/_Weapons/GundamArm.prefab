@@ -931,5 +931,60 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 145061305651118112, guid: d1ccb9ad692f4d14fbaf860b74c6e6e0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3755247297146760155}
+    - targetCorrespondingSourceObject: {fileID: 145061305651118112, guid: d1ccb9ad692f4d14fbaf860b74c6e6e0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5058382237831799413}
   m_SourcePrefab: {fileID: 100100000, guid: d1ccb9ad692f4d14fbaf860b74c6e6e0, type: 3}
+--- !u!1 &568491029066930008 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 145061305651118112, guid: d1ccb9ad692f4d14fbaf860b74c6e6e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 423606547503552376}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3755247297146760155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568491029066930008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c7486da925e5046aff76b0d7975271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: ba5bd08cb7d9db5478152e2e8d0c383d, type: 2}
+--- !u!114 &5058382237831799413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568491029066930008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c98947820d5daa42826c70ded73bd9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventChannel: {fileID: 11400000, guid: 74bf382699ec2a1419995cd77be30dc7, type: 2}
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3755247297146760155}
+        m_TargetAssemblyTypeName: SetSegmentCount, Assembly-CSharp
+        m_MethodName: SetSegmentCountValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
