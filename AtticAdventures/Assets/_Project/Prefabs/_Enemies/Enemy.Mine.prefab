@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 5915783518706403035}
   - component: {fileID: 1838020041138221101}
   - component: {fileID: 2322227510989771420}
+  - component: {fileID: 6488375607817292010}
   m_Layer: 0
   m_Name: Enemy.Mine
   m_TagString: Untagged
@@ -293,6 +294,32 @@ MonoBehaviour:
   decalProjectorRing: {fileID: 5089885765248615944}
   blinkingLightObject: {fileID: 4052560071475627151}
   warningBlinkTimeFactor: 4
+--- !u!205 &6488375607817292010
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5424115889411554051}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0.001998067, z: -0.0000076293945}
+  m_Size: 2
+  m_FadeMode: 1
+  m_AnimateCrossFading: 1
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.03
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 6414272745815688241}
+    - renderer: {fileID: 7889279803876676383}
+  - screenRelativeHeight: 0
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1001 &6437604090617028467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -371,6 +398,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0226c73c41f32ca4ba5a933b354bdefa, type: 3}
+--- !u!23 &6414272745815688241 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 23333577983007554, guid: 0226c73c41f32ca4ba5a933b354bdefa,
+    type: 3}
+  m_PrefabInstance: {fileID: 6437604090617028467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6432947414500244585 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4676528396411674, guid: 0226c73c41f32ca4ba5a933b354bdefa,

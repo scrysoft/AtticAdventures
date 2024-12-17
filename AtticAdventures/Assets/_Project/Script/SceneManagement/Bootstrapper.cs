@@ -1,8 +1,9 @@
 using AtticAdventures.Utilities;
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEditor.SceneManagement;
+#endif
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 
 public class Bootstrapper : PersistentSingleton<Bootstrapper>
@@ -16,6 +17,6 @@ public class Bootstrapper : PersistentSingleton<Bootstrapper>
 #if UNITY_EDITOR
         EditorSceneManager.playModeStartScene = AssetDatabase.LoadAssetAtPath<SceneAsset>(EditorBuildSettings.scenes[sceneIndex].path);
 #endif
-        await SceneManager.LoadSceneAsync("Bootstrapper").AsTask();
+        await UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("Bootstrapper").AsTask();
     }
 }

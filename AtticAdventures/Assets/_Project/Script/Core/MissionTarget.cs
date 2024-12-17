@@ -8,6 +8,7 @@ namespace AtticAdventures
         public string questHeader = "";
         public string questObjective = "";
 
+#if UNITY_EDITOR
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.yellow;
@@ -20,5 +21,6 @@ namespace AtticAdventures
 
             UnityEditor.Handles.Label(transform.position + Vector3.up, $"Index: {index}", style);
         }
+#endif
     }
 }

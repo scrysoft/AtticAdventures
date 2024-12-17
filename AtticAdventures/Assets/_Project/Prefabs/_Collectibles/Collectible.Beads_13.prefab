@@ -381,6 +381,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6109485751585435530}
+    - targetCorrespondingSourceObject: {fileID: 295598093838049291, guid: da2836b214240fd4da792e82eae7a388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4538565311645025628}
   m_SourcePrefab: {fileID: 100100000, guid: da2836b214240fd4da792e82eae7a388, type: 3}
 --- !u!1 &1381716999560125590 stripped
 GameObject:
@@ -400,9 +404,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb7f9458838dd443a08e2b2593f8ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!205 &4538565311645025628
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381716999560125590}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0.001998067, z: -0.0000076293945}
+  m_Size: 2
+  m_FadeMode: 1
+  m_AnimateCrossFading: 1
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.005
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 9064711246755498365}
+    - renderer: {fileID: 8047842469595242740}
+  - screenRelativeHeight: 0
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!4 &1758383966673831468 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1103940782362966705, guid: da2836b214240fd4da792e82eae7a388,
+    type: 3}
+  m_PrefabInstance: {fileID: 1672793331884211357}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8047842469595242740 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8690076711185767529, guid: da2836b214240fd4da792e82eae7a388,
+    type: 3}
+  m_PrefabInstance: {fileID: 1672793331884211357}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &9064711246755498365 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7708656738869720544, guid: da2836b214240fd4da792e82eae7a388,
     type: 3}
   m_PrefabInstance: {fileID: 1672793331884211357}
   m_PrefabAsset: {fileID: 0}
@@ -503,6 +545,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6766606925041883312}
+    - targetCorrespondingSourceObject: {fileID: 295598093838049291, guid: da2836b214240fd4da792e82eae7a388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7740643467346744357}
   m_SourcePrefab: {fileID: 100100000, guid: da2836b214240fd4da792e82eae7a388, type: 3}
 --- !u!4 &1479193277089926586 stripped
 Transform:
@@ -528,6 +574,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb7f9458838dd443a08e2b2593f8ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!205 &7740643467346744357
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2291477745137817344}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0.001998067, z: -0.0000076293945}
+  m_Size: 2
+  m_FadeMode: 1
+  m_AnimateCrossFading: 1
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.005
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 8155029700064363243}
+    - renderer: {fileID: 7156079629617834850}
+  - screenRelativeHeight: 0
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
+--- !u!23 &7156079629617834850 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8690076711185767529, guid: da2836b214240fd4da792e82eae7a388,
+    type: 3}
+  m_PrefabInstance: {fileID: 2006030618677802763}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8155029700064363243 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7708656738869720544, guid: da2836b214240fd4da792e82eae7a388,
+    type: 3}
+  m_PrefabInstance: {fileID: 2006030618677802763}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2736832417376357205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -719,7 +803,23 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5047558088768992774}
+    - targetCorrespondingSourceObject: {fileID: 295598093838049291, guid: da2836b214240fd4da792e82eae7a388,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7922644267393648721}
   m_SourcePrefab: {fileID: 100100000, guid: da2836b214240fd4da792e82eae7a388, type: 3}
+--- !u!23 &1026870819033391336 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7708656738869720544, guid: da2836b214240fd4da792e82eae7a388,
+    type: 3}
+  m_PrefabInstance: {fileID: 7258267576020702472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2027694457166252385 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8690076711185767529, guid: da2836b214240fd4da792e82eae7a388,
+    type: 3}
+  m_PrefabInstance: {fileID: 7258267576020702472}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6962748650846745859 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 295598093838049291, guid: da2836b214240fd4da792e82eae7a388,
@@ -738,6 +838,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb7f9458838dd443a08e2b2593f8ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!205 &7922644267393648721
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6962748650846745859}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0.001998067, z: -0.0000076293945}
+  m_Size: 2
+  m_FadeMode: 1
+  m_AnimateCrossFading: 1
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.005
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1026870819033391336}
+    - renderer: {fileID: 2027694457166252385}
+  - screenRelativeHeight: 0
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!4 &7776440768121319353 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1103940782362966705, guid: da2836b214240fd4da792e82eae7a388,
