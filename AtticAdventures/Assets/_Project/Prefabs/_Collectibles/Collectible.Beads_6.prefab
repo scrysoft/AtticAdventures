@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3f221e44909de942899a4d72792f189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnVFX: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
+  spawnVFX: {fileID: 0}
   animationDuration: 1
   easeType: 27
   isSpawnParticleActive: 0
@@ -291,6 +291,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8235567028296884400}
     m_Modifications:
+    - target: {fileID: 2140783668413008505, guid: 5a499e7e545d50d43910999e7fc8cd41,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2140783668413008505, guid: 5a499e7e545d50d43910999e7fc8cd41,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -433,9 +438,11 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 106038467054663292}
-  - screenRelativeHeight: 0
+    - renderer: {fileID: 4117341580035990318}
+  - screenRelativeHeight: 0.003
     fadeTransitionWidth: 0
-    renderers: []
+    renderers:
+    - renderer: {fileID: 4117341580035990318}
   - screenRelativeHeight: 0
     fadeTransitionWidth: 0
     renderers: []
@@ -448,6 +455,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8235567028296884400}
     m_Modifications:
+    - target: {fileID: 2140783668413008505, guid: 5a499e7e545d50d43910999e7fc8cd41,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2140783668413008505, guid: 5a499e7e545d50d43910999e7fc8cd41,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -590,9 +602,11 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 253316937879543043}
-  - screenRelativeHeight: 0
+    - renderer: {fileID: 4117341580035990318}
+  - screenRelativeHeight: 0.003
     fadeTransitionWidth: 0
-    renderers: []
+    renderers:
+    - renderer: {fileID: 4117341580035990318}
   - screenRelativeHeight: 0
     fadeTransitionWidth: 0
     renderers: []
@@ -605,6 +619,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8235567028296884400}
     m_Modifications:
+    - target: {fileID: 2140783668413008505, guid: 5a499e7e545d50d43910999e7fc8cd41,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2140783668413008505, guid: 5a499e7e545d50d43910999e7fc8cd41,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -741,9 +760,11 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 4520531685020218963}
-  - screenRelativeHeight: 0
+    - renderer: {fileID: 4117341580035990318}
+  - screenRelativeHeight: 0.003
     fadeTransitionWidth: 0
-    renderers: []
+    renderers:
+    - renderer: {fileID: 4117341580035990318}
   - screenRelativeHeight: 0
     fadeTransitionWidth: 0
     renderers: []
@@ -762,6 +783,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8235567028296884400}
     m_Modifications:
+    - target: {fileID: 2140783668413008505, guid: 5a499e7e545d50d43910999e7fc8cd41,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8148315025939379456, guid: 5a499e7e545d50d43910999e7fc8cd41,
         type: 3}
       propertyPath: m_Name
@@ -893,9 +919,11 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 3021621061961689677}
-  - screenRelativeHeight: 0
+    - renderer: {fileID: 4117341580035990318}
+  - screenRelativeHeight: 0.003
     fadeTransitionWidth: 0
-    renderers: []
+    renderers:
+    - renderer: {fileID: 4117341580035990318}
   - screenRelativeHeight: 0
     fadeTransitionWidth: 0
     renderers: []
@@ -914,6 +942,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8235567028296884400}
     m_Modifications:
+    - target: {fileID: 2140783668413008505, guid: 5a499e7e545d50d43910999e7fc8cd41,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2140783668413008505, guid: 5a499e7e545d50d43910999e7fc8cd41,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1044,9 +1077,11 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 6441651067085553478}
-  - screenRelativeHeight: 0
+    - renderer: {fileID: 4117341580035990318}
+  - screenRelativeHeight: 0.003
     fadeTransitionWidth: 0
-    renderers: []
+    renderers:
+    - renderer: {fileID: 4117341580035990318}
   - screenRelativeHeight: 0
     fadeTransitionWidth: 0
     renderers: []
@@ -1151,6 +1186,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7b28afb872c527408ea5ec8a0937dbf, type: 3}
+--- !u!199 &4117341580035990318 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 7990799641857808406, guid: c7b28afb872c527408ea5ec8a0937dbf,
+    type: 3}
+  m_PrefabInstance: {fileID: 6324946917297847096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4333861512731142110 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7773848063599107302, guid: c7b28afb872c527408ea5ec8a0937dbf,
@@ -1165,6 +1206,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8235567028296884400}
     m_Modifications:
+    - target: {fileID: 2140783668413008505, guid: 5a499e7e545d50d43910999e7fc8cd41,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2140783668413008505, guid: 5a499e7e545d50d43910999e7fc8cd41,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1295,9 +1341,11 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 8740767892129653062}
-  - screenRelativeHeight: 0
+    - renderer: {fileID: 4117341580035990318}
+  - screenRelativeHeight: 0.003
     fadeTransitionWidth: 0
-    renderers: []
+    renderers:
+    - renderer: {fileID: 4117341580035990318}
   - screenRelativeHeight: 0
     fadeTransitionWidth: 0
     renderers: []
@@ -1322,6 +1370,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8235567028296884400}
     m_Modifications:
+    - target: {fileID: 2140783668413008505, guid: 5a499e7e545d50d43910999e7fc8cd41,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2140783668413008505, guid: 5a499e7e545d50d43910999e7fc8cd41,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1452,9 +1505,11 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 7661844277362982856}
-  - screenRelativeHeight: 0
+    - renderer: {fileID: 4117341580035990318}
+  - screenRelativeHeight: 0.003
     fadeTransitionWidth: 0
-    renderers: []
+    renderers:
+    - renderer: {fileID: 4117341580035990318}
   - screenRelativeHeight: 0
     fadeTransitionWidth: 0
     renderers: []

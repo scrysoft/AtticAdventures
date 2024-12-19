@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3f221e44909de942899a4d72792f189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnVFX: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
+  spawnVFX: {fileID: 0}
   animationDuration: 1
   easeType: 27
   isSpawnParticleActive: 0
@@ -367,6 +367,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7b28afb872c527408ea5ec8a0937dbf, type: 3}
+--- !u!199 &6990434367727361548 stripped
+ParticleSystemRenderer:
+  m_CorrespondingSourceObject: {fileID: 7990799641857808406, guid: c7b28afb872c527408ea5ec8a0937dbf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1145610760229127706}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7206963691130739452 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7773848063599107302, guid: c7b28afb872c527408ea5ec8a0937dbf,
@@ -383,9 +389,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 249385958572990342, guid: 1422757d3296d384f820b5e149cbe184,
         type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 249385958572990342, guid: 1422757d3296d384f820b5e149cbe184,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b1ad88e03eccd7b46b2220b93ec3bd36, type: 2}
+    - target: {fileID: 3909568111168179220, guid: 1422757d3296d384f820b5e149cbe184,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3909568111168179220, guid: 1422757d3296d384f820b5e149cbe184,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -454,6 +470,11 @@ PrefabInstance:
     - target: {fileID: 7250542128087562821, guid: 1422757d3296d384f820b5e149cbe184,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834406854328038935, guid: 1422757d3296d384f820b5e149cbe184,
+        type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7834406854328038935, guid: 1422757d3296d384f820b5e149cbe184,
@@ -540,9 +561,11 @@ LODGroup:
     - renderer: {fileID: 6088037385090021499}
     - renderer: {fileID: 4301383003243516394}
     - renderer: {fileID: 1046516557893780088}
-  - screenRelativeHeight: 0
+    - renderer: {fileID: 6990434367727361548}
+  - screenRelativeHeight: 0.003
     fadeTransitionWidth: 0
-    renderers: []
+    renderers:
+    - renderer: {fileID: 6990434367727361548}
   - screenRelativeHeight: 0
     fadeTransitionWidth: 0
     renderers: []
@@ -563,9 +586,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 249385958572990342, guid: 1422757d3296d384f820b5e149cbe184,
         type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 249385958572990342, guid: 1422757d3296d384f820b5e149cbe184,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2c5723a15703e0b41871d6a4c9bd4e48, type: 2}
+    - target: {fileID: 3909568111168179220, guid: 1422757d3296d384f820b5e149cbe184,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3909568111168179220, guid: 1422757d3296d384f820b5e149cbe184,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -634,6 +667,11 @@ PrefabInstance:
     - target: {fileID: 7250542128087562821, guid: 1422757d3296d384f820b5e149cbe184,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834406854328038935, guid: 1422757d3296d384f820b5e149cbe184,
+        type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7834406854328038935, guid: 1422757d3296d384f820b5e149cbe184,
@@ -708,9 +746,11 @@ LODGroup:
     - renderer: {fileID: 4514657433320484651}
     - renderer: {fileID: 5867013527130719930}
     - renderer: {fileID: 7232708404309955880}
-  - screenRelativeHeight: 0
+    - renderer: {fileID: 6990434367727361548}
+  - screenRelativeHeight: 0.003
     fadeTransitionWidth: 0
-    renderers: []
+    renderers:
+    - renderer: {fileID: 6990434367727361548}
   - screenRelativeHeight: 0
     fadeTransitionWidth: 0
     renderers: []
@@ -741,6 +781,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5528898062014778885}
     m_Modifications:
+    - target: {fileID: 249385958572990342, guid: 1422757d3296d384f820b5e149cbe184,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3909568111168179220, guid: 1422757d3296d384f820b5e149cbe184,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7250542128087562821, guid: 1422757d3296d384f820b5e149cbe184,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -804,6 +854,11 @@ PrefabInstance:
     - target: {fileID: 7250542128087562821, guid: 1422757d3296d384f820b5e149cbe184,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834406854328038935, guid: 1422757d3296d384f820b5e149cbe184,
+        type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8058286678581289215, guid: 1422757d3296d384f820b5e149cbe184,
@@ -879,9 +934,11 @@ LODGroup:
     - renderer: {fileID: 4159525101350514630}
     - renderer: {fileID: 6229888654991181399}
     - renderer: {fileID: 7152119692878222789}
-  - screenRelativeHeight: 0
+    - renderer: {fileID: 6990434367727361548}
+  - screenRelativeHeight: 0.003
     fadeTransitionWidth: 0
-    renderers: []
+    renderers:
+    - renderer: {fileID: 6990434367727361548}
   - screenRelativeHeight: 0
     fadeTransitionWidth: 0
     renderers: []
