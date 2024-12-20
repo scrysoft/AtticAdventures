@@ -63,6 +63,10 @@ public class AnalyticsManager : MonoBehaviour
 		ResetAnalyticsData();
 	}
 
+	public Guid GetSessionId()
+	{
+		return sessionID;
+	}
 
 	private void Update()
 	{
