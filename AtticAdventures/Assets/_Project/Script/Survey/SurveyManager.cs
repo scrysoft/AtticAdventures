@@ -62,9 +62,27 @@ public class SurveyManager : MonoBehaviour
     void SaveResultsToCsv()
     {
         string sessionId = AnalyticsManager.Instance.GetSessionId().ToString();
-        string path = Path.Combine(Application.persistentDataPath, $"{sessionId}.csv");
 
-        using (StreamWriter writer = new StreamWriter(path))
+        string folderName = $"{sessionId}";
+        string folderPath = Path.Combine(Application.persistentDataPath, folderName);
+
+        if (!Directory.Exists(folderPath))
+        {
+            Directory.CreateDirectory(folderPath);
+        }
+
+        string heatmapFolderPath = Path.Combine(folderPath, "HeatmapTrackingData");
+
+        if (!Directory.Exists(heatmapFolderPath))
+        {
+            Directory.CreateDirectory(heatmapFolderPath);
+        }
+
+        AnalyticsManager.Instance.SetSaveDirectory(heatmapFolderPath);
+
+        string filePath = Path.Combine(folderPath, $"{sessionId}.csv");
+
+        using (StreamWriter writer = new StreamWriter(filePath))
         {
             writer.WriteLine("ID,Frage,Kategorie,Antwort");
 
@@ -74,7 +92,6 @@ public class SurveyManager : MonoBehaviour
                 writer.WriteLine(line);
             }
         }
-
-        Debug.Log($"Ergebnisse gespeichert in: {path}");
     }
+
 }

@@ -68,6 +68,11 @@ public class AnalyticsManager : MonoBehaviour
 		return sessionID;
 	}
 
+	public void SetSaveDirectory(string value)
+	{
+		saveDirectory = value;
+	}
+
 	private void Update()
 	{
 		if (autoExportEnabled && dataPointCount > 0)
