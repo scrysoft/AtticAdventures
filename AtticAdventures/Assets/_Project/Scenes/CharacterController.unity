@@ -6703,7 +6703,7 @@ MonoBehaviour:
     m_Preset: {fileID: 0}
     m_BlockList: []
     m_Default: 1
-  m_Invincible: 0
+  m_Invincible: 1
   m_TimeInvincibleAfterSpawn: 0
   m_HealthAttributeName: Health
   m_ShieldAttributeName: 
@@ -8676,7 +8676,7 @@ MonoBehaviour:
         m_ObjectDetection: 16
         m_DetectLayers:
           serializedVersion: 2
-          m_Bits: 2332033024
+          m_Bits: 2181038080
         m_UseLookPosition: 0
         m_UseLookDirection: 0
         m_AngleThreshold: 360
@@ -8689,7 +8689,7 @@ MonoBehaviour:
         m_MaxTriggerObjectCount: 1
         m_MoveWithObject: 1
         m_DrawDebugGizmos: 1
-        m_AllowedMovements: -1
+        m_AllowedMovements: 124
         m_MinimumStartOffset: {x: 0.6, y: 2, z: -0.4}
         m_MaximumStartOffset: {x: 2, y: 3.5, z: -0.4}
         m_RelativeHangOffset: {x: 0, y: -0.22, z: -0.2}
@@ -8701,7 +8701,7 @@ MonoBehaviour:
         m_ShimmyOffset: 0.5
         m_HandIKOffset: {x: 0, y: 0, z: -0.02}
         m_PullUpCastDistance: 0.5
-        m_StopHangOnJump: 0
+        m_StopHangOnJump: 1
         m_StartClimbOffset: {x: 0.5, y: 1.65}
         m_StartVerticalClimbOffset: 2.15
     - rid: 7444518841798098956
@@ -22001,7 +22001,7 @@ MonoBehaviour:
     m_DebugAction: 0
     m_CharacterItemActionDebugModuleType: 0
   m_UseRate: 0.1
-  m_FaceTarget: 1
+  m_FaceTarget: 0
   m_StopUseAbilityOnCompleteDelay: 0
   m_UseEvent:
     m_WaitForAnimationEvent: 0
@@ -25232,7 +25232,7 @@ PrefabInstance:
     - target: {fileID: 8240980560333052917, guid: 27e220e8ffd395540adda69431e1f657,
         type: 3}
       propertyPath: m_FaceTarget
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8240980560333052917, guid: 27e220e8ffd395540adda69431e1f657,
         type: 3}
