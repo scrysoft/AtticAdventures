@@ -7587,8 +7587,8 @@ MonoBehaviour:
   dialogues:
   - name: Sgt. Smother
     text: Let's settle this. Man to man!
-    audioClip: {fileID: 0}
-    delay: 3
+    audioClip: {fileID: 8300000, guid: 33b8df312d733dd4ea92f1e0744352da, type: 3}
+    delay: 1
     onDialogueStart:
       m_PersistentCalls:
         m_Calls: []
@@ -7597,8 +7597,8 @@ MonoBehaviour:
         m_Calls: []
   - name: Sgt. Smother
     text: You think you are tough? I'll show you tough!
-    audioClip: {fileID: 0}
-    delay: 3
+    audioClip: {fileID: 8300000, guid: eea3cd099bed73549b7e5ef2cbcd13ca, type: 3}
+    delay: 1
     onDialogueStart:
       m_PersistentCalls:
         m_Calls: []
@@ -7608,8 +7608,8 @@ MonoBehaviour:
   - name: Sgt. Smother
     text: Don't think for a second you have won. I will get you, you and your resistance
       friends.
-    audioClip: {fileID: 0}
-    delay: 3
+    audioClip: {fileID: 8300000, guid: 751fe0b2dca9ed748b8144035ecf6d28, type: 3}
+    delay: 1
     onDialogueStart:
       m_PersistentCalls:
         m_Calls: []
@@ -7618,8 +7618,8 @@ MonoBehaviour:
         m_Calls: []
   - name: Sgt. Smother
     text: I am so sorry, Father! I couldn't stop them!
-    audioClip: {fileID: 0}
-    delay: 3
+    audioClip: {fileID: 8300000, guid: b228b18488a3a244da390747ab0ded15, type: 3}
+    delay: 1
     onDialogueStart:
       m_PersistentCalls:
         m_Calls: []
@@ -7773,6 +7773,7 @@ GameObject:
   - component: {fileID: 710570169}
   - component: {fileID: 710570168}
   - component: {fileID: 710570167}
+  - component: {fileID: 710570172}
   m_Layer: 26
   m_Name: BossHealth.Canvas
   m_TagString: Untagged
@@ -7875,6 +7876,33 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &710570172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710570166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a64980629d86242b2807dab43c4309, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onStartEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 709766543}
+        m_TargetAssemblyTypeName: AtticAdventures.UI.InteractableDialogue, Assembly-CSharp
+        m_MethodName: PlaySpecificDialogue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &711492306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8798456708244548665, guid: 4c9a96beab31c3c4dba0c9ba61b7a944,
@@ -11506,6 +11534,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1002441104}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4c9a96beab31c3c4dba0c9ba61b7a944,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1002441105}
     - targetCorrespondingSourceObject: {fileID: -3276787157823894635, guid: 4c9a96beab31c3c4dba0c9ba61b7a944,
         type: 3}
       insertIndex: -1
@@ -11806,6 +11838,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1002441105}
+        m_TargetAssemblyTypeName: DelayedEvent, Assembly-CSharp
+        m_MethodName: StartDelayedEvent
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!136 &1002441100
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11944,6 +11988,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Offset: {x: 0, y: 4.5, z: 0}
+--- !u!114 &1002441105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002441096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e2927442479f874baf8604139f82c36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDelayFinished:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 709766543}
+        m_TargetAssemblyTypeName: AtticAdventures.UI.InteractableDialogue, Assembly-CSharp
+        m_MethodName: StopDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 709766543}
+        m_TargetAssemblyTypeName: AtticAdventures.UI.InteractableDialogue, Assembly-CSharp
+        m_MethodName: PlaySpecificDialogue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 709766543}
+        m_TargetAssemblyTypeName: AtticAdventures.UI.InteractableDialogue, Assembly-CSharp
+        m_MethodName: SetDialogueIsRunning
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1004133100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15800,6 +15895,7 @@ GameObject:
   - component: {fileID: 1370903002}
   - component: {fileID: 1370903003}
   - component: {fileID: 1370903001}
+  - component: {fileID: 1370903004}
   m_Layer: 0
   m_Name: Sgt.Smother
   m_TagString: Untagged
@@ -15917,6 +16013,98 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1370903004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370903000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d97078a2a281a14394dfebac8699247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attributeManager: {fileID: 1002441098}
+  currentHealthPercentage: 100
+  onBelow60Percent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 709766543}
+        m_TargetAssemblyTypeName: AtticAdventures.UI.InteractableDialogue, Assembly-CSharp
+        m_MethodName: StopDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 709766543}
+        m_TargetAssemblyTypeName: AtticAdventures.UI.InteractableDialogue, Assembly-CSharp
+        m_MethodName: PlaySpecificDialogue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 709766543}
+        m_TargetAssemblyTypeName: AtticAdventures.UI.InteractableDialogue, Assembly-CSharp
+        m_MethodName: SetDialogueIsRunning
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onBelow30Percent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 709766543}
+        m_TargetAssemblyTypeName: AtticAdventures.UI.InteractableDialogue, Assembly-CSharp
+        m_MethodName: StopDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 709766543}
+        m_TargetAssemblyTypeName: AtticAdventures.UI.InteractableDialogue, Assembly-CSharp
+        m_MethodName: PlaySpecificDialogue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 709766543}
+        m_TargetAssemblyTypeName: AtticAdventures.UI.InteractableDialogue, Assembly-CSharp
+        m_MethodName: SetDialogueIsRunning
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1374725130
 PrefabInstance:
   m_ObjectHideFlags: 0
