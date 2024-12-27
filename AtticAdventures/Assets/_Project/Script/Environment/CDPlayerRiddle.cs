@@ -63,7 +63,7 @@ public class CDPlayerRiddle : MonoBehaviour
                 {
                     onAllCorrect?.Invoke();
                     gameComplete = true;
-                    ResetAllMaterials();
+                    // ResetAllMaterials();
                 }
             }
             else
@@ -85,7 +85,7 @@ public class CDPlayerRiddle : MonoBehaviour
         correctGuesses.Clear();
     }
 
-    private void ResetAllMaterials()
+    public void ResetAllMaterials()
     {
         foreach (var pair in boolPairs)
         {
