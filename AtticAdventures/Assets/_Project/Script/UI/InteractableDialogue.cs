@@ -160,6 +160,11 @@ namespace AtticAdventures.UI
 
         private IEnumerator PlayDialogueAtIndex(int index)
         {
+            if(dialogueUI == null)
+            {
+                dialogueUI = FindObjectOfType<DialogueUI>();
+            }
+
             var dialogue = dialogues[index];
 
             dialogue.onDialogueStart?.Invoke();
