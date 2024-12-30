@@ -67,7 +67,14 @@ public class ShopManager : MonoBehaviour
 
     public void ShowCategory(string categoryName)
     {
-        if (Enum.TryParse(categoryName, out ItemCategory category))
+        if (categoryName == "All")
+        {
+            for (int i = 0; i < itemsParent.childCount; i++)
+            {
+                itemsParent.GetChild(i).gameObject.SetActive(true);
+            }
+        }
+        else if (Enum.TryParse(categoryName, out ItemCategory category))
         {
             for (int i = 0; i < itemsParent.childCount; i++)
             {
