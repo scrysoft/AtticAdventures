@@ -1,4 +1,5 @@
 using AtticAdventures;
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -43,8 +44,15 @@ public class ShopManager : MonoBehaviour
         foreach (var item in shopItems)
         {
             var panelInstance = Instantiate(itemPanelPrefab, itemsParent);
-
-            panelInstance.GetComponent<ShopItemUI>().SetupItem(item.icon, item.title, item.description, maxBeadsCount * item.factor, item.isBuyable, item.category);
+            panelInstance.name = $"{item.title}_{item.isBuyable}";
+            panelInstance.GetComponent<ShopItemUI>().SetupItem(
+                item.icon,
+                item.title,
+                item.description,
+                maxBeadsCount * item.factor,
+                item.isBuyable,
+                item.category
+            );
         }
     }
 
@@ -54,6 +62,22 @@ public class ShopManager : MonoBehaviour
         for (int i = itemsParent.childCount - 1; i >= 0; i--)
         {
             DestroyImmediate(itemsParent.GetChild(i).gameObject);
+        }
+    }
+
+    public void ShowCategory(string categoryName)
+    {
+        if (Enum.TryParse(categoryName, out ItemCategory category))
+        {
+            for (int i = 0; i < itemsParent.childCount; i++)
+            {
+                var child = itemsParent.GetChild(i);
+                var itemUI = child.GetComponent<ShopItemUI>();
+                if (itemUI != null)
+                {
+                    child.gameObject.SetActive(itemUI.category == category);
+                }
+            }
         }
     }
 }
