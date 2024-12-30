@@ -1,0 +1,168 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9177d8a1287334a978e110e9636df1, type: 3}
+  m_Name: SCI-Fi
+  m_EditorClassIdentifier: 
+  achievementSystemPrefab: {fileID: 4520502133782792856, guid: 3e76658e755b28746b5af49a9d495d02, type: 3}
+  achievementPrefab: {fileID: 4283787512013071029, guid: e75883ce022637b4688d6a8a58a56fa0, type: 3}
+  categoryPrefab: {fileID: 1438642842390286, guid: e1ada28d43920a64895961f4d7947c14, type: 3}
+  themeMap:
+  - mapType: 34
+    sprite: {fileID: 21300000, guid: 340c530c81cbd9747b233a70ac8ad6f7, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement Complete
+  - mapType: 35
+    sprite: {fileID: 21300000, guid: b91a135b05eb8eb45bb01f30e9e85e94, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement Complete
+  - mapType: 31
+    sprite: {fileID: -889701262, guid: 434a975bc5ca3a2418fd0b85aa1d9b91, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement Complete
+  - mapType: 1
+    sprite: {fileID: 21300000, guid: df46e7fbf706bcb469bfb1eabe155af5, type: 3}
+    spriteColor: {r: 0.3764706, g: 0.3764706, b: 0.3764706, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 23
+    sprite: {fileID: 21300000, guid: 3fe2ef8d96e396044b5f625fe5b06dc0, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 25
+    sprite: {fileID: 21300000, guid: 5944e24e465807b4bbf14ff73937cb1e, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 29
+    sprite: {fileID: 21300000, guid: cafae17ed4143be46a1aac685de96970, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 30
+    sprite: {fileID: 21300000, guid: 5944e24e465807b4bbf14ff73937cb1e, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 26
+    sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 28
+    sprite: {fileID: 21300000, guid: 6955fa9b9b8c9cf4bb9141525d9c4e15, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 27
+    sprite: {fileID: 21300000, guid: d7dc06620a147fb42a21b883918e3fb3, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 24
+    sprite: {fileID: 21300000, guid: 6955fa9b9b8c9cf4bb9141525d9c4e15, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 21
+    sprite: {fileID: 21300000, guid: 5e2adaa4be1db4c46a45176ef6b38257, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 22
+    sprite: {fileID: 21300000, guid: 43a523fdc93709d489d32c9575873c0e, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 20
+    sprite: {fileID: -889701262, guid: 434a975bc5ca3a2418fd0b85aa1d9b91, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 18
+    sprite: {fileID: 21300000, guid: 98a31755e4b82bf42b6dce84af99be55, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 16
+    sprite: {fileID: 21300000, guid: 5e2adaa4be1db4c46a45176ef6b38257, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 17
+    sprite: {fileID: 21300000, guid: 43a523fdc93709d489d32c9575873c0e, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 15
+    sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 12
+    sprite: {fileID: 0}
+    spriteColor: {r: 1, g: 1, b: 1, a: 0}
+    referenceMapParent: Achievement System
+  - mapType: 10
+    sprite: {fileID: 21300000, guid: 6b02f0f485606974a8f3948c338b766d, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 11
+    sprite: {fileID: 21300000, guid: ff72ec4cdb668cf4b908a49a5e094868, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 4
+    sprite: {fileID: -1324347014, guid: d5f3b5fc29913dd448e16f5ba151ca99, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 8
+    sprite: {fileID: 599242668, guid: f0cde2a233cb34e4f84b9c9b7abf64a5, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 9
+    sprite: {fileID: 21300000, guid: 4604e0adb75c3de40bf81ab8f62af000, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement System
+  - mapType: 39
+    sprite: {fileID: 21300000, guid: 3fe2ef8d96e396044b5f625fe5b06dc0, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Category
+  - mapType: 38
+    sprite: {fileID: 21300000, guid: 7d26a3bd2bf6bc84682e89d8c722499a, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Category
+  - mapType: 37
+    sprite: {fileID: 21300000, guid: d7dc06620a147fb42a21b883918e3fb3, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Category
+  - mapType: 47
+    sprite: {fileID: 21300000, guid: c071fd24efee93b40bebfad026baff70, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement
+  - mapType: 46
+    sprite: {fileID: 21300000, guid: af83e5cb7ae59be4e9f42f154b581634, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement
+  - mapType: 43
+    sprite: {fileID: 21300000, guid: bab8e54827fe37145a14fd22a3cc3c22, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement
+  - mapType: 44
+    sprite: {fileID: 21300000, guid: b91a135b05eb8eb45bb01f30e9e85e94, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement
+  - mapType: 42
+    sprite: {fileID: 21300000, guid: 235cabc37c18e3a43b3e1e9a0e8f53a0, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 0}
+    referenceMapParent: Achievement
+  - mapType: 41
+    sprite: {fileID: 21300000, guid: cafae17ed4143be46a1aac685de96970, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+    referenceMapParent: Achievement
+  categoryButtonTextColor: {r: 0.5372549, g: 0.9215687, b: 0.9686275, a: 1}
+  categoryTextColor: {r: 0.5372549, g: 0.9215687, b: 0.9686275, a: 1}
+  achievementSystemHeadingTextColor: {r: 0.5372549, g: 0.9215687, b: 0.9686275, a: 1}
+  achievementSystemCategoryHeadingTextColor: {r: 0.5372549, g: 0.9215687, b: 0.9686275, a: 1}
+  achievementSystemAPHeadingTextColor: {r: 0.5372549, g: 0.9215687, b: 0.9686275, a: 1}
+  achievementHeadingTextColor: {r: 1, g: 1, b: 1, a: 1}
+  achievementDescriptionTextColor: {r: 1, g: 1, b: 1, a: 1}
+  achievementPointsTextColor: {r: 1, g: 1, b: 1, a: 1}
+  achievementProgressTextColor: {r: 1, g: 1, b: 1, a: 1}
+  searchFieldPlaceHolderTextColor: {r: 1, g: 1, b: 1, a: 1}
+  searchFieldTextColor: {r: 1, g: 1, b: 1, a: 1}
+  achievementCompleteHeadingTextColor: {r: 1, g: 1, b: 1, a: 1}
+  achievementCompleteDescriptionTextColor: {r: 1, g: 1, b: 1, a: 1}
+  achievementCompleteAchievementPointsTextColor: {r: 1, g: 1, b: 1, a: 1}

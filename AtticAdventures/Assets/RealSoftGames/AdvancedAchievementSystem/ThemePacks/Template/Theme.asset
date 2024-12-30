@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9177d8a1287334a978e110e9636df1, type: 3}
+  m_Name: Theme
+  m_EditorClassIdentifier: 
+  achievementSystemPrefab: {fileID: 4520502133782792856, guid: 8caf0cd7674e1804a833737c20fc7c13, type: 3}
+  achievementPrefab: {fileID: 4283787512013071029, guid: b7c820089b40a124ca441a7d14f3903f, type: 3}
+  categoryPrefab: {fileID: 1438642842390286, guid: 2a049688a589a5841a2ae146e90b7b99, type: 3}
+  themeMap:
+  - mapType: 34
+    sprite: {fileID: 21300000, guid: 9061586eaec87b24794936fb8aaf6f68, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 35
+    sprite: {fileID: 21300000, guid: ff123b7258a539d438ed6abd398ff85c, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 31
+    sprite: {fileID: 21300000, guid: 3db59d94d24af074b8f165bc011ec4d5, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 1
+    sprite: {fileID: 598304144, guid: 0a191623a3007a04289d8a2de3e6805e, type: 3}
+    spriteColor: {r: 0.5529412, g: 0.98039216, b: 0.8745098, a: 1}
+  - mapType: 23
+    sprite: {fileID: 21300000, guid: 3db59d94d24af074b8f165bc011ec4d5, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 25
+    sprite: {fileID: 21300000, guid: 3db59d94d24af074b8f165bc011ec4d5, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 29
+    sprite: {fileID: 21300000, guid: 7f329061c1bb2c44cbbec641a97ae78d, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 30
+    sprite: {fileID: 21300000, guid: 5a6de3c5227e6ed419fc15828deccaa6, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 26
+    sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 28
+    sprite: {fileID: 21300000, guid: 5a6de3c5227e6ed419fc15828deccaa6, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 24
+    sprite: {fileID: 21300000, guid: 5a6de3c5227e6ed419fc15828deccaa6, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 21
+    sprite: {fileID: 21300000, guid: 7f329061c1bb2c44cbbec641a97ae78d, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 22
+    sprite: {fileID: 21300000, guid: 5a6de3c5227e6ed419fc15828deccaa6, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 20
+    sprite: {fileID: 598304144, guid: 0a191623a3007a04289d8a2de3e6805e, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 18
+    sprite: {fileID: 21300000, guid: 31274b5b01bb7a4439489125c600e912, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 16
+    sprite: {fileID: 21300000, guid: 7f329061c1bb2c44cbbec641a97ae78d, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 17
+    sprite: {fileID: 21300000, guid: 5a6de3c5227e6ed419fc15828deccaa6, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 15
+    sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 12
+    sprite: {fileID: 598304144, guid: 0a191623a3007a04289d8a2de3e6805e, type: 3}
+    spriteColor: {r: 0.43529412, g: 0.7764706, b: 0.9254902, a: 1}
+  - mapType: 10
+    sprite: {fileID: 21300000, guid: 3f3deaabeb04e454baaf886a5f497e70, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 11
+    sprite: {fileID: 21300000, guid: 933e35404fb3c8643a877f154ada35f6, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 4
+    sprite: {fileID: 21300000, guid: 997cb5a0a1342814babc4f0819a05f4d, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 8
+    sprite: {fileID: 21300000, guid: a04c939fbcaecc44cbc4193cf97d4fe1, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 9
+    sprite: {fileID: 21300000, guid: fa925aed12f74e248bf1096c4fff05fd, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 47
+    sprite: {fileID: 21300000, guid: a44d6780e64a33e478ac69feb1f34139, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 46
+    sprite: {fileID: 21300000, guid: ee6723ed4ce399a45991edadbac70741, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 43
+    sprite: {fileID: 21300000, guid: 9061586eaec87b24794936fb8aaf6f68, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 44
+    sprite: {fileID: 21300000, guid: ff123b7258a539d438ed6abd398ff85c, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 42
+    sprite: {fileID: 21300000, guid: 27c2b405a92dec745abb193be8cd7fcb, type: 3}
+    spriteColor: {r: 0.26622722, g: 0, b: 0.30882353, a: 0}
+  - mapType: 41
+    sprite: {fileID: 21300000, guid: 78fa1b7da31299a489288faf4d3de015, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 39
+    sprite: {fileID: 1786631462, guid: 9ff94cb5268418c42b0494346eccc7ff, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 38
+    sprite: {fileID: 21300000, guid: 15632461452c1cc48a34a58a5d301b8e, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  - mapType: 37
+    sprite: {fileID: 21300000, guid: ca76a6eeeed9b4142b81ac2c484f4f7a, type: 3}
+    spriteColor: {r: 1, g: 1, b: 1, a: 1}
+  categoryButtonTextColor: {r: 1, g: 1, b: 1, a: 1}
+  categoryTextColor: {r: 1, g: 1, b: 1, a: 1}
+  achievementSystemHeadingTextColor: {r: 1, g: 1, b: 1, a: 1}
+  achievementSystemCategoryHeadingTextColor: {r: 1, g: 1, b: 1, a: 1}
+  achievementHeadingTextColor: {r: 1, g: 1, b: 1, a: 1}
+  achievementDescriptionTextColor: {r: 1, g: 1, b: 1, a: 1}
+  achievementPointsTextColor: {r: 1, g: 1, b: 1, a: 1}
+  achievementProgressTextColor: {r: 1, g: 1, b: 1, a: 1}
+  searchFieldPlaceHolderTextColor: {r: 1, g: 1, b: 1, a: 0.49019608}
+  searchFieldTextColor: {r: 1, g: 1, b: 1, a: 1}
+  achievementCompleteHeadingTextColor: {r: 1, g: 1, b: 1, a: 1}
+  achievementCompleteDescriptionTextColor: {r: 1, g: 1, b: 1, a: 1}
+  achievementCompleteAchievementPointsTextColor: {r: 1, g: 1, b: 1, a: 1}
+  CopyFromThemeMap: {fileID: 0}

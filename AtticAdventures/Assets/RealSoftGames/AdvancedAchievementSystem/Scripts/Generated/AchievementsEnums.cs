@@ -1,0 +1,35 @@
+namespace RealSoftGames.AdvancedAchievementSystem
+{
+    public enum AchievementList
+    {
+        Military_Coup,
+        Coup_in_a_Flash,
+        Unreachable_Treasure,
+        Daddys_Old_Records,
+        Under_the_Dome,
+        Tactical_Warfare,
+        Under_new_Management,
+        Parliament_of_Owls,
+        Lucky_Guess,
+        Treasure_Hunter,
+        Surprise,
+        Asking_for_trouble,
+        Trust_Fund,
+        Bead_Tycoon,
+        Thug,
+        Delinquent,
+        Warrior,
+        Inquisitor,
+        Smothers_Secret_Weapon,
+        Talkative,
+        School_Nurse,
+        Strategy_Meeting,
+        Window_Shopping,
+        To_be_continued,
+        King_of_the_World,
+        Sniper,
+        Marksman,
+        First_Time_Customer,
+        Broken_Silence,
+    }
+}

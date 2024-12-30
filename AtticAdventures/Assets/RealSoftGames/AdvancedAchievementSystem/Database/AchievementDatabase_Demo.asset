@@ -1,0 +1,263 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ad5317a7782b4748af9ff43f23e651d, type: 3}
+  m_Name: AchievementDatabase_Demo
+  m_EditorClassIdentifier: 
+  categories:
+  - buttonName: All
+    category: 0
+    subCategories:
+    - categoryType: 1
+      category: 0
+      incompleteAlpha: 0
+      completeAlpha: 1
+      color: {r: 1, g: 1, b: 1, a: 1}
+      image: {fileID: 0}
+  - buttonName: General
+    category: 1
+    subCategories:
+    - categoryType: 1
+      category: 1
+      incompleteAlpha: 0
+      completeAlpha: 1
+      color: {r: 0.26622722, g: 0, b: 0.30882353, a: 1}
+      image: {fileID: 21300000, guid: 27c2b405a92dec745abb193be8cd7fcb, type: 3}
+  - buttonName: Currency
+    category: 8
+    subCategories:
+    - categoryType: 1
+      category: 7
+      incompleteAlpha: 0
+      completeAlpha: 1
+      color: {r: 0.9622642, g: 0.041758526, b: 0.041758526, a: 0}
+      image: {fileID: 21300000, guid: 27c2b405a92dec745abb193be8cd7fcb, type: 3}
+    - categoryType: 1
+      category: 6
+      incompleteAlpha: 0
+      completeAlpha: 1
+      color: {r: 0.6102941, g: 0.6102941, b: 0.6102941, a: 0.19607843}
+      image: {fileID: 21300000, guid: 27c2b405a92dec745abb193be8cd7fcb, type: 3}
+    - categoryType: 1
+      category: 5
+      incompleteAlpha: 0
+      completeAlpha: 1
+      color: {r: 0.5418864, g: 0.5735294, b: 0, a: 1}
+      image: {fileID: 21300000, guid: 27c2b405a92dec745abb193be8cd7fcb, type: 3}
+  - buttonName: Slayer
+    category: 2
+    subCategories:
+    - categoryType: 1
+      category: 2
+      incompleteAlpha: 0
+      completeAlpha: 1
+      color: {r: 0.15294118, g: 0.64705884, b: 0.15686275, a: 0}
+      image: {fileID: 21300000, guid: 27c2b405a92dec745abb193be8cd7fcb, type: 3}
+  - buttonName: Weapon
+    category: 3
+    subCategories:
+    - categoryType: 1
+      category: 3
+      incompleteAlpha: 0
+      completeAlpha: 1
+      color: {r: 0.4867924, g: 0, b: 0, a: 1}
+      image: {fileID: 21300000, guid: 27c2b405a92dec745abb193be8cd7fcb, type: 3}
+  - buttonName: Quests
+    category: 4
+    subCategories:
+    - categoryType: 1
+      category: 4
+      incompleteAlpha: 0
+      completeAlpha: 1
+      color: {r: 0.09655173, g: 0, b: 0.8235294, a: 1}
+      image: {fileID: 21300000, guid: 27c2b405a92dec745abb193be8cd7fcb, type: 3}
+  achievements:
+  - achievementName: Expert Weapon User
+    achievement: 4
+    category: 3
+    searchString: weapon expert weapon user shoot 10 times
+    keys: 02000000
+    description: Shoot 10 times
+    image: {fileID: 21300000, guid: 45ef4e84fbd13d64a81a21f1b020c9ff, type: 3}
+    currentValue: 0
+    neededValue: 10
+    achievementPoints: 15
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 0}
+  - achievementName: Explorer
+    achievement: 7
+    category: 1
+    searchString: general explorer shoot 50 times
+    keys: 02000000
+    description: Shoot 50 times
+    image: {fileID: 21300000, guid: 45ef4e84fbd13d64a81a21f1b020c9ff, type: 3}
+    currentValue: 0
+    neededValue: 50
+    achievementPoints: 150
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 0}
+  - achievementName: Goblin King Slayer
+    achievement: 0
+    category: 2
+    searchString: slayer goblin king slayer click to move 10 times
+    keys: 01000000
+    description: Click to move 10 times
+    image: {fileID: 21300000, guid: 17fcf12529ccae844a396e5a434a06cb, type: 3}
+    currentValue: 0
+    neededValue: 10
+    achievementPoints: 10
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 11400000, guid: 46fa25e639f75b247aad50aeed41a125, type: 2}
+  - achievementName: Goblin Slayer
+    achievement: 8
+    category: 2
+    searchString: slayer goblin slayer slay 2 goblins
+    keys: 0300000004000000
+    description: Slay 2 goblins
+    image: {fileID: 21300000, guid: c7ec4ff9ee22d24489d1858dfd365cb8, type: 3}
+    currentValue: 0
+    neededValue: 2
+    achievementPoints: 10
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 1
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 2
+    achievementReward: {fileID: 11400000, guid: 7394a87c96e40664b82dacf0c0c7c1fd, type: 2}
+  - achievementName: Goblin Slayer Expert
+    achievement: 6
+    category: 2
+    searchString: slayer goblin slayer expert shoot 35 times
+    keys: 02000000
+    description: Shoot 35 times
+    image: {fileID: 21300000, guid: 45ef4e84fbd13d64a81a21f1b020c9ff, type: 3}
+    currentValue: 0
+    neededValue: 5
+    achievementPoints: 0
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 0}
+  - achievementName: Intermediate Weapon User
+    achievement: 2
+    category: 3
+    searchString: weapon intermediate weapon user slay 3 goblins
+    keys: 0400000003000000
+    description: Slay 3 goblins
+    image: {fileID: 21300000, guid: c7ec4ff9ee22d24489d1858dfd365cb8, type: 3}
+    currentValue: 0
+    neededValue: 3
+    achievementPoints: 25
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 0}
+  - achievementName: Money Bags
+    achievement: 5
+    category: 6
+    searchString: silver money bags shoot 20 times
+    keys: 02000000
+    description: Shoot 20 times
+    image: {fileID: 21300000, guid: 45ef4e84fbd13d64a81a21f1b020c9ff, type: 3}
+    currentValue: 0
+    neededValue: 20
+    achievementPoints: 30
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 0}
+  - achievementName: Novice Weapon User
+    achievement: 3
+    category: 3
+    searchString: weapon novice weapon user slay the goblin king
+    keys: 03000000
+    description: Slay the Goblin King
+    image: {fileID: 21300000, guid: e2608d542f8e20e49ae308c4865c7522, type: 3}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 80
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 1
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 11400000, guid: 7394a87c96e40664b82dacf0c0c7c1fd, type: 2}
+  - achievementName: Weapon Master
+    achievement: 1
+    category: 3
+    searchString: weapon weapon master collect 10 coins
+    keys: 00000000
+    description: Collect {NeededValue} coins
+    image: {fileID: 21300000, guid: 4b5356c89681715448ef3547a33c687e, type: 3}
+    currentValue: 0
+    neededValue: 10
+    achievementPoints: 15
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 11400000, guid: 46fa25e639f75b247aad50aeed41a125, type: 2}
+  display: 0
+  menu: 0
+  achievementSystemPrefab: {fileID: 4520502133782792856, guid: db2e5ef7388ac954f9b6ef325127f9da, type: 3}
+  categoriesBtnPrefab: {fileID: 1438642842390286, guid: 8db83c61b4ba0c74fb5d9b1b23cab1eb, type: 3}
+  achievementPrefab: {fileID: 4283787512013071029, guid: 46091bef2324e20459b8576a267467b8, type: 3}
+  onCompleteAudio: {fileID: 0}
+  dateTimeFormat: dd MMM yyyy hh:mmtt
+  theme: {fileID: 11400000, guid: 40ed9f698dfc24247a07af43a6fb5407, type: 2}
+  categoryNames:
+  - General
+  - Slayer
+  - Weapon
+  - Quests
+  - Gold
+  - Silver
+  - PVP
+  - Currency
+  achievementNames:
+  - Rapid_Clicker
+  - Coin_Collector
+  - Goblin_Slayer
+  - Goblin_King
+  - Novice_Weapon_User
+  - Intermediate_Weapon_User
+  - Expert_Weapon_User
+  - Weapon_Master
+  - Goblin_Slayer_Expert
+  - Goblin_Slayer_King
+  achievementKeys:
+  - Coin
+  - Click
+  - Bullet
+  - Goblin_King
+  - Goblin
+  displayTime: 5
+  fadeInTime: 1
+  fadeOutTime: 1

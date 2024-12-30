@@ -1,0 +1,578 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ad5317a7782b4748af9ff43f23e651d, type: 3}
+  m_Name: AtticAdventuresDatabase
+  m_EditorClassIdentifier: 
+  categories:
+  - buttonName: All
+    category: 0
+    subCategories:
+    - categoryType: 0
+      category: 0
+      incompleteAlpha: 0
+      completeAlpha: 0
+      color: {r: 0, g: 0, b: 0, a: 0}
+      image: {fileID: 0}
+  - buttonName: Combat
+    category: 1
+    subCategories:
+    - categoryType: 0
+      category: 1
+      incompleteAlpha: 0
+      completeAlpha: 0
+      color: {r: 0, g: 0, b: 0, a: 0}
+      image: {fileID: 0}
+  - buttonName: Exploration
+    category: 2
+    subCategories:
+    - categoryType: 0
+      category: 2
+      incompleteAlpha: 0
+      completeAlpha: 0
+      color: {r: 0, g: 0, b: 0, a: 0}
+      image: {fileID: 0}
+  - buttonName: Story
+    category: 3
+    subCategories:
+    - categoryType: 0
+      category: 3
+      incompleteAlpha: 0
+      completeAlpha: 0
+      color: {r: 0, g: 0, b: 0, a: 0}
+      image: {fileID: 0}
+  achievements:
+  - achievementName: Military Coup
+    achievement: 0
+    category: 3
+    searchString: story military coup you defeated the final boss of the chapter.
+    keys: 
+    description: You defeated the Final Boss of the Chapter.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 0}
+  - achievementName: Coup in a Flash
+    achievement: 1
+    category: 1
+    searchString: combat coup in a flash you defeated the final boss of the chapter
+      in under 3 minutes.
+    keys: 
+    description: You defeated the Final Boss of the Chapter in under 3 Minutes.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 0}
+  - achievementName: Unreachable Treasure
+    achievement: 2
+    category: 2
+    searchString: exploration unreachable treasure found the collectible at the highest
+      point of polymere valley.
+    keys: 
+    description: Found the Collectible at the highest point of Polymere Valley.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 0}
+  - achievementName: "Daddy\u2019s Old Records"
+    achievement: 3
+    category: 2
+    searchString: "exploration daddy\u2019s old records found the collectible in
+      the portable cd-player."
+    keys: 
+    description: Found the Collectible in the portable CD-Player.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 0}
+  - achievementName: Under the Dome
+    achievement: 4
+    category: 2
+    searchString: exploration under the dome found the collectible in the fish bowl.
+    keys: 
+    description: Found the Collectible in the fish bowl.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 0}
+  - achievementName: Tactical Warfare
+    achievement: 5
+    category: 2
+    searchString: exploration tactical warfare find the collectible guarded by a
+      tank.
+    keys: 
+    description: Find the Collectible guarded by a tank.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 0}
+  - achievementName: Under new Management
+    achievement: 6
+    category: 2
+    searchString: exploration under new management find the collectible by toppling
+      a tyrant.
+    keys: 
+    description: Find the Collectible by toppling a tyrant.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 0}
+  - achievementName: Parliament of Owls
+    achievement: 7
+    category: 2
+    searchString: exploration parliament of owls found all the special collectible
+      capsule in the polymere valley.
+    keys: 
+    description: Found all the Special Collectible Capsule in the Polymere Valley.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 0}
+  - achievementName: Lucky Guess
+    achievement: 8
+    category: 2
+    searchString: exploration lucky guess you found a blue collectible capsule containing
+      beads.
+    keys: 
+    description: You found a Blue Collectible Capsule containing Beads.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 0}
+  - achievementName: Treasure Hunter
+    achievement: 9
+    category: 2
+    searchString: "exploration treasure hunter you found all \rblue collectible capsules
+      containing beads\r.\n"
+    keys: 
+    description: "You found all \rBlue Collectible Capsules containing Beads\r.\n"
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 10
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 0}
+  - achievementName: Surprise!
+    achievement: 10
+    category: 2
+    searchString: "exploration surprise! you found a red collectible capsule containing
+      enemies\r."
+    keys: 
+    description: "You found a Red Collectible Capsule containing Enemies\r."
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 0}
+  - achievementName: Asking for trouble
+    achievement: 11
+    category: 2
+    searchString: exploration asking for trouble you found all red collectible capsules
+      containing enemies
+    keys: 
+    description: You found all Red Collectible Capsules containing Enemies
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 4
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 0}
+  - achievementName: Trust Fund
+    achievement: 12
+    category: 2
+    searchString: exploration trust fund you have collected 100 beads.
+    keys: 
+    description: You have collected 100 Beads.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 100
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 0
+    achievementReward: {fileID: 0}
+  - achievementName: Bead Tycoon
+    achievement: 13
+    category: 2
+    searchString: exploration bead tycoon you have collected 1000 beads.
+    keys: 
+    description: You have collected 1000 Beads.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 100
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 1
+    requiresCompletedAchievementID: 12
+    achievementReward: {fileID: 0}
+  - achievementName: Thug
+    achievement: 14
+    category: 1
+    searchString: combat thug you defeated an enemy.
+    keys: 
+    description: You defeated an Enemy.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 12
+    achievementReward: {fileID: 0}
+  - achievementName: Delinquent
+    achievement: 15
+    category: 1
+    searchString: combat delinquent you defeated 10 enemies.
+    keys: 
+    description: You defeated 10 Enemies.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 10
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 1
+    requiresCompletedAchievementID: 14
+    achievementReward: {fileID: 0}
+  - achievementName: Warrior
+    achievement: 16
+    category: 1
+    searchString: combat warrior you defeated 100 enemies.
+    keys: 
+    description: You defeated 100 Enemies.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 100
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 1
+    requiresCompletedAchievementID: 15
+    achievementReward: {fileID: 0}
+  - achievementName: Inquisitor
+    achievement: 17
+    category: 1
+    searchString: combat inquisitor you defeated 1000 enemies.
+    keys: 
+    description: You defeated 1000 Enemies.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1000
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 1
+    requiresCompletedAchievementID: 16
+    achievementReward: {fileID: 0}
+  - achievementName: "Smother\u2019s Secret Weapon"
+    achievement: 18
+    category: 1
+    searchString: "combat smother\u2019s secret weapon you managed to destroy sgt.
+      smother\u2019s tank."
+    keys: 
+    description: "You managed to destroy Sgt. Smother\u2019s Tank."
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 16
+    achievementReward: {fileID: 0}
+  - achievementName: Talkative
+    achievement: 19
+    category: 3
+    searchString: story talkative you have talked to someone.
+    keys: 
+    description: You have talked to someone.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 16
+    achievementReward: {fileID: 0}
+  - achievementName: School Nurse
+    achievement: 20
+    category: 3
+    searchString: story school nurse youhave  talked to pippa, the healer.
+    keys: 
+    description: Youhave  talked to Pippa, the Healer.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 16
+    achievementReward: {fileID: 0}
+  - achievementName: Strategy Meeting
+    achievement: 21
+    category: 3
+    searchString: story strategy meeting you have talked to pam, leader of the rebellion.
+    keys: 
+    description: You have talked to Pam, leader of the Rebellion.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 16
+    achievementReward: {fileID: 0}
+  - achievementName: Window Shopping
+    achievement: 22
+    category: 3
+    searchString: story window shopping you have talked to jarmaine, the merchant.
+    keys: 
+    description: You have talked to Jarmaine, the Merchant.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 16
+    achievementReward: {fileID: 0}
+  - achievementName: "To be continued\u2026"
+    achievement: 23
+    category: 3
+    searchString: "story to be continued\u2026 you reached the gate to the next level."
+    keys: 
+    description: You reached the Gate to the next level.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 16
+    achievementReward: {fileID: 0}
+  - achievementName: King of the World
+    achievement: 24
+    category: 2
+    searchString: exploration king of the world you have reached the top of the valley.
+    keys: 
+    description: You have reached the top of the valley.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 16
+    achievementReward: {fileID: 0}
+  - achievementName: Sniper
+    achievement: 25
+    category: 1
+    searchString: combat sniper you have killed an enemy with your laser.
+    keys: 
+    description: You have killed an Enemy with your laser.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 16
+    achievementReward: {fileID: 0}
+  - achievementName: Marksman
+    achievement: 26
+    category: 1
+    searchString: combat marksman you have killed 10 enemies with your laser.
+    keys: 
+    description: You have killed 10 Enemies with your laser.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 10
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 1
+    requiresCompletedAchievementID: 25
+    achievementReward: {fileID: 0}
+  - achievementName: First Time Customer
+    achievement: 27
+    category: 2
+    searchString: exploration first time customer you have bought an item in jarmaines
+      shop.
+    keys: 
+    description: You have bought an Item in jarmaines shop.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 25
+    achievementReward: {fileID: 0}
+  - achievementName: Broken Silence
+    achievement: 28
+    category: 2
+    searchString: exploration broken silence extract a prisoner's closely guarded
+      secret to unveil the dark truth.
+    keys: 
+    description: Extract a prisoner's closely guarded secret to unveil the dark truth.
+    image: {fileID: 0}
+    currentValue: 0
+    neededValue: 1
+    achievementPoints: 1
+    complete: 0
+    completeTimeDate: 
+    hiddenAchievement: 0
+    requiresCompletedAchievement: 0
+    requiresCompletedAchievementID: 25
+    achievementReward: {fileID: 0}
+  display: 0
+  menu: 0
+  achievementSystemPrefab: {fileID: 4520502133782792856, guid: a3c85602fc9695d418249ee3aed0b894,
+    type: 3}
+  categoriesBtnPrefab: {fileID: 1438642842390286, guid: f645895f761785342a559f6bc3ae63d1,
+    type: 3}
+  achievementPrefab: {fileID: 4283787512013071029, guid: 2b0ddf76b0e64c84da3ddf529e6c3464,
+    type: 3}
+  onCompleteAudio: {fileID: 0}
+  dateTimeFormat: dd MMM yyyy hh:mmtt
+  theme: {fileID: 11400000, guid: bda181e8fb40c5742bc54e8f92cf5ce0, type: 2}
+  categoryNames:
+  - Combat
+  - Exploration
+  - Story
+  achievementNames:
+  - Military_Coup
+  - Coup_in_a_Flash
+  - Unreachable_Treasure
+  - Daddys_Old_Records
+  - Under_the_Dome
+  - Tactical_Warfare
+  - Under_new_Management
+  - Parliament_of_Owls
+  - Lucky_Guess
+  - Treasure_Hunter
+  - Surprise
+  - Asking_for_trouble
+  - Trust_Fund
+  - Bead_Tycoon
+  - Thug
+  - Delinquent
+  - Warrior
+  - Inquisitor
+  - Smothers_Secret_Weapon
+  - Talkative
+  - School_Nurse
+  - Strategy_Meeting
+  - Window_Shopping
+  - To_be_continued
+  - King_of_the_World
+  - Sniper
+  - Marksman
+  - First_Time_Customer
+  - Broken_Silence
+  achievementKeys: []
+  displayTime: 5
+  fadeInTime: 1
+  fadeOutTime: 1
