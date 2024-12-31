@@ -11,6 +11,8 @@ namespace AtticAdventures.Core
         private int tweeners = 3125;
         private int sequences = 50;
 
+        [SerializeField] CollectibleBeadsAchievement collectibleBeadsAchievement;
+
         public int Score { get; private set; }
 
         private void Awake()
@@ -44,6 +46,11 @@ namespace AtticAdventures.Core
         public void AddScore(int score)
         {
             Score += score;
+
+            for (int i = 0; i < score; i++)
+            {
+                collectibleBeadsAchievement.Achievement();
+            }
         }
 
         private void SetMaxTweens(int tweeners, int sequences)

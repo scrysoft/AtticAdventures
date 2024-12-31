@@ -2,10 +2,10 @@ namespace RealSoftGames.AdvancedAchievementSystem
 {
     public enum AchievementKey
     {
-        Coin,
-        Click,
-        Bullet,
-        Goblin_King,
-        Goblin,
+        GoldCollectible,
+        BlueCollectible,
+        RedCollectible,
+        BeadsCollectible,
+        Enemy,
     }
 }

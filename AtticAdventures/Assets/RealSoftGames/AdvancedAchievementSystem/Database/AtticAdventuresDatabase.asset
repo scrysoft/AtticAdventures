@@ -172,11 +172,11 @@ MonoBehaviour:
     category: 2
     searchString: exploration parliament of owls found all the special collectible
       capsule in the polymere valley.
-    keys: 
+    keys: 00000000
     description: Found all the Special Collectible Capsule in the Polymere Valley.
     image: {fileID: 0}
     currentValue: 0
-    neededValue: 1
+    neededValue: 5
     achievementPoints: 1
     complete: 0
     completeTimeDate: 
@@ -189,7 +189,7 @@ MonoBehaviour:
     category: 2
     searchString: exploration lucky guess you found a blue collectible capsule containing
       beads.
-    keys: 
+    keys: 01000000
     description: You found a Blue Collectible Capsule containing Beads.
     image: {fileID: 0}
     currentValue: 0
@@ -206,7 +206,7 @@ MonoBehaviour:
     category: 2
     searchString: "exploration treasure hunter you found all \rblue collectible capsules
       containing beads\r.\n"
-    keys: 
+    keys: 01000000
     description: "You found all \rBlue Collectible Capsules containing Beads\r.\n"
     image: {fileID: 0}
     currentValue: 0
@@ -223,7 +223,7 @@ MonoBehaviour:
     category: 2
     searchString: "exploration surprise! you found a red collectible capsule containing
       enemies\r."
-    keys: 
+    keys: 02000000
     description: "You found a Red Collectible Capsule containing Enemies\r."
     image: {fileID: 0}
     currentValue: 0
@@ -240,7 +240,7 @@ MonoBehaviour:
     category: 2
     searchString: exploration asking for trouble you found all red collectible capsules
       containing enemies
-    keys: 
+    keys: 02000000
     description: You found all Red Collectible Capsules containing Enemies
     image: {fileID: 0}
     currentValue: 0
@@ -256,7 +256,7 @@ MonoBehaviour:
     achievement: 12
     category: 2
     searchString: exploration trust fund you have collected 100 beads.
-    keys: 
+    keys: 03000000
     description: You have collected 100 Beads.
     image: {fileID: 0}
     currentValue: 0
@@ -272,11 +272,11 @@ MonoBehaviour:
     achievement: 13
     category: 2
     searchString: exploration bead tycoon you have collected 1000 beads.
-    keys: 
+    keys: 03000000
     description: You have collected 1000 Beads.
     image: {fileID: 0}
     currentValue: 0
-    neededValue: 100
+    neededValue: 1000
     achievementPoints: 1
     complete: 0
     completeTimeDate: 
@@ -288,7 +288,7 @@ MonoBehaviour:
     achievement: 14
     category: 1
     searchString: combat thug you defeated an enemy.
-    keys: 
+    keys: 04000000
     description: You defeated an Enemy.
     image: {fileID: 0}
     currentValue: 0
@@ -304,7 +304,7 @@ MonoBehaviour:
     achievement: 15
     category: 1
     searchString: combat delinquent you defeated 10 enemies.
-    keys: 
+    keys: 04000000
     description: You defeated 10 Enemies.
     image: {fileID: 0}
     currentValue: 0
@@ -320,7 +320,7 @@ MonoBehaviour:
     achievement: 16
     category: 1
     searchString: combat warrior you defeated 100 enemies.
-    keys: 
+    keys: 04000000
     description: You defeated 100 Enemies.
     image: {fileID: 0}
     currentValue: 0
@@ -336,7 +336,7 @@ MonoBehaviour:
     achievement: 17
     category: 1
     searchString: combat inquisitor you defeated 1000 enemies.
-    keys: 
+    keys: 04000000
     description: You defeated 1000 Enemies.
     image: {fileID: 0}
     currentValue: 0
@@ -572,7 +572,12 @@ MonoBehaviour:
   - Marksman
   - First_Time_Customer
   - Broken_Silence
-  achievementKeys: []
+  achievementKeys:
+  - GoldCollectible
+  - BlueCollectible
+  - RedCollectible
+  - BeadsCollectible
+  - Enemy
   displayTime: 5
   fadeInTime: 1
   fadeOutTime: 1

@@ -745,6 +745,11 @@ namespace RealSoftGames.AdvancedAchievementSystem
             return null;
         }
 
+        internal void UpdateAchievementsByKey(AchievementKey goldCollectible, object nAchievementCompleteCallback)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion Utility Methods
 
         #endregion Methods

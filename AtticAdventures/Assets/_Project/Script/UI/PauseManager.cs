@@ -32,11 +32,17 @@ public class PauseManager : MonoBehaviour
         }
     }
 
-    private void PauseGame()
+    public void PauseGame()
     {
         Time.timeScale = 0f;
         isPaused = true;
         onPause?.Invoke();
+    }
+
+    public void PauseGameWithoutEvent()
+    {
+        Time.timeScale = 0f;
+        isPaused = true;
     }
 
     private void ResumeGame()
@@ -49,6 +55,12 @@ public class PauseManager : MonoBehaviour
     public void UnpauseGame()
     {
         ResumeGame();
+    }
+
+    public void ResumeGameWithoutEvent()
+    {
+        Time.timeScale = 1f;
+        isPaused = false;
     }
 
     public async void RestartLevel(int index)

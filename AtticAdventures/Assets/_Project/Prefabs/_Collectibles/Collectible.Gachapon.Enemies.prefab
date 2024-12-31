@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8594216942732363923}
   - component: {fileID: 336140078537905608}
   - component: {fileID: 1667178771904032406}
+  - component: {fileID: 1324870295209918486}
   m_Layer: 0
   m_Name: Collectible.Gachapon.Enemies
   m_TagString: Untagged
@@ -49,6 +50,7 @@ MonoBehaviour:
   spawnVFX: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
   animationDuration: 1
   easeType: 27
+  isSpawnParticleActive: 0
 --- !u!82 &1667178771904032406
 AudioSource:
   m_ObjectHideFlags: 0
@@ -145,6 +147,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1324870295209918486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3251059397716761499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e1115e499d5e574c97a033a91c6ca1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4788207664327768752
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,6 +293,41 @@ PrefabInstance:
       propertyPath: m_SpawnedObjectsOnDeath.Array.data[4]
       value: 
       objectReference: {fileID: 162456, guid: aa67315846cbf1a4db925cced0c050da, type: 3}
+    - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1324870295209918486}
+    - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Achievement
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AtticAdventures.CollectibleRedAchievement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6597685690503651716, guid: cbceb40845e5806478c8bbef57e19d55,
         type: 3}
       propertyPath: m_Name

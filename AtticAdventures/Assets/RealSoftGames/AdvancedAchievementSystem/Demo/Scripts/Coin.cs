@@ -21,7 +21,7 @@ namespace RealSoftGames.AdvancedAchievementSystem.Demo
             if (col.name == "Player")
             {
                 Player.AddCurrency(1);
-                AchievementManager.Instance.UpdateAchievementsByKey(AchievementKey.Coin);
+                //AchievementManager.Instance.UpdateAchievementsByKey(AchievementKey.Coin);
                 Destroy(gameObject);
             }
         }

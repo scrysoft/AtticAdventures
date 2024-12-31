@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 158500914342200006}
   - component: {fileID: 1605561653264414859}
   - component: {fileID: 4405753260073071471}
+  - component: {fileID: 2592911928927453776}
   m_Layer: 0
   m_Name: Collectible.Gachapon.Gold_2
   m_TagString: Untagged
@@ -191,6 +192,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2592911928927453776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9093329662548841161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a70982a484312547811fd7d38c6f5e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3521445649997750479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -263,11 +276,16 @@ PrefabInstance:
     - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
         type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
         type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
@@ -277,7 +295,17 @@ PrefabInstance:
       objectReference: {fileID: 4847513613770278893}
     - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
         type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2592911928927453776}
+    - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
+        type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
@@ -287,8 +315,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
         type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Achievement
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
+        type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: AtticAdventures.OwlMessenger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AtticAdventures.CollectibleGoldAchievement, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
         type: 3}
@@ -297,7 +335,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
         type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
+        type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6597685690503651716, guid: 4dbc22ecb7ed2dd4aac64d6a3c4bc49d,
