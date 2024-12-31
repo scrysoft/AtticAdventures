@@ -13,6 +13,7 @@ namespace AtticAdventures
         private void OnAchievementComplete()
         {
             Debug.Log($"You have bought an Item in jarmaines shop.");
+            WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.First_Time_Customer.ToString()}");
         }
     }
 }

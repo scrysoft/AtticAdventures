@@ -13,6 +13,7 @@ namespace AtticAdventures
         private void OnAchievementComplete()
         {
             Debug.Log($"You have reached the top of the valley.");
+            WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.King_of_the_World.ToString()}");
         }
     }
 }

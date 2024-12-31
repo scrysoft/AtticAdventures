@@ -13,6 +13,7 @@ namespace AtticAdventures
         private void OnAchievementComplete()
         {
             Debug.Log($"You managed to destroy Sgt. Smother’s Tank.");
+            WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Smothers_Secret_Weapon.ToString()}");
         }
     }
 }

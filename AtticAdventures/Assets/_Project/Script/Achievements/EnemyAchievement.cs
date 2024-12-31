@@ -15,21 +15,25 @@ namespace AtticAdventures
             if (achievement == AchievementList.Thug)
             {
                 Debug.Log("You defeated an Enemy.");
+                WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Thug.ToString()}");
             }
 
             if (achievement == AchievementList.Delinquent)
             {
                 Debug.Log("You defeated 10 Enemies.");
+                WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Delinquent.ToString()}");
             }
 
             if (achievement == AchievementList.Warrior)
             {
                 Debug.Log("You defeated 100 Enemies.");
+                WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Warrior.ToString()}");
             }
 
             if (achievement == AchievementList.Inquisitor)
             {
                 Debug.Log("You defeated 1000 Enemies.");
+                WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Inquisitor.ToString()}");
             }
         }
     }

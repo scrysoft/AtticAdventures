@@ -13,6 +13,8 @@ namespace AtticAdventures
         private void OnAchievementComplete()
         {
             Debug.Log($"Extract a prisoner's closely guarded secret to unveil the dark truth.");
+            WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Broken_Silence.ToString()}");
+
         }
     }
 }

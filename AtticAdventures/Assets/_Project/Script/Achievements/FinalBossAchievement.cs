@@ -13,6 +13,8 @@ namespace AtticAdventures
         private void OnAchievementComplete()
         {
             Debug.Log($"Military Coup completed!");
+            WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Military_Coup.ToString()}");
+
         }
     }
 }

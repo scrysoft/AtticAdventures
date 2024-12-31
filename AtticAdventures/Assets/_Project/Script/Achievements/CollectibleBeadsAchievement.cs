@@ -15,11 +15,15 @@ namespace AtticAdventures
             if (achievement == AchievementList.Trust_Fund)
             {
                 Debug.Log("You collected 100 Beads.");
+                WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Trust_Fund.ToString()}");
+
             }
 
             if (achievement == AchievementList.Bead_Tycoon)
             {
                 Debug.Log("You collected 1000 Beads.");
+                WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Bead_Tycoon.ToString()}");
+
             }
         }
     }

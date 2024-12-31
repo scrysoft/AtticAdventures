@@ -30,21 +30,29 @@ namespace AtticAdventures
         private void OnAchievementWindowShoppingComplete()
         {
             Debug.Log($"You talked to jarmaine, the Merchant.");
+            WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Window_Shopping.ToString()}");
+
         }
 
         private void OnAchievementStrategyMeetingComplete()
         {
             Debug.Log($"You talked to Pam, leader of the Rebellion.");
+            WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Strategy_Meeting.ToString()}");
+
         }
 
         private void OnAchievementSchoolNurseComplete()
         {
             Debug.Log($"You talked to Pippa, the Healer.");
+            WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.School_Nurse.ToString()}");
+
         }
 
         private void OnAchievementTalkativeComplete()
         {
             Debug.Log($"You talked to someone.");
+            WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Talkative.ToString()}");
+
         }
     }
 }
