@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using System.IO;
 using UnityEngine;
 
@@ -44,7 +45,8 @@ namespace AtticAdventures
         public void WriteAchievementWithTimestamp(string text)
         {
             float timeSinceStart = Time.time - _startTime;
-            string line = $"{text},{timeSinceStart:F2}";
+            int intSeconds = (int)timeSinceStart;
+            string line = $"{text},{intSeconds}";
 
             try
             {
