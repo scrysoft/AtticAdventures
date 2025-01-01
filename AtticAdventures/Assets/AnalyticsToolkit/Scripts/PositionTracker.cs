@@ -72,6 +72,10 @@ public class PositionTracker : MonoBehaviour
 		trackingEnabled = false;
 	}
 
+	public void RecordSinglePosition()
+	{
+		RecordPosition();
+	}
 
 	/// <summary>
 	/// Save the current position

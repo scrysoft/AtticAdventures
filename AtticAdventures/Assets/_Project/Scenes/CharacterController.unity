@@ -3629,6 +3629,53 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 277505941}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &280444060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 280444061}
+  - component: {fileID: 280444062}
+  m_Layer: 31
+  m_Name: DiveRoll_Tracking
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &280444061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280444060}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 514368702}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &280444062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280444060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705565eaf6ea57a4aae43e90aed23b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: DiveRoll_Usage
+  stepIntervall: Infinity
+  trackingEnabled: 0
 --- !u!1 &286817211
 GameObject:
   m_ObjectHideFlags: 0
@@ -4228,6 +4275,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9082370389815128192, guid: 55b8fb8c2d02bc14da4089d73e299ed4,
         type: 3}
+      propertyPath: m_EquipItemEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082370389815128192, guid: 55b8fb8c2d02bc14da4089d73e299ed4,
+        type: 3}
+      propertyPath: m_UnequipItemEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082370389815128192, guid: 55b8fb8c2d02bc14da4089d73e299ed4,
+        type: 3}
+      propertyPath: m_EquipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082370389815128192, guid: 55b8fb8c2d02bc14da4089d73e299ed4,
+        type: 3}
       propertyPath: m_EquipItemEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1163283053}
@@ -4243,6 +4305,16 @@ PrefabInstance:
       objectReference: {fileID: 514368705}
     - target: {fileID: 9082370389815128192, guid: 55b8fb8c2d02bc14da4089d73e299ed4,
         type: 3}
+      propertyPath: m_EquipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 837822676}
+    - target: {fileID: 9082370389815128192, guid: 55b8fb8c2d02bc14da4089d73e299ed4,
+        type: 3}
+      propertyPath: m_UnequipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082370389815128192, guid: 55b8fb8c2d02bc14da4089d73e299ed4,
+        type: 3}
       propertyPath: m_UnequipItemEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1163283053}
@@ -4256,6 +4328,56 @@ PrefabInstance:
       propertyPath: m_UnequipItemEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 514368705}
+    - target: {fileID: 9082370389815128192, guid: 55b8fb8c2d02bc14da4089d73e299ed4,
+        type: 3}
+      propertyPath: m_UnequipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 837822676}
+    - target: {fileID: 9082370389815128192, guid: 55b8fb8c2d02bc14da4089d73e299ed4,
+        type: 3}
+      propertyPath: m_EquipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082370389815128192, guid: 55b8fb8c2d02bc14da4089d73e299ed4,
+        type: 3}
+      propertyPath: m_EquipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: StartTracking
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082370389815128192, guid: 55b8fb8c2d02bc14da4089d73e299ed4,
+        type: 3}
+      propertyPath: m_UnequipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082370389815128192, guid: 55b8fb8c2d02bc14da4089d73e299ed4,
+        type: 3}
+      propertyPath: m_UnequipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: StopTracking
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082370389815128192, guid: 55b8fb8c2d02bc14da4089d73e299ed4,
+        type: 3}
+      propertyPath: m_EquipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: PositionTracker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082370389815128192, guid: 55b8fb8c2d02bc14da4089d73e299ed4,
+        type: 3}
+      propertyPath: m_UnequipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: PositionTracker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082370389815128192, guid: 55b8fb8c2d02bc14da4089d73e299ed4,
+        type: 3}
+      propertyPath: m_UnequipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082370389815128192, guid: 55b8fb8c2d02bc14da4089d73e299ed4,
+        type: 3}
+      propertyPath: m_EquipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082370389815128192, guid: 55b8fb8c2d02bc14da4089d73e299ed4,
+        type: 3}
+      propertyPath: m_UnequipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4931,12 +5053,12 @@ GameObject:
   - component: {fileID: 369644867}
   - component: {fileID: 369644868}
   m_Layer: 31
-  m_Name: PlayerDeaths
+  m_Name: PlayerDeaths_Tracking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &369644867
 Transform:
   m_ObjectHideFlags: 0
@@ -4959,7 +5081,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 369644866}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 705565eaf6ea57a4aae43e90aed23b20, type: 3}
   m_Name: 
@@ -5195,6 +5317,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 280444062}
+        m_TargetAssemblyTypeName: PositionTracker, Assembly-CSharp
+        m_MethodName: RecordSinglePosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
   OnEventTwoTriggered:
     m_PersistentCalls:
@@ -6672,19 +6806,7 @@ MonoBehaviour:
     m_AudioClips: []
   m_OnRespawnEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 369644868}
-        m_TargetAssemblyTypeName: PositionTracker, Assembly-CSharp
-        m_MethodName: StopTracking
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_CheckForObstruction: 0
 --- !u!114 &514368692
 MonoBehaviour:
@@ -6703,7 +6825,7 @@ MonoBehaviour:
     m_Preset: {fileID: 0}
     m_BlockList: []
     m_Default: 1
-  m_Invincible: 1
+  m_Invincible: 0
   m_TimeInvincibleAfterSpawn: 0
   m_HealthAttributeName: Health
   m_ShieldAttributeName: 
@@ -6737,7 +6859,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 369644868}
         m_TargetAssemblyTypeName: PositionTracker, Assembly-CSharp
-        m_MethodName: StartTracking
+        m_MethodName: RecordSinglePosition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9327,6 +9449,11 @@ Transform:
   - {fileID: 382701067}
   - {fileID: 439261205}
   - {fileID: 369644867}
+  - {fileID: 837822675}
+  - {fileID: 747110203}
+  - {fileID: 1669830377}
+  - {fileID: 1689587967}
+  - {fileID: 280444061}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!195 &514368703
@@ -11738,6 +11865,53 @@ MonoBehaviour:
     m_Default: 1
   m_ForceVisible: 0
   m_FirstPersonVisibleOnDeath: 0
+--- !u!1 &747110202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 747110203}
+  - component: {fileID: 747110204}
+  m_Layer: 31
+  m_Name: Sword_Tracking
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &747110203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747110202}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 514368702}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &747110204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747110202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705565eaf6ea57a4aae43e90aed23b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: SwordUsage
+  stepIntervall: 0.1
+  trackingEnabled: 0
 --- !u!1 &787716008
 GameObject:
   m_ObjectHideFlags: 0
@@ -11964,6 +12138,53 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.0016
   m_Center: {x: 0, y: 0.0014, z: 0}
+--- !u!1 &837822674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 837822675}
+  - component: {fileID: 837822676}
+  m_Layer: 31
+  m_Name: LaserArm_Tracking
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &837822675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837822674}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 514368702}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &837822676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837822674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705565eaf6ea57a4aae43e90aed23b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: LaserArmUsage
+  stepIntervall: 0.1
+  trackingEnabled: 0
 --- !u!1001 &845663456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16668,6 +16889,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 280444062}
+        m_TargetAssemblyTypeName: PositionTracker, Assembly-CSharp
+        m_MethodName: RecordSinglePosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnEventTwoTriggered:
     m_PersistentCalls:
       m_Calls:
@@ -20388,6 +20621,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1689587968}
+        m_TargetAssemblyTypeName: PositionTracker, Assembly-CSharp
+        m_MethodName: StartTracking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1.5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onUnducked:
     m_PersistentCalls:
       m_Calls:
@@ -20419,6 +20664,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: AtticAdventures.ChangeHealthAttribute, Assembly-CSharp
         m_MethodName: SetHealthBarWidth
         m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1689587968}
+        m_TargetAssemblyTypeName: PositionTracker, Assembly-CSharp
+        m_MethodName: StopTracking
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -20848,6 +21105,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 731026694}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1669830376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1669830377}
+  - component: {fileID: 1669830378}
+  m_Layer: 31
+  m_Name: Melee_Tracking
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1669830377
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669830376}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 514368702}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1669830378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669830376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705565eaf6ea57a4aae43e90aed23b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: MeleeUsage
+  stepIntervall: 0.1
+  trackingEnabled: 0
 --- !u!1001 &1676185971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21349,6 +21653,53 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.16
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1689587966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1689587967}
+  - component: {fileID: 1689587968}
+  m_Layer: 31
+  m_Name: RubberDucky_Tracking
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1689587967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689587966}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 514368702}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1689587968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689587966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705565eaf6ea57a4aae43e90aed23b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: RubberDuckyUsage
+  stepIntervall: 0.1
+  trackingEnabled: 0
 --- !u!1 &1710802381
 GameObject:
   m_ObjectHideFlags: 0
@@ -22780,10 +23131,34 @@ MonoBehaviour:
       m_Calls: []
   m_EquipItemEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1669830378}
+        m_TargetAssemblyTypeName: PositionTracker, Assembly-CSharp
+        m_MethodName: StartTracking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_UnequipItemEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1669830378}
+        m_TargetAssemblyTypeName: PositionTracker, Assembly-CSharp
+        m_MethodName: StopTracking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_DropItemEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -25791,6 +26166,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8437294280287390922, guid: 27e220e8ffd395540adda69431e1f657,
         type: 3}
+      propertyPath: m_EquipItemEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437294280287390922, guid: 27e220e8ffd395540adda69431e1f657,
+        type: 3}
+      propertyPath: m_UnequipItemEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437294280287390922, guid: 27e220e8ffd395540adda69431e1f657,
+        type: 3}
+      propertyPath: m_EquipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437294280287390922, guid: 27e220e8ffd395540adda69431e1f657,
+        type: 3}
       propertyPath: m_EquipItemEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1624898154}
@@ -25806,6 +26196,16 @@ PrefabInstance:
       objectReference: {fileID: 1215777030}
     - target: {fileID: 8437294280287390922, guid: 27e220e8ffd395540adda69431e1f657,
         type: 3}
+      propertyPath: m_EquipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 747110204}
+    - target: {fileID: 8437294280287390922, guid: 27e220e8ffd395540adda69431e1f657,
+        type: 3}
+      propertyPath: m_UnequipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437294280287390922, guid: 27e220e8ffd395540adda69431e1f657,
+        type: 3}
       propertyPath: m_UnequipItemEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1624898154}
@@ -25819,6 +26219,56 @@ PrefabInstance:
       propertyPath: m_UnequipItemEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1215777030}
+    - target: {fileID: 8437294280287390922, guid: 27e220e8ffd395540adda69431e1f657,
+        type: 3}
+      propertyPath: m_UnequipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 747110204}
+    - target: {fileID: 8437294280287390922, guid: 27e220e8ffd395540adda69431e1f657,
+        type: 3}
+      propertyPath: m_EquipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437294280287390922, guid: 27e220e8ffd395540adda69431e1f657,
+        type: 3}
+      propertyPath: m_EquipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: StartTracking
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437294280287390922, guid: 27e220e8ffd395540adda69431e1f657,
+        type: 3}
+      propertyPath: m_UnequipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437294280287390922, guid: 27e220e8ffd395540adda69431e1f657,
+        type: 3}
+      propertyPath: m_UnequipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: StopTracking
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437294280287390922, guid: 27e220e8ffd395540adda69431e1f657,
+        type: 3}
+      propertyPath: m_EquipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: PositionTracker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437294280287390922, guid: 27e220e8ffd395540adda69431e1f657,
+        type: 3}
+      propertyPath: m_EquipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437294280287390922, guid: 27e220e8ffd395540adda69431e1f657,
+        type: 3}
+      propertyPath: m_UnequipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: PositionTracker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437294280287390922, guid: 27e220e8ffd395540adda69431e1f657,
+        type: 3}
+      propertyPath: m_EquipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437294280287390922, guid: 27e220e8ffd395540adda69431e1f657,
+        type: 3}
+      propertyPath: m_UnequipItemEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8880924582921227325, guid: 27e220e8ffd395540adda69431e1f657,
         type: 3}
       propertyPath: m_Name
@@ -26168,7 +26618,7 @@ PrefabInstance:
     - target: {fileID: 770249214410997234, guid: a3c85602fc9695d418249ee3aed0b894,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 57292.043
+      value: 175589.72
       objectReference: {fileID: 0}
     - target: {fileID: 1373988248320970861, guid: a3c85602fc9695d418249ee3aed0b894,
         type: 3}
@@ -27058,7 +27508,7 @@ PrefabInstance:
     - target: {fileID: 7568922959682641740, guid: a3c85602fc9695d418249ee3aed0b894,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 121718.85
+      value: 362231.47
       objectReference: {fileID: 0}
     - target: {fileID: 7917405662975085842, guid: a3c85602fc9695d418249ee3aed0b894,
         type: 3}

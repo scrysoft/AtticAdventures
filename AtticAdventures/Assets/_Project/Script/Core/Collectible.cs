@@ -1,5 +1,6 @@
 using AtticAdventures.EventSystem;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace AtticAdventures.Core
 {
@@ -16,6 +17,8 @@ namespace AtticAdventures.Core
         private bool playerIsInRange = false;
 
         [SerializeField] bool initallyActive = true;
+
+        public UnityEvent collected;
 
         public void SetActivity(bool value)
         {
@@ -40,6 +43,7 @@ namespace AtticAdventures.Core
             if (other.CompareTag("Player") && initallyActive)
             {
                 scoreChannel.Invoke(score);
+                collected.Invoke();
                 Destroy(gameObject);
             }
 

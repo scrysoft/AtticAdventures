@@ -1475,6 +1475,53 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2077160494}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &136769054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 136769055}
+  - component: {fileID: 136769056}
+  m_Layer: 0
+  m_Name: EnemyDeath_Tracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &136769055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136769054}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1370903002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &136769056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136769054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705565eaf6ea57a4aae43e90aed23b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: SgtSmotherEnemyDeath
+  stepIntervall: Infinity
+  trackingEnabled: 0
 --- !u!1001 &137118146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1768,6 +1815,53 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4327e41cfbad5d1468b8318de22e2853, type: 3}
+--- !u!1 &154874461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 154874462}
+  - component: {fileID: 154874463}
+  m_Layer: 0
+  m_Name: EnemyDeath_Tracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &154874462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154874461}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2142963186}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &154874463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154874461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705565eaf6ea57a4aae43e90aed23b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: TankEnemyDeath
+  stepIntervall: Infinity
+  trackingEnabled: 0
 --- !u!1001 &155040649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11850,6 +11944,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 136769056}
+        m_TargetAssemblyTypeName: PositionTracker, Assembly-CSharp
+        m_MethodName: RecordSinglePosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!136 &1002441100
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16002,6 +16108,7 @@ Transform:
   m_Children:
   - {fileID: 1002441095}
   - {fileID: 709766542}
+  - {fileID: 136769055}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &1370903003
@@ -23813,6 +23920,7 @@ Transform:
   m_Children:
   - {fileID: 822930991}
   - {fileID: 688972645}
+  - {fileID: 154874462}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 5.71, y: -159.631, z: 5.44}
 --- !u!114 &2142963187
@@ -23999,6 +24107,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 154874463}
+        m_TargetAssemblyTypeName: PositionTracker, Assembly-CSharp
+        m_MethodName: RecordSinglePosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2

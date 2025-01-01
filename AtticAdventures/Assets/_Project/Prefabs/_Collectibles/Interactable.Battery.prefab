@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2073131710540539767}
   - component: {fileID: 6407448449221046574}
   - component: {fileID: 7371823457183709388}
+  - component: {fileID: 5439395056521565724}
   m_Layer: 0
   m_Name: Interactable.Battery
   m_TagString: Untagged
@@ -181,4 +182,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnInteracted:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5439395056521565724}
+        m_TargetAssemblyTypeName: PositionTracker, Assembly-CSharp
+        m_MethodName: RecordSinglePosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5439395056521565724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4121287863728656798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705565eaf6ea57a4aae43e90aed23b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: BatteryPickUp
+  stepIntervall: Infinity
+  trackingEnabled: 0

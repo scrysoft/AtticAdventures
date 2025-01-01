@@ -275,11 +275,16 @@ PrefabInstance:
     - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
         type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
         type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
@@ -289,7 +294,17 @@ PrefabInstance:
       objectReference: {fileID: 1322724601914054367}
     - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
         type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 4655140097812469385}
+    - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
+        type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
@@ -299,12 +314,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
         type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: RecordSinglePosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
+        type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: AtticAdventures.CollectibleBlueAchievement, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
         type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PositionTracker, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
+        type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054961092622204950, guid: cbceb40845e5806478c8bbef57e19d55,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6597685690503651716, guid: cbceb40845e5806478c8bbef57e19d55,
@@ -315,7 +345,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6597685690503651716, guid: cbceb40845e5806478c8bbef57e19d55,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4655140097812469385}
   m_SourcePrefab: {fileID: 100100000, guid: cbceb40845e5806478c8bbef57e19d55, type: 3}
 --- !u!4 &2112543209058969297 stripped
 Transform:
@@ -323,3 +357,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2048521401696991726}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5179842647099627626 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6597685690503651716, guid: cbceb40845e5806478c8bbef57e19d55,
+    type: 3}
+  m_PrefabInstance: {fileID: 2048521401696991726}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4655140097812469385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5179842647099627626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705565eaf6ea57a4aae43e90aed23b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: BlueCollectiblePickUp
+  stepIntervall: Infinity
+  trackingEnabled: 0

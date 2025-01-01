@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 336140078537905608}
   - component: {fileID: 1667178771904032406}
   - component: {fileID: 3186910853933338117}
+  - component: {fileID: 491485721385648066}
   m_Layer: 0
   m_Name: Collectible.Beads_16_1
   m_TagString: Untagged
@@ -53,6 +54,21 @@ MonoBehaviour:
   moveSpeed: 20
   offSet: {x: 0, y: 0, z: 0}
   initallyActive: 1
+  collected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 491485721385648066}
+        m_TargetAssemblyTypeName: PositionTracker, Assembly-CSharp
+        m_MethodName: RecordSinglePosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &336140078537905608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +202,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.6
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &491485721385648066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3251059397716761499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705565eaf6ea57a4aae43e90aed23b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: Unknown
+  stepIntervall: 0.5
+  trackingEnabled: 1
 --- !u!1 &6203356327355289323
 GameObject:
   m_ObjectHideFlags: 0
