@@ -1,3 +1,4 @@
+using AtticAdventures.Core;
 using RealSoftGames.AdvancedAchievementSystem;
 using UnityEngine;
 
@@ -14,6 +15,7 @@ namespace AtticAdventures
         {
             Debug.Log($"You managed to destroy Sgt. Smother’s Tank.");
             WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Smothers_Secret_Weapon.ToString()}");
+            GameManager.Instance.RecordPosiition($"{AchievementList.Smothers_Secret_Weapon.ToString()}");
         }
     }
 }

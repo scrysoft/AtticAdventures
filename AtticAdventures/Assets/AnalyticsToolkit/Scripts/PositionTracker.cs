@@ -77,6 +77,14 @@ public class PositionTracker : MonoBehaviour
 		RecordPosition();
 	}
 
+	public void RecordPlayerPosition(Vector3 playerPosition, string achievementKey)
+	{
+        AnalyticsManager.Instance.AddTrackStep($"AchievementUnlocked_{achievementKey}", new StepData
+        {
+            pos = playerPosition
+        });
+    }
+
 	/// <summary>
 	/// Save the current position
 	/// </summary>

@@ -12,6 +12,9 @@ namespace AtticAdventures.Core
         private int sequences = 50;
 
         [SerializeField] CollectibleBeadsAchievement collectibleBeadsAchievement;
+        [SerializeField] PositionTracker positionTracker;
+
+        Transform player;
 
         public int Score { get; private set; }
 
@@ -56,6 +59,15 @@ namespace AtticAdventures.Core
         private void SetMaxTweens(int tweeners, int sequences)
         {
             DOTween.SetTweensCapacity(tweeners, sequences);
+        }
+
+        public void RecordPosiition(string achievementName)
+        {
+            if (positionTracker == null) return;
+
+            Transform player = GameObject.FindGameObjectWithTag("Player").transform;
+
+            positionTracker.RecordPlayerPosition(player.transform.position, achievementName);
         }
     }
 }

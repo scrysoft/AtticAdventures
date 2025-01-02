@@ -1,3 +1,4 @@
+using AtticAdventures.Core;
 using RealSoftGames.AdvancedAchievementSystem;
 using UnityEngine;
 
@@ -52,7 +53,7 @@ namespace AtticAdventures
         {
             Debug.Log($"You talked to someone.");
             WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Talkative.ToString()}");
-
+            GameManager.Instance.RecordPosiition($"{AchievementList.Talkative.ToString()}");
         }
     }
 }

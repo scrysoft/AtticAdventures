@@ -1,3 +1,4 @@
+using AtticAdventures.Core;
 using RealSoftGames.AdvancedAchievementSystem;
 using System;
 using UnityEngine;
@@ -36,7 +37,7 @@ namespace AtticAdventures
             {
                 Debug.Log("Found all the Special Collectibles in the Polymere Valley");
                 WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Parliament_of_Owls.ToString()}");
-
+                GameManager.Instance.RecordPosiition($"{AchievementList.Parliament_of_Owls.ToString()}");
             }
         }
 
@@ -44,35 +45,35 @@ namespace AtticAdventures
         {
             Debug.Log("Find the Collectible by toppling a tyrant.");
             WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Under_new_Management.ToString()}");
-
+            GameManager.Instance.RecordPosiition($"{AchievementList.Under_new_Management.ToString()}");
         }
 
         private void OnAchievementTacticalWarfareComplete()
         {
             Debug.Log("Find the Collectible guarded by a tank.");
             WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Tactical_Warfare.ToString()}");
-
+            GameManager.Instance.RecordPosiition($"{AchievementList.Tactical_Warfare.ToString()}");
         }
 
         private void OnAchievementUnderTheDomeComplete()
         {
             Debug.Log("Find the Collectible in the fish bowl.");
             WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Under_the_Dome.ToString()}");
-
+            GameManager.Instance.RecordPosiition($"{AchievementList.Under_the_Dome.ToString()}");
         }
 
         private void OnAchievementOldRecordsComplete()
         {
             Debug.Log("Found the Collectible in the portable CD-Player.");
             WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Daddys_Old_Records.ToString()}");
-
+            GameManager.Instance.RecordPosiition($"{AchievementList.Daddys_Old_Records.ToString()}");
         }
 
         private void OnAchievementUnreachableTreasureComplete()
         {
             Debug.Log("Found the Collectible at the highest point of polymere valley.");
             WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Unreachable_Treasure.ToString()}");
-
+            GameManager.Instance.RecordPosiition($"{AchievementList.Unreachable_Treasure.ToString()}");
         }
     }
 }

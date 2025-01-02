@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 262.33694, g: 325.04984, b: 430.2193, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -874,6 +874,7 @@ GameObject:
   - component: {fileID: 1884408734}
   - component: {fileID: 1884408735}
   - component: {fileID: 1884408736}
+  - component: {fileID: 1884408737}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -909,6 +910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectibleBeadsAchievement: {fileID: 1884408736}
+  positionTracker: {fileID: 1884408737}
 --- !u!114 &1884408735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -949,6 +951,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca79f08438ee5b940865d398ffd759b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1884408737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884408732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 705565eaf6ea57a4aae43e90aed23b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: AchievementUnlocked
+  stepIntervall: Infinity
+  trackingEnabled: 0
 --- !u!1 &2036129065
 GameObject:
   m_ObjectHideFlags: 0

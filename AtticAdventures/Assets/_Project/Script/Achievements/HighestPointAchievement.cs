@@ -1,3 +1,4 @@
+using AtticAdventures.Core;
 using RealSoftGames.AdvancedAchievementSystem;
 using UnityEngine;
 
@@ -14,6 +15,7 @@ namespace AtticAdventures
         {
             Debug.Log($"You have reached the top of the valley.");
             WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.King_of_the_World.ToString()}");
+            GameManager.Instance.RecordPosiition($"{AchievementList.King_of_the_World.ToString()}");
         }
     }
 }

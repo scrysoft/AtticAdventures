@@ -1,3 +1,4 @@
+using AtticAdventures.Core;
 using RealSoftGames.AdvancedAchievementSystem;
 using UnityEngine;
 
@@ -14,7 +15,7 @@ namespace AtticAdventures
         {
             Debug.Log($"Military Coup completed!");
             WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.Military_Coup.ToString()}");
-
+            GameManager.Instance.RecordPosiition($"{AchievementList.Military_Coup.ToString()}");
         }
     }
 }

@@ -1,3 +1,4 @@
+using AtticAdventures.Core;
 using RealSoftGames.AdvancedAchievementSystem;
 using UnityEngine;
 
@@ -14,6 +15,8 @@ namespace AtticAdventures
         {
             Debug.Log($"You reached the Gate to the next level.");
             WriteToFile.Instance.WriteAchievementWithTimestamp($"{AchievementList.To_be_continued.ToString()}");
+            GameManager.Instance.RecordPosiition($"{AchievementList.To_be_continued.ToString()}");
+
         }
     }
 }
