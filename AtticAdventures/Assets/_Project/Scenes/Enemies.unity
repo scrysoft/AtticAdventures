@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.33694, g: 325.04984, b: 430.2193, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7054,7 +7054,7 @@ PrefabInstance:
     - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
         type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
         type: 3}
@@ -7063,9 +7063,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
         type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
+        type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 575938353}
+    - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 673326171}
     - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
         type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
@@ -7078,12 +7088,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
         type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: ChangeMissionWayPointByIndex
+      objectReference: {fileID: 0}
+    - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
+        type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
         type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: AtticAdventures.MissionWayPointChanger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
+        type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8421625424995250949, guid: 71adc6c41a5145940a1f09976ac19a75,
@@ -7103,8 +7133,30 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 575938352}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4398441882110203246, guid: 71adc6c41a5145940a1f09976ac19a75,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 673326171}
   m_SourcePrefab: {fileID: 100100000, guid: 71adc6c41a5145940a1f09976ac19a75, type: 3}
+--- !u!1 &673326170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4398441882110203246, guid: 71adc6c41a5145940a1f09976ac19a75,
+    type: 3}
+  m_PrefabInstance: {fileID: 673326169}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &673326171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673326170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e87d33a1c0bd440ada58948f573536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &687390458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11956,6 +12008,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1370903006}
+        m_TargetAssemblyTypeName: AtticAdventures.MissionWayPointChanger, Assembly-CSharp
+        m_MethodName: ChangeMissionWayPointByIndex
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 12
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!136 &1002441100
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16015,6 +16079,7 @@ GameObject:
   - component: {fileID: 1370903001}
   - component: {fileID: 1370903004}
   - component: {fileID: 1370903005}
+  - component: {fileID: 1370903006}
   m_Layer: 0
   m_Name: Sgt.Smother
   m_TagString: Untagged
@@ -16235,6 +16300,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8f003b61cef3d64093559b420b2ba9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1370903006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370903000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e87d33a1c0bd440ada58948f573536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1374725130
@@ -20725,7 +20802,7 @@ PrefabInstance:
     - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
         type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
         type: 3}
@@ -20734,9 +20811,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
         type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
+        type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 1664754384}
+    - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1756227059}
     - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
         type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
@@ -20749,12 +20836,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
         type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: ChangeMissionWayPointByIndex
+      objectReference: {fileID: 0}
+    - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
+        type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
         type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: AtticAdventures.MissionWayPointChanger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_IntArgument
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
+        type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6117952351835482309, guid: 71adc6c41a5145940a1f09976ac19a75,
+        type: 3}
+      propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8421625424995250949, guid: 71adc6c41a5145940a1f09976ac19a75,
@@ -20774,8 +20881,30 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1664754383}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4398441882110203246, guid: 71adc6c41a5145940a1f09976ac19a75,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1756227059}
   m_SourcePrefab: {fileID: 100100000, guid: 71adc6c41a5145940a1f09976ac19a75, type: 3}
+--- !u!1 &1756227058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4398441882110203246, guid: 71adc6c41a5145940a1f09976ac19a75,
+    type: 3}
+  m_PrefabInstance: {fileID: 1756227057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1756227059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756227058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e87d33a1c0bd440ada58948f573536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1763091552
 PrefabInstance:
   m_ObjectHideFlags: 0
