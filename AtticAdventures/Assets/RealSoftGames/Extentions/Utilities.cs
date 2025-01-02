@@ -85,7 +85,7 @@ namespace RealSoftGames
             File.WriteAllText(filePath, content);
         }
 
-        private static string searchText = "";
+        // private static string searchText = "";
 
         public static string FindReplace(BaseAchievement achievement, string text)
         {
