@@ -12,7 +12,7 @@ namespace AtticAdventures.Audio
         public Sound[] music;
         public Sound[] sfx;
 
-        public static AudioManager instance; // SINGLETON:Call AudioManager.instance.Function();
+        public static AudioManager instance;
 
         private void Awake()
         {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 262.33694, g: 325.04984, b: 430.2193, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -961,7 +961,7 @@ GameObject:
   - component: {fileID: 85359325}
   - component: {fileID: 85359324}
   - component: {fileID: 85359326}
-  m_Layer: 26
+  m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7181,7 +7181,7 @@ GameObject:
   - component: {fileID: 688972644}
   - component: {fileID: 688972646}
   - component: {fileID: 688972647}
-  m_Layer: 26
+  m_Layer: 0
   m_Name: TurrentAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7920,6 +7920,7 @@ GameObject:
   - component: {fileID: 710570168}
   - component: {fileID: 710570167}
   - component: {fileID: 710570172}
+  - component: {fileID: 710570173}
   m_Layer: 26
   m_Name: BossHealth.Canvas
   m_TagString: Untagged
@@ -8049,6 +8050,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!225 &710570173
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710570166}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &711492306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8798456708244548665, guid: 4c9a96beab31c3c4dba0c9ba61b7a944,
@@ -9386,7 +9399,7 @@ GameObject:
   - component: {fileID: 822930996}
   - component: {fileID: 822930998}
   - component: {fileID: 822930995}
-  m_Layer: 26
+  m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9871,7 +9884,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 842825513}
-  m_Layer: 26
+  m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11898,7 +11911,7 @@ MonoBehaviour:
     m_Preset: {fileID: 0}
     m_BlockList: []
     m_Default: 1
-  m_Invincible: 0
+  m_Invincible: 1
   m_TimeInvincibleAfterSpawn: 0
   m_HealthAttributeName: Health
   m_ShieldAttributeName: 
@@ -13533,6 +13546,205 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71adc6c41a5145940a1f09976ac19a75, type: 3}
+--- !u!1 &1124628319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1124628324}
+  - component: {fileID: 1124628323}
+  - component: {fileID: 1124628322}
+  - component: {fileID: 1124628325}
+  - component: {fileID: 1124628320}
+  m_Layer: 2
+  m_Name: PanTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1124628320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124628319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41ab8fc553fabf74890bf1d734d0236c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPlayerEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 710570173}
+        m_TargetAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
+        m_MethodName: set_alpha
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1370903001}
+        m_TargetAssemblyTypeName: BehaviorDesigner.Runtime.Behavior, BehaviorDesigner.Runtime
+        m_MethodName: EnableBehavior
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1002441099}
+        m_TargetAssemblyTypeName: Opsive.UltimateCharacterController.Traits.Health,
+          Opsive.UltimateCharacterController
+        m_MethodName: set_Invincible
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPlayerExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 710570173}
+        m_TargetAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
+        m_MethodName: set_alpha
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1370903001}
+        m_TargetAssemblyTypeName: BehaviorDesigner.Runtime.Behavior, BehaviorDesigner.Runtime
+        m_MethodName: DisableBehavior
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1002441099}
+        m_TargetAssemblyTypeName: Opsive.UltimateCharacterController.Traits.Health,
+          Opsive.UltimateCharacterController
+        m_MethodName: set_Invincible
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!23 &1124628322
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124628319}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 257
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1124628323
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124628319}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1124628324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124628319}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -156.07, y: 53.43, z: 148.25}
+  m_LocalScale: {x: 34.76, y: 8, z: 34.76}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1124628325
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124628319}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1125833899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15178,7 +15390,7 @@ GameObject:
   - component: {fileID: 1310369188}
   - component: {fileID: 1310369187}
   - component: {fileID: 1310369186}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tank.Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15200,6 +15412,7 @@ MonoBehaviour:
   tankMovement: {fileID: 2142963187}
   rotateAndShoot: {fileID: 688972644}
   canvas: {fileID: 1335512485}
+  health: {fileID: 2142963189}
 --- !u!65 &1310369187
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24024,10 +24237,9 @@ GameObject:
   - component: {fileID: 2142963187}
   - component: {fileID: 2142963190}
   - component: {fileID: 2142963189}
-  - component: {fileID: 2142963188}
   - component: {fileID: 2142963191}
   - component: {fileID: 2142963192}
-  m_Layer: 26
+  m_Layer: 0
   m_Name: Enemy.Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24066,19 +24278,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 2
   patrolDistance: 20
---- !u!114 &2142963188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2142963185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a16c458321536b43b2e57119a8cb244, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Offset: {x: 0, y: 2, z: 0}
 --- !u!114 &2142963189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24096,7 +24295,7 @@ MonoBehaviour:
     m_Preset: {fileID: 0}
     m_BlockList: []
     m_Default: 1
-  m_Invincible: 0
+  m_Invincible: 1
   m_TimeInvincibleAfterSpawn: 0
   m_HealthAttributeName: Health
   m_ShieldAttributeName: 
@@ -24361,6 +24560,7 @@ SceneRoots:
   - {fileID: 2142963186}
   - {fileID: 1310369188}
   - {fileID: 1370903002}
+  - {fileID: 1124628324}
   - {fileID: 710570171}
   - {fileID: 1335512486}
   - {fileID: 438194}
