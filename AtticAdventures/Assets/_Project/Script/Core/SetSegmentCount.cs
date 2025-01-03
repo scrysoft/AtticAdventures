@@ -10,7 +10,7 @@ public class SetSegmentCount : MonoBehaviour
         if (renderer != null)
         {
             material = renderer.material;
-            SetSegmentCountValue(4f);
+            SetSegmentCountValue(material.GetInt("_SegmentCount"));
         }
     }
 

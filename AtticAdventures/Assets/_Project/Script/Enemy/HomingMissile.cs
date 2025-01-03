@@ -19,20 +19,22 @@ public class HomingMissile : MonoBehaviour
     private float accelerationTimer;
     private bool isFalling = false;
 
+    public string targetTag = "Player";
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         currentSpeed = initialSpeed;
         accelerationTimer = accelerationTime;
 
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject player = GameObject.FindGameObjectWithTag(targetTag);
         if (player != null)
         {
             target = player.transform;
         }
         else
         {
-            Debug.LogWarning("Kein Objekt mit dem Tag 'Player' gefunden!");
+            Debug.LogWarning($"Kein Objekt mit dem Tag {targetTag} gefunden!");
         }
 
         Invoke("StartFalling", lifeTime);
@@ -80,7 +82,7 @@ public class HomingMissile : MonoBehaviour
             return;
         }
 
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag(targetTag))
         {
             Explode();
         }
