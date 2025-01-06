@@ -48,6 +48,7 @@ namespace AtticAdventures.Core
                     health.Value += amount;
                 }
 
+                GameManager.Instance.healAudioSource.Play();
                 Destroy(gameObject);
             }
 

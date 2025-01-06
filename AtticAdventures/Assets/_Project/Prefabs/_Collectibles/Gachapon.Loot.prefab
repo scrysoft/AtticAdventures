@@ -406,13 +406,18 @@ MonoBehaviour:
     m_Bits: 0
   m_TakeDamageAudioClipSet:
     m_AudioConfig: {fileID: 0}
-    m_AudioClips: []
+    m_AudioClips:
+    - {fileID: 8300000, guid: 62d567f4a762646429db88238c129096, type: 3}
+    - {fileID: 8300000, guid: 2cf818867bd37874cb7e877f692e514e, type: 3}
+    - {fileID: 8300000, guid: 2cf818867bd37874cb7e877f692e514e, type: 3}
   m_HealAudioClipSet:
     m_AudioConfig: {fileID: 0}
     m_AudioClips: []
   m_DeathAudioClipSet:
     m_AudioConfig: {fileID: 0}
-    m_AudioClips: []
+    m_AudioClips:
+    - {fileID: 8300000, guid: 62d567f4a762646429db88238c129096, type: 3}
+    - {fileID: 8300000, guid: 94e2f14a94d710143af6e0daacf08ce9, type: 3}
   m_DamagePopupManagerID: -1
   m_OnDamageEvent:
     m_PersistentCalls:
@@ -448,7 +453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e458a25b435dd4086faf6dce3b39e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SurfaceType: {fileID: 11400000, guid: af1b1502703cd024aa8610073980d688, type: 2}
+  m_SurfaceType: {fileID: 11400000, guid: e616b14f5d2d0cf42bb5b4360f2b2089, type: 2}
   m_AllowDecals: 1
 --- !u!135 &4628289001945725490
 SphereCollider:

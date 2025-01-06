@@ -23,7 +23,7 @@ namespace AtticAdventures.Core
                 Instantiate(spawnVFX, transform.position, Quaternion.identity);
             }
 
-            GetComponent<AudioSource>().Play();
+            // GetComponent<AudioSource>().Play();
         }
 
     }

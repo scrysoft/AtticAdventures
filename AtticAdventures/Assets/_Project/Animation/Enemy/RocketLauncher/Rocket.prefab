@@ -258,6 +258,7 @@ MonoBehaviour:
     type: 3}
   targetOffset: {x: 0, y: 1.25, z: 0}
   fallSpeed: 6
+  targetTag: Player
 --- !u!114 &7583567615417230809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,6 +499,31 @@ PrefabInstance:
     - target: {fileID: 4279621146394558, guid: 14a334c03c1cccd458efe9a3d4fbc240, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82723163243150482, guid: 14a334c03c1cccd458efe9a3d4fbc240,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 82723163243150482, guid: 14a334c03c1cccd458efe9a3d4fbc240,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 82723163243150482, guid: 14a334c03c1cccd458efe9a3d4fbc240,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 31d4354cef3a92a4481b8c1464e22afd, type: 3}
+    - target: {fileID: 82723163243150482, guid: 14a334c03c1cccd458efe9a3d4fbc240,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82723163243150482, guid: 14a334c03c1cccd458efe9a3d4fbc240,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

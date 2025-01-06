@@ -397,13 +397,17 @@ MonoBehaviour:
     m_Bits: 0
   m_TakeDamageAudioClipSet:
     m_AudioConfig: {fileID: 0}
-    m_AudioClips: []
+    m_AudioClips:
+    - {fileID: 8300000, guid: 6474f70365af90941bd7ccea36e6ce27, type: 3}
+    - {fileID: 8300000, guid: 62dd3fb068bd68d42b6e2f1b52bff3ef, type: 3}
+    - {fileID: 8300000, guid: 78db6d1c702ad5542acf9c8ce82d9000, type: 3}
   m_HealAudioClipSet:
     m_AudioConfig: {fileID: 0}
     m_AudioClips: []
   m_DeathAudioClipSet:
     m_AudioConfig: {fileID: 0}
-    m_AudioClips: []
+    m_AudioClips:
+    - {fileID: 8300000, guid: 464735025c1ad9d48b368f0ae84c7e39, type: 3}
   m_DamagePopupManagerID: -1
   m_OnDamageEvent:
     m_PersistentCalls:

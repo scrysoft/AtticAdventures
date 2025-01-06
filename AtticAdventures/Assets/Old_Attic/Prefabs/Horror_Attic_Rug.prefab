@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 1030976368}
   - component: {fileID: 1030976369}
   - component: {fileID: 1030976370}
-  - component: {fileID: 1137435949505649281}
   m_Layer: 0
   m_Name: SM_Horror_Attic_Rug
   m_TagString: Untagged
@@ -115,26 +114,4 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030976367}
-  m_Mesh: {fileID: 4300000, guid: abc00000000004129038848789173121, type: 3}
---- !u!64 &1137435949505649281
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030976367}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: abc00000000004129038848789173121, type: 3}

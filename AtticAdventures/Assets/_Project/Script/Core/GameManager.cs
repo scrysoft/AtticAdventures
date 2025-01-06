@@ -16,6 +16,8 @@ namespace AtticAdventures.Core
 
         Transform player;
 
+        public AudioSource healAudioSource;
+
         public int Score { get; private set; }
 
         private void Awake()

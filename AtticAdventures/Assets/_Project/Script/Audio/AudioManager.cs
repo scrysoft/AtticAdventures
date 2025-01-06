@@ -1,5 +1,4 @@
 using UnityEngine;
-using System;
 using UnityEngine.Audio;
 
 namespace AtticAdventures.Audio
@@ -16,7 +15,7 @@ namespace AtticAdventures.Audio
 
         private void Awake()
         {
-            if(instance == null)
+            if (instance == null)
             {
                 instance = this;
             }
@@ -27,55 +26,37 @@ namespace AtticAdventures.Audio
             }
 
             DontDestroyOnLoad(gameObject);
-
             SetupAudioSource("MusicSources", music, musicOutput);
             SetupAudioSource("SFXSources", sfx, sfxOutput);
         }
 
-        public void PlayMusic(string name)
+        public void PlayMusic(int index)
         {
-            Sound s = Array.Find(music, sound => sound.name == name);
-
-            if (s == null) 
-            {
-                Debug.LogWarning("Sound: " + name + " not found in Music Sources.");
-                return;
-            }
-
-            Debug.Log(s.source.clip.name);
+            if (index < 0 || index >= music.Length) return;
+            Sound s = music[index];
+            Debug.Log($"Playing Music Clip: {s.source.clip.name}");
             s.source.Play();
         }
 
-        public void StopMusic(string name)
+        public void StopMusic(int index)
         {
-            Sound s = Array.Find(music, sound => sound.name == name);
-
-            if (s == null)
-            {
-                Debug.LogWarning("Sound: " + name + " not found in Music Sources.");
-                return;
-            }
-
-            Debug.Log(s.source.clip.name);
+            if (index < 0 || index >= music.Length) return;
+            Sound s = music[index];
+            Debug.Log($"Stopping Music Clip: {s.source.clip.name}");
             s.source.Stop();
         }
 
-        public void PlaySFX(string name)
+        public void PlaySFX(int index)
         {
-            Sound s = Array.Find(sfx, sound => sound.name == name);
-
-            if (s == null)
-            {
-                Debug.LogWarning("Sound: " + name + " not found in SFX Sources.");
-                return;
-            }
-
+            if (index < 0 || index >= sfx.Length) return;
+            Sound s = sfx[index];
+            Debug.Log($"Playing SFX Clip: {s.source.clip.name}");
             s.source.Play();
         }
 
-        private void SetupAudioSource(string name, Sound[] sounds, AudioMixerGroup output)
+        private void SetupAudioSource(string childName, Sound[] sounds, AudioMixerGroup output)
         {
-            GameObject childObject = new GameObject(name);
+            GameObject childObject = new GameObject(childName);
             childObject.transform.parent = transform;
 
             foreach (Sound s in sounds)

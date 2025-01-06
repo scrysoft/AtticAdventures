@@ -5,16 +5,14 @@ namespace AtticAdventures
 {
     public class MusicChanger : MonoBehaviour
     {
-        public void PlayMusic(string name)
+        public void PlayMusic(int index)
         {
-            AudioManager.instance.PlayMusic(name);
-            Debug.Log("Play Audio: " + name);
+            AudioManager.instance.PlayMusic(index);
         }
 
-        public void StopMusic(string name)
+        public void StopMusic(int index)
         {
-            AudioManager.instance.StopMusic(name);
-            Debug.Log("Stop Audio: " + name);
+            AudioManager.instance.StopMusic(index);
         }
     }
 }
