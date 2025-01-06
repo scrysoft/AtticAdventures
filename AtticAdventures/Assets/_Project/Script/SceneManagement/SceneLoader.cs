@@ -11,6 +11,7 @@ namespace AtticAdventures.SceneManagement
         [SerializeField] float fillSpeed = 0.5f;
         [SerializeField] Canvas loadingCanvas;
         [SerializeField] Camera loadingCamera;
+        [SerializeField] AudioListener listener;
         [SerializeField] SceneGroup[] sceneGroups;
 
         float targetProgress;
@@ -68,6 +69,7 @@ namespace AtticAdventures.SceneManagement
             isLoading = enable;
             loadingCanvas.gameObject.SetActive(enable);
             loadingCamera.gameObject.SetActive(enable);
+            listener.enabled = enable;
         }
 
     }

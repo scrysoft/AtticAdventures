@@ -502,7 +502,7 @@ MonoBehaviour:
     type: 3}
   achievementPrefab: {fileID: 4283787512013071029, guid: 2b0ddf76b0e64c84da3ddf529e6c3464,
     type: 3}
-  onCompleteAudio: {fileID: 0}
+  onCompleteAudio: {fileID: 8300000, guid: 3c8be8be4ed98f04585c5e0a5cb7f2e7, type: 3}
   dateTimeFormat: dd MMM yyyy hh:mmtt
   theme: {fileID: 11400000, guid: bda181e8fb40c5742bc54e8f92cf5ce0, type: 2}
   categoryNames:
@@ -545,6 +545,6 @@ MonoBehaviour:
   - RedCollectible
   - BeadsCollectible
   - Enemy
-  displayTime: 5
-  fadeInTime: 1
+  displayTime: 4
+  fadeInTime: 0.6
   fadeOutTime: 1

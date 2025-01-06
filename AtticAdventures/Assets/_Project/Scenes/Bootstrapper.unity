@@ -429,6 +429,7 @@ MonoBehaviour:
   fillSpeed: 0.5
   loadingCanvas: {fileID: 1393997908}
   loadingCamera: {fileID: 2036129067}
+  listener: {fileID: 2036129066}
   sceneGroups:
   - GroupName: MainMenu
     Scenes:
@@ -1199,7 +1200,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036129065}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &2036129067
 Camera:
   m_ObjectHideFlags: 0
