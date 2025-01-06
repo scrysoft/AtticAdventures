@@ -2154,6 +2154,50 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 271d03355f68dfe42885cffbb5d646c2, type: 3}
+--- !u!1 &181405344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 181405346}
+  - component: {fileID: 181405345}
+  m_Layer: 0
+  m_Name: AudioHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &181405345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181405344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b5a19e13f75984db6b6d8111bbd85b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &181405346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181405344}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &189632029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8299,7 +8343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &710570167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8409,19 +8453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onStartEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 709766543}
-        m_TargetAssemblyTypeName: AtticAdventures.UI.InteractableDialogue, Assembly-CSharp
-        m_MethodName: PlaySpecificDialogue
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!225 &710570173
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -8430,7 +8462,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710570166}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -9310,7 +9342,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 835d0fe286d03304bbd919011c52a5ab, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9319,7 +9351,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 30
+  MaxDistance: 80
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -12533,11 +12565,11 @@ MonoBehaviour:
     m_MinValue: 0
     m_MaxValue: 600
     m_Value: 600
-    m_AutoUpdateValueType: 0
+    m_AutoUpdateValueType: 2
     m_UpdateWhenInactive: 0
-    m_AutoUpdateStartDelay: 1
+    m_AutoUpdateStartDelay: 2
     m_AutoUpdateInterval: 0.1
-    m_AutoUpdateAmount: 2
+    m_AutoUpdateAmount: 1
 --- !u!114 &1002441099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12686,6 +12718,18 @@ MonoBehaviour:
       - m_Target: {fileID: 842931114}
         m_TargetAssemblyTypeName: TimerController, Assembly-CSharp
         m_MethodName: StopTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1945438807}
+        m_TargetAssemblyTypeName: AtticAdventures.BossResetter, Assembly-CSharp
+        m_MethodName: BossIsDead
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14221,6 +14265,7 @@ GameObject:
   - component: {fileID: 1124628322}
   - component: {fileID: 1124628325}
   - component: {fileID: 1124628320}
+  - component: {fileID: 1124628326}
   m_Layer: 2
   m_Name: PanTrigger
   m_TagString: Untagged
@@ -14292,6 +14337,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1124628326}
+        m_TargetAssemblyTypeName: AtticAdventures.BossChecker, Assembly-CSharp
+        m_MethodName: PlayMusic
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1124628326}
+        m_TargetAssemblyTypeName: AtticAdventures.BossChecker, Assembly-CSharp
+        m_MethodName: StopMusic
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPlayerExit:
     m_PersistentCalls:
       m_Calls:
@@ -14328,6 +14397,30 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1124628326}
+        m_TargetAssemblyTypeName: AtticAdventures.MusicChanger, Assembly-CSharp
+        m_MethodName: StopMusic
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1124628326}
+        m_TargetAssemblyTypeName: AtticAdventures.MusicChanger, Assembly-CSharp
+        m_MethodName: PlayMusic
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -14419,6 +14512,35 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1124628326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124628319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428706040fdfd14e890dc67dfe3f216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetter: {fileID: 1945438807}
+  musicChanger: {fileID: 181405345}
+  onFightBegin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 709766543}
+        m_TargetAssemblyTypeName: AtticAdventures.UI.InteractableDialogue, Assembly-CSharp
+        m_MethodName: PlaySpecificDialogue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1125833899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16087,6 +16209,8 @@ MonoBehaviour:
   rotateAndShoot: {fileID: 688972644}
   canvas: {fileID: 1335512485}
   health: {fileID: 2142963189}
+  resetter: {fileID: 1945438807}
+  musicChanger: {fileID: 181405345}
 --- !u!65 &1310369187
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16210,13 +16334,14 @@ GameObject:
   - component: {fileID: 1335512484}
   - component: {fileID: 1335512483}
   - component: {fileID: 1335512482}
+  - component: {fileID: 1335512487}
   m_Layer: 26
   m_Name: TankHealth.Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1335512482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16312,6 +16437,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!225 &1335512487
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335512481}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1001 &1337592706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16501,7 +16638,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 30
+  MaxDistance: 80
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -17704,7 +17841,7 @@ RectTransform:
   m_Father: {fileID: 1630541284}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -22342,7 +22479,7 @@ RectTransform:
   m_Father: {fileID: 796667919}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -23348,6 +23485,54 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 271d03355f68dfe42885cffbb5d646c2, type: 3}
+--- !u!1 &1945438806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1945438808}
+  - component: {fileID: 1945438807}
+  m_Layer: 0
+  m_Name: BossResetter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1945438807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945438806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a840c6a41133a4582611c927b26428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tank: {fileID: 2142963190}
+  boss: {fileID: 1002441098}
+  canvasGroupsTank: {fileID: 1335512487}
+  canvasGroupsBoss: {fileID: 710570173}
+--- !u!4 &1945438808
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945438806}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1952482835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25359,6 +25544,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1945438807}
+        m_TargetAssemblyTypeName: AtticAdventures.BossResetter, Assembly-CSharp
+        m_MethodName: TankIsDead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2142963192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25817,3 +26014,5 @@ SceneRoots:
   - {fileID: 746283684}
   - {fileID: 1340291253}
   - {fileID: 343833588}
+  - {fileID: 181405346}
+  - {fileID: 1945438808}

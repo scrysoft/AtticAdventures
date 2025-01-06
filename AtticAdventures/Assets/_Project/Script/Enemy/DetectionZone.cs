@@ -1,3 +1,4 @@
+using AtticAdventures;
 using Opsive.UltimateCharacterController.Traits;
 using UnityEngine;
 
@@ -7,6 +8,9 @@ public class DetectionZone : MonoBehaviour
     public RotateAndShoot rotateAndShoot;
     public Canvas canvas;
     public Health health;
+    public BossResetter resetter;
+
+    [SerializeField] MusicChanger musicChanger;
 
     private bool isCanvasActivatedEntirely = true;
 
@@ -18,9 +22,15 @@ public class DetectionZone : MonoBehaviour
             rotateAndShoot.StartRotationAndShoot(true, other.transform);
             health.Invincible = false;
 
+            if (resetter.IsTankAlive())
+            {
+                musicChanger.StopMusic(1);
+                musicChanger.PlayMusic(3);
+            }
+
             if (isCanvasActivatedEntirely)
             {
-                canvas.gameObject.SetActive(true);
+                canvas.GetComponent<CanvasGroup>().alpha = 1f;            
             }
         }
     }
@@ -33,9 +43,15 @@ public class DetectionZone : MonoBehaviour
             rotateAndShoot.StartRotationAndShoot(false, null);
             health.Invincible = true;
 
+            if (resetter.IsTankAlive())
+            {
+                musicChanger.StopMusic(3);
+                musicChanger.PlayMusic(1);
+            }
+
             if (isCanvasActivatedEntirely)
             {
-                canvas.gameObject.SetActive(false);
+                canvas.GetComponent<CanvasGroup>().alpha = 0f;
             }
         }
     }

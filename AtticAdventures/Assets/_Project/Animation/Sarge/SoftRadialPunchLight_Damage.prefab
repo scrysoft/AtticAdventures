@@ -4848,10 +4848,10 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 3221225635
     m_DamageProcessor: {fileID: 0}
-    m_DamageAmount: 10
+    m_DamageAmount: 15
     m_ImpactForce: 1
     m_ImpactForceFrames: 1
-    m_ImpactRadius: 0
+    m_ImpactRadius: 1
     m_ImpactStateName: 
     m_ImpactStateDisableTimer: 10
     m_SurfaceImpact: {fileID: 0}
@@ -4865,7 +4865,9 @@ MonoBehaviour:
   m_MaxCollisionCount: 100
   m_ExplosionAudioClipSet:
     m_AudioConfig: {fileID: 0}
-    m_AudioClips: []
+    m_AudioClips:
+    - {fileID: 8300000, guid: 0f64ee9d2303b824cb07f571b4378454, type: 3}
+    - {fileID: 8300000, guid: 65a5d457f41b0754aa754511be0e5c74, type: 3}
   references:
     version: 2
     RefIds:
@@ -4890,7 +4892,7 @@ MonoBehaviour:
         m_DamageAmount: 25
         m_ImpactForce: 2
         m_ImpactForceFrames: 15
-        m_ImpactRadius: 0
+        m_ImpactRadius: 1
         m_ScaleDamageByImpactStrength: 0
     - rid: 4007985383746306049
       type: {class: SpawnSurfaceEffect, ns: Opsive.UltimateCharacterController.Items.Actions.Impact,
