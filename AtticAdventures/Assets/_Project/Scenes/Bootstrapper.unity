@@ -612,47 +612,48 @@ MonoBehaviour:
     type: 2}
   sfxOutput: {fileID: 3069521897705426758, guid: d160fe00889510840adfe81fabc64584,
     type: 2}
+  fadeDuration: 1
   music:
   - name: ResistanceBase
     clip: {fileID: 8300000, guid: c7fca5c5aa5503c41a6a4cb2091f8b9b, type: 3}
-    output: {fileID: 0}
     volume: 0.8
     pitch: 1
-    spacialBlend: 0.5
     loop: 1
+    spacialBlend: 0.5
     source: {fileID: 0}
+    targetVolume: 0
   - name: Valley
     clip: {fileID: 8300000, guid: e73b610611bfe1e4f8ff5560cff39844, type: 3}
-    output: {fileID: 0}
     volume: 0.8
     pitch: 1
-    spacialBlend: 0.5
     loop: 1
+    spacialBlend: 0.5
     source: {fileID: 0}
+    targetVolume: 0
   - name: Factory
     clip: {fileID: 8300000, guid: 8ca97f346a6c3c04e945143c161b9133, type: 3}
-    output: {fileID: 0}
     volume: 0.8
     pitch: 1
-    spacialBlend: 0.5
     loop: 1
+    spacialBlend: 0.5
     source: {fileID: 0}
+    targetVolume: 0
   - name: Battle
     clip: {fileID: 8300000, guid: 41ee0adfc456cb0498389efc93edb504, type: 3}
-    output: {fileID: 0}
     volume: 0.6
     pitch: 1
-    spacialBlend: 0.5
     loop: 1
+    spacialBlend: 0.5
     source: {fileID: 0}
+    targetVolume: 0
   - name: Boss
     clip: {fileID: 8300000, guid: 17ff0e4eb81a14a44aec957165be5da8, type: 3}
-    output: {fileID: 0}
     volume: 0.6
     pitch: 1
-    spacialBlend: 0.5
     loop: 1
+    spacialBlend: 0.5
     source: {fileID: 0}
+    targetVolume: 0
   sfx: []
 --- !u!1 &1664135269
 GameObject:
@@ -994,7 +995,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4bbd77dcb6dd78b4e97c9c6daca75ad0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.45
+  m_Volume: 0.35
   m_Pitch: 1.1
   Loop: 0
   Mute: 0

@@ -32,9 +32,9 @@ namespace Opsive.UltimateCharacterController.SurfaceSystem
         [Tooltip("The AudioClips that can be triggered from a collision.")]
         [SerializeField] protected AudioClip[] m_AudioClips;
         [Tooltip("The minimum volume of the AudioClip.")]
-        [SerializeField] protected float m_MinAudioVolume = 1;
+        [SerializeField] protected float m_MinAudioVolume = 0.4f;
         [Tooltip("The maximum volume of the AudioClip.")]
-        [SerializeField] protected float m_MaxAudioVolume = 1;
+        [SerializeField] protected float m_MaxAudioVolume = 0.6f;
         [Tooltip("The minimum pitch of the AudioClip.")]
         [SerializeField] protected float m_MinAudioPitch = 1;
         [Tooltip("The maximum pitch of the AudioClip.")]

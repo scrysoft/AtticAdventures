@@ -9,6 +9,8 @@ namespace AtticAdventures
         UltimateCharacterLocomotion characterLocomotion;
         CharacterAttributeManager characterAttributeManager;
 
+        [SerializeField] GameObject healEffect;
+
         public void HealCharacter()
         {
             characterLocomotion = FindAnyObjectByType<UltimateCharacterLocomotion>();
@@ -18,6 +20,7 @@ namespace AtticAdventures
             if (characterAttributeManager != null)
             {
                 health.Value = health.MaxValue;
+                Instantiate(healEffect, characterLocomotion.transform.position, Quaternion.identity);
             }
         }
     }
