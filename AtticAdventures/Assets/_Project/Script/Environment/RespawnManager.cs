@@ -25,17 +25,14 @@ namespace AtticAdventures
 
         public void SetSpawnPoint(int index)
         {
-            if (spawnPoints == null || spawnPoints.Count == 0)
-            {
-                return;
-            }
+            Debug.Log(index);
 
-            if (index < 0 || index >= spawnPoints.Count)
-            {
-                return;
-            }
+            if (spawnPoints == null || spawnPoints.Count == 0) return;
+
+            if (index < 0 || index >= spawnPoints.Count) return;
 
             spawnPoint.position = spawnPoints[index].position;
+            Debug.Log(spawnPoints[index].position);
         }
     }
 }

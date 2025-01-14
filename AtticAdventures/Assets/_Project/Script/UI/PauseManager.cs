@@ -1,3 +1,4 @@
+using AtticAdventures.Core;
 using AtticAdventures.SceneManagement;
 using Rewired;
 using UnityEngine;
@@ -66,6 +67,7 @@ public class PauseManager : MonoBehaviour
     public async void RestartLevel(int index)
     {
         SceneLoader sceneLoader = FindAnyObjectByType<SceneLoader>();
+        int spawnIndex = GameManager.Instance.GetSpawnPointIndex();
         ResumeGame();
         await sceneLoader.LoadSceneGroup(index);
     }
