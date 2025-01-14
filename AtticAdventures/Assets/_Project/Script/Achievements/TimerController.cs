@@ -10,9 +10,11 @@ public class TimerController : MonoBehaviour
     private float currentTime;
     private bool isRunning;
 
+    private bool isBossDead = false;
+
     private void Update()
     {
-        if (isRunning)
+        if (isRunning && !isBossDead)
         {
             currentTime += Time.deltaTime;
             if (currentTime >= 3599f)
@@ -28,6 +30,8 @@ public class TimerController : MonoBehaviour
 
     public void StartTimer()
     {
+        if (isBossDead) return;
+
         currentTime = 0f;
         isRunning = true;
     }
@@ -44,5 +48,10 @@ public class TimerController : MonoBehaviour
         {
             onUnderOneMinute?.Invoke();
         }
+    }
+
+    public void SetBossIsDead()
+    {
+        isBossDead = true;
     }
 }
